@@ -21,4 +21,4 @@ Driving & Vehicle License Department System built using Three Layer Architecture
 
 ## Dashboard
 
-![Dashboard](Screenshots/Screenshot 2026-05-12 141509.png)
+![Dashboard](Screenshots/Screenshots/Dashbord.png)
