@@ -1,0 +1,6 @@
+H:\myfirst\DataAccess\bin\Debug\DataAccess.dll
+H:\myfirst\DataAccess\bin\Debug\DataAccess.pdb
+H:\myfirst\DataAccess\obj\Debug\DVLD_DataAccess.csproj.AssemblyReference.cache
+H:\myfirst\DataAccess\obj\Debug\DVLD_DataAccess.csproj.CoreCompileInputs.cache
+H:\myfirst\DataAccess\obj\Debug\DataAccess.dll
+H:\myfirst\DataAccess\obj\Debug\DataAccess.pdb

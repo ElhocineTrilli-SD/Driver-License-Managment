@@ -1,0 +1,9 @@
+H:\myfirst\DVLD_BUSINESS\obj\Debug\DVLD_BUSINESS.csproj.AssemblyReference.cache
+H:\myfirst\DVLD_BUSINESS\obj\Debug\DVLD_BUSINESS.csproj.CoreCompileInputs.cache
+H:\myfirst\DVLD_BUSINESS\bin\Debug\DVLD_BUSINESS.dll
+H:\myfirst\DVLD_BUSINESS\bin\Debug\DVLD_BUSINESS.pdb
+H:\myfirst\DVLD_BUSINESS\bin\Debug\DataAccess.dll
+H:\myfirst\DVLD_BUSINESS\bin\Debug\DataAccess.pdb
+H:\myfirst\DVLD_BUSINESS\obj\Debug\DVLD_BUS.AA20AAAC.Up2Date
+H:\myfirst\DVLD_BUSINESS\obj\Debug\DVLD_BUSINESS.dll
+H:\myfirst\DVLD_BUSINESS\obj\Debug\DVLD_BUSINESS.pdb
