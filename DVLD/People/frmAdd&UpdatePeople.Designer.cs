@@ -210,7 +210,7 @@
             this.rbFemale.TabIndex = 17;
             this.rbFemale.Text = "Famale";
             this.rbFemale.UseVisualStyleBackColor = true;
-            this.rbFemale.CheckedChanged += new System.EventHandler(this.rbMale_CheckedChanged);
+            this.rbFemale.Click += new System.EventHandler(this.rbFemale_Click);
             // 
             // rbMale
             // 
@@ -223,7 +223,7 @@
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
-            this.rbMale.CheckedChanged += new System.EventHandler(this.rbFemale_CheckedChanged);
+            this.rbMale.Click += new System.EventHandler(this.rbMale_Click);
             // 
             // label9
             // 
@@ -270,6 +270,7 @@
             this.txtnationaln.Name = "txtnationaln";
             this.txtnationaln.Size = new System.Drawing.Size(133, 20);
             this.txtnationaln.TabIndex = 10;
+            this.txtnationaln.Validating += new System.ComponentModel.CancelEventHandler(this.txtnationaln_Validating);
             // 
             // label7
             // 
@@ -416,7 +417,7 @@
             this.btnClose.Size = new System.Drawing.Size(144, 43);
             this.btnClose.TabIndex = 33;
             this.btnClose.Text = "Close";
-            this.btnClose.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // errorProvider1
             // 
@@ -441,7 +442,7 @@
             this.Name = "frmAddUpdatePerson";
             this.ShowIcon = false;
             this.Text = "AddPerson";
-            this.Load += new System.EventHandler(this.AddPeople_Load);
+            this.Load += new System.EventHandler(this.frmadd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBFoto)).EndInit();

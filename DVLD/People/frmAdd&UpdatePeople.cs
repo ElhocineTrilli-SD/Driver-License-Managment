@@ -27,8 +27,9 @@ namespace DVLD
         // Declare an event using the delegate
         public event DataBackEventHandler DataBack;
 
-
         public enum enMode { AddNew = 0, Update = 1 };
+        public enum enGendor { Male = 0, Female = 1 };
+
         private enMode _Mode;
 
         private int _PersonID = -1;
@@ -81,7 +82,7 @@ namespace DVLD
             dtp_DateOfBirth.MinDate = DateTime.Now.AddYears(-100);
 
             //this will set default country to jordan.
-            cbCountries.SelectedIndex = cbCountries.FindString("Jordan");
+            cbCountries.SelectedIndex = cbCountries.FindString("Algeria");
 
             txtFirstname.Text = "";
             txtSecondname.Text = "";
@@ -108,7 +109,6 @@ namespace DVLD
 
         private void _LoadData()
         {
-
             _Person = clsPerson.Find(_PersonID);
 
             if (_Person == null)
@@ -150,37 +150,16 @@ namespace DVLD
 
         }
 
-        private void rbFemale_CheckedChanged(object sender, EventArgs e)
+        private void frmadd_Load(object sender, EventArgs e)
         {
-            //change the defualt image to female incase there is no image set.
-            if (PBFoto.ImageLocation == null)
-                PBFoto.Image = Resources.women;
+            _ResetDefualtValues();
+
+            if (_Mode == enMode.Update)
+                _LoadData();
 
         }
 
-        private void rbMale_CheckedChanged(object sender, EventArgs e)
-        {
-
-            //change the defualt image to female incase there is no image set.
-            if (PBFoto.ImageLocation == null)
-                PBFoto.Image = Resources.man;
-
-        }
-
-        private void RemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            PBFoto.ImageLocation = null;
-
-
-
-            if (rbMale.Checked)
-                PBFoto.Image = Resources.man;
-            else
-                PBFoto.Image = Resources.women;
-
-            lblRemove.Visible = false;
-
-        }
+       
 
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -208,74 +187,75 @@ namespace DVLD
         //    }
 
         //}
-
-      
-
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (!this.ValidateChildren())
+            {
+                //Here we dont continue becuase the form is not valid
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
             int CountryID = clsCountry.Find(cbCountries.Text).CountryID;
 
-            _Person.NationalNo = txtnationaln.Text;
-            _Person.Email = txtemail.Text;
-            _Person.Phone = txtPhone.Text;
-            _Person.Address = txtaddress.Text;
+            _Person.NationalNo = txtnationaln.Text.Trim();
+            _Person.Email = txtemail.Text.Trim();
+            _Person.Phone = txtPhone.Text.Trim();
+            _Person.Address = txtaddress.Text.Trim();
             _Person.DateOfBirth = dtp_DateOfBirth.Value;
-            _Person.NationalityCountryID = CountryID;
-            _Person.Firstname = txtFirstname.Text;
-            _Person.Secondname = txtSecondname.Text;
-            _Person.thirdname = txtThirdname.Text;
-            _Person.lastname = txtlastname.Text;
+          
+            _Person.Firstname = txtFirstname.Text.Trim();
+            _Person.Secondname = txtSecondname.Text.Trim();
+            _Person.thirdname = txtThirdname.Text.Trim();
+            _Person.lastname = txtlastname.Text.Trim();
 
             if (rbMale.Checked)
-            {
-                _Person.Gender = 0;
-            }
+                _Person.Gender = (byte)enGendor.Male;
             else
-            {
-                _Person.Gender = 1;
-            }
-
+                _Person.Gender = (byte)enGendor.Female;
+            _Person.NationalityCountryID = CountryID;
+            /////////////////////
             if (PBFoto.ImageLocation != null)
-            {
-
-
-                _Person.ImagePath = PBFoto.ImageLocation.ToString();
-            }
+                _Person.ImagePath = PBFoto.ImageLocation;
             else
-            {
                 _Person.ImagePath = "";
-            }
+            /////////////////////
 
             if (_Person.Save())
             {
-                MessageBox.Show("Data Saved Successfully");
+               txtPersonID.Text = _Person.PersonID.ToString();
+                //change form mode to update.
+                _Mode = enMode.Update;
+                lbltitel.Text = "Update Person";
+
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK,
+                 MessageBoxIcon.Information);
+
+
             }
             else
             {
-                MessageBox.Show("Error: Data is Not Saved Successfully");
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
 
-            _Mode = enMode.Update;
-            lbltitel.Text = "Edit Person ID:" + _Person.PersonID;
-            txtPersonID.Text = _Person.PersonID.ToString();
-
+          
 
         }
 
-        private void guna2Button3_Click(object sender, EventArgs e)
+        private void RemoveImage_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //      _ManagePeople._RefrechPeopleList();
+            PBFoto.ImageLocation = null;
 
-            this.Close();
 
-        }
 
-        private void AddPeople_Load(object sender, EventArgs e)
-        {
-            _ResetDefualtValues();
+            if (rbMale.Checked)
+                PBFoto.Image = Resources.man;
+            else
+                PBFoto.Image = Resources.women;
 
-            if (_Mode == enMode.Update)
-                _LoadData();
+            lblRemove.Visible = false;
 
         }
 
@@ -296,6 +276,16 @@ namespace DVLD
             }
         }
 
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            //      _ManagePeople._RefrechPeopleList();
+
+            this.Close();
+
+        }
+
+     
         private void txtemail_Validating(object sender, CancelEventArgs e)
         {
 
@@ -314,6 +304,47 @@ namespace DVLD
                 errorProvider1.SetError(txtemail, null);
             }
             ;
+        }
+
+        private void txtnationaln_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtnationaln.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtnationaln, "This field is required!");
+                return;
+            }
+            else
+            {
+                errorProvider1.SetError(txtnationaln, null);
+            }
+
+            //Make sure the national number is not used by another person
+            if (txtnationaln.Text.Trim() != _Person.NationalNo && clsPerson.IsPersonExist(txtnationaln.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtnationaln, "National Number is used for another person!");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtnationaln, null);
+            }
+        }
+
+        private void rbMale_Click(object sender, EventArgs e)
+        {
+            //change the defualt image to male incase there is no image set.
+            if (PBFoto.ImageLocation == null)
+                PBFoto.Image = Resources.man;
+        }
+
+       
+        private void rbFemale_Click(object sender, EventArgs e)
+        {
+            //change the defualt image to female incase there is no image set.
+            if (PBFoto.ImageLocation == null)
+                PBFoto.Image = Resources.women;
         }
     }
 }
