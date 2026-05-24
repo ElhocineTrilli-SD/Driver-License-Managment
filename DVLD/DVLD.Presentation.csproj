@@ -284,5 +284,20 @@
   <ItemGroup>
     <None Include="Resources\phone-call1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driving-licence1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MD1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_whnolbwhnolbwhno.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detain license.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
