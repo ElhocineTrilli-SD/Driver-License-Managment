@@ -224,7 +224,7 @@ namespace DataAccess
             }
 
             //ImagePath: allows null in database so we should handle null
-            if (imagepath != "" && imagepath != null)
+            if (imagepath != "")
             {
                command.Parameters.AddWithValue("@ImagePath", imagepath);
             }
@@ -233,7 +233,7 @@ namespace DataAccess
                 command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
             }
 
-            command.Parameters.AddWithValue("@ImagePath", imagepath);
+            
             command.Parameters.AddWithValue("@NationalityCountryID", CountryID);
 
             try

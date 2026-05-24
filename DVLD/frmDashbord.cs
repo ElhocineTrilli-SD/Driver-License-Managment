@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using DVLD_BUSINESS;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,9 +32,18 @@ namespace DVLD
 
         private void OpenManagePeopleForm()
         {
-            Form ManagePeople = new frmManagePeopleScreen();
-            ManagePeople.ShowDialog();
+            frmManagePeopleScreen form = new frmManagePeopleScreen();
+
+            form.DataBack += RecieveData_DataBack;
+
+            form.ShowDialog();
         }
+
+        private void RecieveData_DataBack(object sender, int records)
+        {
+           lblTotalPeople.Text = records.ToString();
+        }
+
         private void guna2Button3_Click(object sender, EventArgs e)
         {
            OpenManagePeopleForm();
@@ -56,8 +66,16 @@ namespace DVLD
            
         }
 
+        private void _RefrechNumberOfPeople()
+        {
+            int Total_P = clsPerson.GetPeopleCount();
+
+            lblTotalPeople.Text += Total_P.ToString();
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
+            _RefrechNumberOfPeople();
             timer1.Start();
         }
 
@@ -170,6 +188,11 @@ namespace DVLD
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        }
+
+        private void lblTotalPeople_Click(object sender, EventArgs e)
+        {
 
         }
     }

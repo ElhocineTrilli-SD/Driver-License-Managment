@@ -62,7 +62,7 @@
             this.dgvPeopleList.ReadOnly = true;
             this.dgvPeopleList.Size = new System.Drawing.Size(1160, 291);
             this.dgvPeopleList.TabIndex = 0;
-            this.dgvPeopleList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+          
             // 
             // contextMenuStrip2
             // 
@@ -89,7 +89,7 @@
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
             this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.phoneCallToolStripMenuItem.Text = "Phone Call";
-            this.phoneCallToolStripMenuItem.Click += new System.EventHandler(this.phoneCallToolStripMenuItem_Click);
+            this.phoneCallToolStripMenuItem.Click += new System.EventHandler(this.phoneCallTool_Click);
             // 
             // label1
             // 
@@ -154,7 +154,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(155, 53);
             this.guna2Button1.TabIndex = 9;
             this.guna2Button1.Text = "Close";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2Button1.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -187,7 +187,7 @@
             this.showDetailsToolStripMenuItem1.Name = "showDetailsToolStripMenuItem1";
             this.showDetailsToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
             this.showDetailsToolStripMenuItem1.Text = "Show Details";
-            this.showDetailsToolStripMenuItem1.Click += new System.EventHandler(this.showDetailsToolStripMenuItem1_Click);
+            this.showDetailsToolStripMenuItem1.Click += new System.EventHandler(this.showDetailsTool_Click);
             // 
             // editToolStripMenuItem1
             // 
@@ -196,7 +196,7 @@
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
             this.editToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
             this.editToolStripMenuItem1.Text = "Add New Person";
-            this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
+            this.editToolStripMenuItem1.Click += new System.EventHandler(this.ADDTools_Click);
             // 
             // deleteToolStripMenuItem1
             // 
@@ -205,7 +205,7 @@
             this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
             this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
             this.deleteToolStripMenuItem1.Text = "Edit";
-            this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
+            this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.EditTool_Click);
             // 
             // deleteToolStripMenuItem2
             // 
@@ -214,7 +214,7 @@
             this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
             this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(177, 24);
             this.deleteToolStripMenuItem2.Text = "Delete";
-            this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteToolStripMenuItem2_Click);
+            this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteTool_Click);
             // 
             // sendEmailToolStripMenuItem
             // 
@@ -223,7 +223,7 @@
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
             this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
-            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
+            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailTool_Click);
             // 
             // frmManagePeopleScreen
             // 

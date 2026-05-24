@@ -13,6 +13,12 @@ namespace DVLD
 {
     public partial class frmManagePeopleScreen : Form
     {
+        public delegate void handler (object sender, int records);
+
+        // Declare an event using the delegate
+        public event handler DataBack;
+
+
         public frmManagePeopleScreen()
         {
             InitializeComponent();
@@ -43,14 +49,12 @@ namespace DVLD
         public void _RefrechRecordCount()
         {
             int Records = dgvPeopleList.RowCount;
-
             lblRecordCount.Text = Records.ToString();
 
-        }
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+            DataBack?.Invoke(this, Records);
         }
+      
         private void ManagePeople_Load(object sender, EventArgs e)
         {
             _RefrechPeopleList();
@@ -131,11 +135,11 @@ namespace DVLD
           
 
         }
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void deleteToolStripMenuItem2_Click(object sender, EventArgs e)
+        private void deleteTool_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("are you sure do you want to delete Person " +
           "[" + dgvPeopleList.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
@@ -153,28 +157,28 @@ namespace DVLD
 
             }
         }
-        private void editToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void ADDTools_Click(object sender, EventArgs e)
         {
 
             Form frm = new frmAddUpdatePerson();
             frm.ShowDialog();
         }
-        private void showDetailsToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void showDetailsTool_Click(object sender, EventArgs e)
         {
             Form form = new ShowPersonDetails((int)dgvPeopleList.CurrentRow.Cells[0].Value,this);
             form.ShowDialog();
         }
-        private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void EditTool_Click(object sender, EventArgs e)
         {
             Form frm = new frmAddUpdatePerson((int)dgvPeopleList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
             _RefrechPeopleList();
         }
-        private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        private void sendEmailTool_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
-        private void phoneCallToolStripMenuItem_Click(object sender, EventArgs e)
+        private void phoneCallTool_Click(object sender, EventArgs e)
         {
             MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }

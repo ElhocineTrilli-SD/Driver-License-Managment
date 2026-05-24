@@ -32,6 +32,9 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.AccountMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.sighToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.ApplicationMenueStripe = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTotalPeople = new System.Windows.Forms.Label();
@@ -43,9 +46,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.AccountMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.sighToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -60,6 +60,9 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.currentUserInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drivingLicenseServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newDrivingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drivingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -77,14 +80,11 @@
             this.releaseDetainedLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageApplicationTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageTestTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.currentUserInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.signOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1.SuspendLayout();
+            this.AccountMenu.SuspendLayout();
             this.ApplicationMenueStripe.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
-            this.AccountMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
@@ -131,6 +131,27 @@
             this.guna2Separator1.Size = new System.Drawing.Size(145, 9);
             this.guna2Separator1.TabIndex = 12;
             // 
+            // AccountMenu
+            // 
+            this.AccountMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.currentUserInfoToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.changePasswordToolStripMenuItem,
+            this.sighToolStripMenuItem,
+            this.signOutToolStripMenuItem});
+            this.AccountMenu.Name = "AccountMenu";
+            this.AccountMenu.Size = new System.Drawing.Size(192, 88);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(188, 6);
+            // 
+            // sighToolStripMenuItem
+            // 
+            this.sighToolStripMenuItem.Name = "sighToolStripMenuItem";
+            this.sighToolStripMenuItem.Size = new System.Drawing.Size(188, 6);
+            // 
             // ApplicationMenueStripe
             // 
             this.ApplicationMenueStripe.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -161,9 +182,9 @@
             this.lblTotalPeople.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotalPeople.Location = new System.Drawing.Point(27, 29);
             this.lblTotalPeople.Name = "lblTotalPeople";
-            this.lblTotalPeople.Size = new System.Drawing.Size(61, 30);
+            this.lblTotalPeople.Size = new System.Drawing.Size(0, 30);
             this.lblTotalPeople.TabIndex = 2;
-            this.lblTotalPeople.Text = "2000";
+            this.lblTotalPeople.Click += new System.EventHandler(this.lblTotalPeople_Click);
             // 
             // label1
             // 
@@ -171,9 +192,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(18, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Total Drivers";
+            this.label1.Text = "Total People";
             // 
             // guna2Panel4
             // 
@@ -252,27 +273,6 @@
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // AccountMenu
-            // 
-            this.AccountMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.currentUserInfoToolStripMenuItem,
-            this.toolStripMenuItem2,
-            this.changePasswordToolStripMenuItem,
-            this.sighToolStripMenuItem,
-            this.signOutToolStripMenuItem});
-            this.AccountMenu.Name = "AccountMenu";
-            this.AccountMenu.Size = new System.Drawing.Size(192, 110);
-            // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(188, 6);
-            // 
-            // sighToolStripMenuItem
-            // 
-            this.sighToolStripMenuItem.Name = "sighToolStripMenuItem";
-            this.sighToolStripMenuItem.Size = new System.Drawing.Size(188, 6);
             // 
             // guna2PictureBox5
             // 
@@ -485,6 +485,33 @@
             this.guna2Button1.Text = "     Application";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // currentUserInfoToolStripMenuItem
+            // 
+            this.currentUserInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.currentUserInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.user;
+            this.currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
+            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.currentUserInfoToolStripMenuItem.Text = "Current User Info";
+            this.currentUserInfoToolStripMenuItem.Click += new System.EventHandler(this.currentUserInfoToolStripMenuItem_Click);
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.changePasswordToolStripMenuItem.Image = global::DVLD.Properties.Resources.reset_password;
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
+            // signOutToolStripMenuItem
+            // 
+            this.signOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.signOutToolStripMenuItem.Image = global::DVLD.Properties.Resources.logout;
+            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.signOutToolStripMenuItem.Text = "Sign Out";
+            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
+            // 
             // drivingLicenseServicesToolStripMenuItem
             // 
             this.drivingLicenseServicesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -496,6 +523,7 @@
             this.releaseToolStripMenuItem,
             this.retakeTestToolStripMenuItem});
             this.drivingLicenseServicesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.drivingLicenseServicesToolStripMenuItem.Image = global::DVLD.Properties.Resources.driving_licence;
             this.drivingLicenseServicesToolStripMenuItem.Name = "drivingLicenseServicesToolStripMenuItem";
             this.drivingLicenseServicesToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.drivingLicenseServicesToolStripMenuItem.Text = "Driving License services";
@@ -551,12 +579,14 @@
             this.localDrivingLicenseApplicationToolStripMenuItem,
             this.intenationalDrivingLicenseApplicationToolStripMenuItem});
             this.manageApplicationsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.manageApplicationsToolStripMenuItem.Image = global::DVLD.Properties.Resources.application;
             this.manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
             this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.manageApplicationsToolStripMenuItem.Text = "Manage Applications";
             // 
             // localDrivingLicenseApplicationToolStripMenuItem
             // 
+            this.localDrivingLicenseApplicationToolStripMenuItem.Image = global::DVLD.Properties.Resources.location;
             this.localDrivingLicenseApplicationToolStripMenuItem.Name = "localDrivingLicenseApplicationToolStripMenuItem";
             this.localDrivingLicenseApplicationToolStripMenuItem.Size = new System.Drawing.Size(340, 24);
             this.localDrivingLicenseApplicationToolStripMenuItem.Text = "Local Driving License Application";
@@ -564,6 +594,7 @@
             // 
             // intenationalDrivingLicenseApplicationToolStripMenuItem
             // 
+            this.intenationalDrivingLicenseApplicationToolStripMenuItem.Image = global::DVLD.Properties.Resources.earth;
             this.intenationalDrivingLicenseApplicationToolStripMenuItem.Name = "intenationalDrivingLicenseApplicationToolStripMenuItem";
             this.intenationalDrivingLicenseApplicationToolStripMenuItem.Size = new System.Drawing.Size(340, 24);
             this.intenationalDrivingLicenseApplicationToolStripMenuItem.Text = "Intenational driving License Application";
@@ -576,6 +607,7 @@
             this.detainLicenseToolStripMenuItem,
             this.releaseDetainedLicenseToolStripMenuItem});
             this.detainLicensesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.detainLicensesToolStripMenuItem.Image = global::DVLD.Properties.Resources.stop;
             this.detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
             this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.detainLicensesToolStripMenuItem.Text = "Detain Licenses";
@@ -604,6 +636,7 @@
             // manageApplicationTypesToolStripMenuItem
             // 
             this.manageApplicationTypesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.manageApplicationTypesToolStripMenuItem.Image = global::DVLD.Properties.Resources.application1;
             this.manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
             this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.manageApplicationTypesToolStripMenuItem.Text = "Manage Application Types";
@@ -611,35 +644,12 @@
             // manageTestTypesToolStripMenuItem
             // 
             this.manageTestTypesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.manageTestTypesToolStripMenuItem.Image = global::DVLD.Properties.Resources.application1;
             this.manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
             this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
             this.manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
             // 
-            // currentUserInfoToolStripMenuItem
-            // 
-            this.currentUserInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
-            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
-            this.currentUserInfoToolStripMenuItem.Text = "Current User Info";
-            this.currentUserInfoToolStripMenuItem.Click += new System.EventHandler(this.currentUserInfoToolStripMenuItem_Click);
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
-            // 
-            // signOutToolStripMenuItem
-            // 
-            this.signOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
-            this.signOutToolStripMenuItem.Text = "Sign Out";
-            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
-            // 
-            // Main
+            // frmDashbord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -649,18 +659,18 @@
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Name = "Main";
+            this.Name = "frmDashbord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Driver License Management";
             this.Load += new System.EventHandler(this.Main_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.AccountMenu.ResumeLayout(false);
             this.ApplicationMenueStripe.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
-            this.AccountMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
