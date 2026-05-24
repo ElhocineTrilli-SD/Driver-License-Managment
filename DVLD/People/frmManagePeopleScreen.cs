@@ -156,7 +156,7 @@ namespace DVLD
         private void editToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-            Form frm = new frmAddUpdatePerson(-1);
+            Form frm = new frmAddUpdatePerson();
             frm.ShowDialog();
         }
         private void showDetailsToolStripMenuItem1_Click(object sender, EventArgs e)
