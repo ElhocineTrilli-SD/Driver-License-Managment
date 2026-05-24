@@ -136,6 +136,7 @@
             this.txtaddress.Size = new System.Drawing.Size(391, 81);
             this.txtaddress.TabIndex = 25;
             this.txtaddress.Text = "";
+            this.txtaddress.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // label13
             // 
@@ -190,6 +191,7 @@
             this.txtPhone.Size = new System.Drawing.Size(143, 20);
             this.txtPhone.TabIndex = 19;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // label10
             // 
@@ -324,6 +326,7 @@
             this.txtSecondname.Name = "txtSecondname";
             this.txtSecondname.Size = new System.Drawing.Size(143, 20);
             this.txtSecondname.TabIndex = 4;
+            this.txtSecondname.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txtlastname
             // 
@@ -331,6 +334,7 @@
             this.txtlastname.Name = "txtlastname";
             this.txtlastname.Size = new System.Drawing.Size(143, 20);
             this.txtlastname.TabIndex = 3;
+            this.txtlastname.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txtThirdname
             // 
@@ -338,6 +342,7 @@
             this.txtThirdname.Name = "txtThirdname";
             this.txtThirdname.Size = new System.Drawing.Size(143, 20);
             this.txtThirdname.TabIndex = 2;
+            this.txtThirdname.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // txtFirstname
             // 
@@ -345,6 +350,7 @@
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(143, 20);
             this.txtFirstname.TabIndex = 1;
+            this.txtFirstname.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // label2
             // 
@@ -431,6 +437,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(722, 476);
             this.Controls.Add(this.btnClose);

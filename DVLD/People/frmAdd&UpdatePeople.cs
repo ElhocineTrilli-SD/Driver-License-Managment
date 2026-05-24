@@ -170,23 +170,23 @@ namespace DVLD
             }
         }
 
-        //private void ValidateEmptyTextBox(object sender, CancelEventArgs e)
-        //{
+        private void ValidateEmptyTextBox(object sender, CancelEventArgs e)
+        {
 
-        //    // First: set AutoValidate property of your Form to EnableAllowFocusChange in designer 
-        //    TextBox Temp = ((TextBox)sender);
-        //    if (string.IsNullOrEmpty(Temp.Text.Trim()))
-        //    {
-        //        e.Cancel = true;
-        //        errorProvider1.SetError(Temp, "This field is required!");
-        //    }
-        //    else
-        //    {
-        //        //e.Cancel = false;
-        //        errorProvider1.SetError(Temp, null);
-        //    }
+            // First: set AutoValidate property of your Form to EnableAllowFocusChange in designer 
+            TextBox Temp = ((TextBox)sender);
+            if (string.IsNullOrEmpty(Temp.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(Temp, "This field is required!");
+            }
+            else
+            {
+                //e.Cancel = false;
+                errorProvider1.SetError(Temp, null);
+            }
 
-        //}
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())
