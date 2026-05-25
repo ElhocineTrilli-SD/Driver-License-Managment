@@ -116,7 +116,7 @@ namespace DVLD
             //_Person.ImagePath contains the old Image, we check if it changed then we copy the new image
             if (_Person.ImagePath != PBFoto.ImageLocation)
             {
-                if (_Person.ImagePath != "")
+                if ( ! string.IsNullOrEmpty( _Person.ImagePath) )
                 {
                     //first we delete the old image from the folder in case there is any.
 
@@ -131,7 +131,7 @@ namespace DVLD
                     }
                 }
 
-                if (PBFoto.ImageLocation != null)
+                if (! string.IsNullOrEmpty( PBFoto.ImageLocation))
                 {
                     //then we copy the new image to the image folder after we rename it
                     string SourceImageFile = PBFoto.ImageLocation.ToString();
@@ -183,7 +183,7 @@ namespace DVLD
 
 
             //load person image incase it was set.
-            if (_Person.ImagePath != "")
+            if (!string.IsNullOrEmpty(_Person.ImagePath))
             {
                 PBFoto.ImageLocation = _Person.ImagePath;
 
@@ -314,7 +314,7 @@ namespace DVLD
             {
                 // Process the selected file
                 string selectedFilePath = openFileDialog1.FileName;
-                PBFoto.Load(selectedFilePath);
+                PBFoto.ImageLocation = selectedFilePath;
                 lblRemove.Visible = true;
                 // ...
 

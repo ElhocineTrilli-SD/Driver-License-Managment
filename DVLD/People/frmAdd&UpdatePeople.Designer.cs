@@ -447,7 +447,8 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmAddUpdatePerson";
             this.ShowIcon = false;
-            this.Text = "AddPerson";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Add Person";
             this.Load += new System.EventHandler(this.frmadd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
