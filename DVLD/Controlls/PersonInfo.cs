@@ -37,7 +37,17 @@ namespace DVLD
             txtDateofbirth.Text = person.DateOfBirth.ToString("yyyy-MM-dd");
             txtPhone.Text = person.Phone;
             //
-            txtCountry.Text = clsCountry.Find(person.NationalityCountryID).CountryName;
+           // txtCountry.Text = clsCountry.Find(person.NationalityCountryID).CountryName;
+            var country = clsCountry.Find(person.NationalityCountryID);
+
+            if (country != null)
+            {
+                txtCountry.Text = country.CountryName;
+            }
+            else
+            {
+                txtCountry.Text = "Unknown";
+            }
             //
             if (!string.IsNullOrEmpty(person.ImagePath) && File.Exists(person.ImagePath))
             {

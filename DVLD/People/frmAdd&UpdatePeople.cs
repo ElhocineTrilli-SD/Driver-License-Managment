@@ -104,7 +104,53 @@ namespace DVLD
                 cbCountries.Items.Add(row["CountryName"]);
             }
         }
+        private bool _HandlePersonImage()
+        {
 
+            //this procedure will handle the person image,
+            //it will take care of deleting the old image from the folder
+            //in case the image changed. and it will rename the new image with guid and 
+            // place it in the images folder.
+
+
+            //_Person.ImagePath contains the old Image, we check if it changed then we copy the new image
+            if (_Person.ImagePath != PBFoto.ImageLocation)
+            {
+                if (_Person.ImagePath != "")
+                {
+                    //first we delete the old image from the folder in case there is any.
+
+                    try
+                    {
+                        File.Delete(_Person.ImagePath);
+                    }
+                    catch (IOException)
+                    {
+                        // We could not delete the file.
+                        //log it later   
+                    }
+                }
+
+                if (PBFoto.ImageLocation != null)
+                {
+                    //then we copy the new image to the image folder after we rename it
+                    string SourceImageFile = PBFoto.ImageLocation.ToString();
+
+                    if (clsUtil.CopyImageToProjectImagesFolder(ref SourceImageFile))
+                    {
+                        PBFoto.ImageLocation = SourceImageFile;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error Copying Image File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+
+            }
+            return true;
+        }
         private void _LoadData()
         {
             _Person = clsPerson.Find(_PersonID);
@@ -192,6 +238,9 @@ namespace DVLD
                 return;
 
             }
+
+            if (!_HandlePersonImage())
+                return;
 
             int CountryID = clsCountry.Find(cbCountries.Text).CountryID;
 
