@@ -120,7 +120,7 @@
             // lblRemove
             // 
             this.lblRemove.AutoSize = true;
-            this.lblRemove.Location = new System.Drawing.Point(580, 288);
+            this.lblRemove.Location = new System.Drawing.Point(548, 278);
             this.lblRemove.Name = "lblRemove";
             this.lblRemove.Size = new System.Drawing.Size(47, 13);
             this.lblRemove.TabIndex = 26;
@@ -191,7 +191,6 @@
             this.txtPhone.Size = new System.Drawing.Size(143, 20);
             this.txtPhone.TabIndex = 19;
             this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
-            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateEmptyTextBox);
             // 
             // label10
             // 
@@ -240,7 +239,7 @@
             // SetImage
             // 
             this.SetImage.AutoSize = true;
-            this.SetImage.Location = new System.Drawing.Point(580, 266);
+            this.SetImage.Location = new System.Drawing.Point(548, 255);
             this.SetImage.Name = "SetImage";
             this.SetImage.Size = new System.Drawing.Size(54, 13);
             this.SetImage.TabIndex = 14;
@@ -367,7 +366,7 @@
             this.lbltitel.AutoSize = true;
             this.lbltitel.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitel.ForeColor = System.Drawing.Color.Crimson;
-            this.lbltitel.Location = new System.Drawing.Point(257, 23);
+            this.lbltitel.Location = new System.Drawing.Point(216, 24);
             this.lbltitel.Name = "lbltitel";
             this.lbltitel.Size = new System.Drawing.Size(243, 36);
             this.lbltitel.TabIndex = 1;
@@ -439,7 +438,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(722, 476);
+            this.ClientSize = new System.Drawing.Size(722, 457);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPersonID);

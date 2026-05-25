@@ -93,8 +93,6 @@ namespace DVLD
             txtPhone.Text = "";
             txtemail.Text = "";
             txtaddress.Text = "";
-
-
         }
 
         private void _FillCountriesInComoboBox()
@@ -159,8 +157,6 @@ namespace DVLD
 
         }
 
-       
-
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
             // JustNumbers
@@ -174,7 +170,7 @@ namespace DVLD
         {
 
             // First: set AutoValidate property of your Form to EnableAllowFocusChange in designer 
-            TextBox Temp = ((TextBox)sender);
+            TextBoxBase  Temp = ((TextBoxBase)sender);
             if (string.IsNullOrEmpty(Temp.Text.Trim()))
             {
                 e.Cancel = true;
@@ -276,7 +272,6 @@ namespace DVLD
             }
         }
 
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             //      _ManagePeople._RefrechPeopleList();
@@ -284,7 +279,6 @@ namespace DVLD
             this.Close();
 
         }
-
      
         private void txtemail_Validating(object sender, CancelEventArgs e)
         {
@@ -337,9 +331,7 @@ namespace DVLD
             //change the defualt image to male incase there is no image set.
             if (PBFoto.ImageLocation == null)
                 PBFoto.Image = Resources.man;
-        }
-
-       
+        }       
         private void rbFemale_Click(object sender, EventArgs e)
         {
             //change the defualt image to female incase there is no image set.
