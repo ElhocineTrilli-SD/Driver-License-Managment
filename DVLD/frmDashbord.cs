@@ -195,5 +195,12 @@ namespace DVLD
         {
 
         }
+
+        private void UserPicture_Click(object sender, EventArgs e)
+        {
+
+            AccountMenu.Show(UserPicture, 0, UserPicture.Height);
+
+        }
     }
 }
