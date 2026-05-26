@@ -49,6 +49,19 @@ namespace DVLD
             _FillPersonInfo();
         }
 
+        public void LoadPersonInfo(string NationalNo)
+        {
+            _Person = clsPerson.Find(NationalNo);
+            if (_Person == null)
+            {
+                ResetPersonInfo();
+                MessageBox.Show("No Person with NationalNo = " + NationalNo, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _FillPersonInfo();
+        }
+
         private void _FillPersonInfo()
         {
             
