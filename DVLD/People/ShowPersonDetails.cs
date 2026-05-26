@@ -18,13 +18,12 @@ namespace DVLD
 
         clsPerson _Person;
 
-        frmManagePeopleScreen _managePeople;
+       
 
-        public ShowPersonDetails(int PersonID,frmManagePeopleScreen managePeople)
+        public ShowPersonDetails(int PersonID)
         {
             InitializeComponent();
-            _PersonID = PersonID;
-            _managePeople = managePeople;
+            personUserControl11.LoadPersonInfo(PersonID); 
         }
 
         private void btnclose_Click(object sender, EventArgs e)
@@ -32,19 +31,5 @@ namespace DVLD
             this.Close();
         }
 
-        private void PersonDetails_Load(object sender, EventArgs e)
-        {
-            _Person = clsPerson.Find(_PersonID);
-            personInfo1.SetData(_Person);
-
-        }
-
-        private void lblEdit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Form form = new frmAddUpdatePerson(_PersonID );
-            form.ShowDialog();
-            _managePeople._RefrechPeopleList();
-
-        }
     }
 }

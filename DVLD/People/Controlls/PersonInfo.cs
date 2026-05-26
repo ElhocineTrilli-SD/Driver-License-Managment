@@ -1,0 +1,114 @@
+﻿using DVLD.Properties;
+using DVLD_BUSINESS;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Linq;
+using static DVLD.frmAddUpdatePerson;
+
+namespace DVLD
+{
+    public partial  class PersonUserControl1 : UserControl
+    {
+        public PersonUserControl1()
+        {
+            InitializeComponent();
+        }
+
+        private clsPerson _Person;
+
+        private int _PersonID = -1;
+
+        public int PersonID
+        {
+            get { return _PersonID; }
+        }
+
+        public clsPerson SelectedPersonInfo
+        {
+            get { return _Person; }
+        }
+
+        public void LoadPersonInfo(int PersonID)
+        {
+            _Person = clsPerson.Find(PersonID);
+            if (_Person == null)
+            {
+                ResetPersonInfo();
+                MessageBox.Show("No Person with PersonID = " + PersonID.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            _FillPersonInfo();
+        }
+
+        private void _FillPersonInfo()
+        {
+            
+            llEditPersonInfo.Enabled = true;
+            _PersonID = _Person.PersonID;
+            lblPersonID.Text = _Person.PersonID.ToString();
+            lblNationalNo.Text = _Person.NationalNo;
+            lblFullName.Text = _Person.Fullname;
+            lblGendor.Text = _Person.Gender == 0 ? "Male" : "Female";
+            lblEmail.Text = _Person.Email;
+            lblPhone.Text = _Person.Phone;
+            lblDateOfBirth.Text = _Person.DateOfBirth.ToShortDateString();
+            lblCountry.Text = clsCountry.Find(_Person.NationalityCountryID).CountryName;
+            lblAddress.Text = _Person.Address;
+            _LoadPersonImage();
+
+
+
+
+        }
+
+        private void _LoadPersonImage()
+        {
+            if (_Person.Gender == 0)
+                picbFoto.Image = Resources.man;
+            else
+                picbFoto.Image = Resources.women;
+
+            string ImagePath = _Person.ImagePath;
+            if (ImagePath != "")
+                if (File.Exists(ImagePath))
+                    picbFoto.ImageLocation = ImagePath;
+                else
+                    MessageBox.Show("Could not find this image: = " + ImagePath, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+        }        
+
+        private void ResetPersonInfo()
+        {
+            _PersonID = -1;
+            lblPersonID.Text = "[????]";
+            lblNationalNo.Text = "[????]";
+            lblFullName.Text = "[????]";
+          
+            lblGendor.Text = "[????]";
+            lblEmail.Text = "[????]";
+            lblPhone.Text = "[????]";
+            lblDateOfBirth.Text = "[????]";
+            lblCountry.Text = "[????]";
+            lblAddress.Text = "[????]";
+            picbFoto.Image = Resources.man;
+        }
+
+        private void llEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmAddUpdatePerson frm = new frmAddUpdatePerson(_PersonID);
+            frm.ShowDialog();
+
+            //refrech
+            LoadPersonInfo(_PersonID);
+        }
+    }
+}

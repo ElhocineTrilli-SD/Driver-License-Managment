@@ -165,7 +165,7 @@ namespace DVLD
         }
         private void showDetailsTool_Click(object sender, EventArgs e)
         {
-            Form form = new ShowPersonDetails((int)dgvPeopleList.CurrentRow.Cells[0].Value,this);
+            Form form = new ShowPersonDetails((int)dgvPeopleList.CurrentRow.Cells[0].Value);
             form.ShowDialog();
         }
         private void EditTool_Click(object sender, EventArgs e)
