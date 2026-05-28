@@ -34,7 +34,7 @@
             this.txtFilterValue = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.personUserControl11 = new DVLD.PersonUserControl1();
+   
             this.btnAddNewPerson = new Guna.UI2.WinForms.Guna2Button();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.gbPersonFilter.SuspendLayout();
@@ -102,10 +102,10 @@
             // 
             // personUserControl11
             // 
-            this.personUserControl11.Location = new System.Drawing.Point(3, 99);
-            this.personUserControl11.Name = "personUserControl11";
-            this.personUserControl11.Size = new System.Drawing.Size(647, 275);
-            this.personUserControl11.TabIndex = 0;
+            //this.personUserControl11.Location = new System.Drawing.Point(3, 99);
+            //this.personUserControl11.Name = "personUserControl11";
+            //this.personUserControl11.Size = new System.Drawing.Size(647, 275);
+            //this.personUserControl11.TabIndex = 0;
             // 
             // btnAddNewPerson
             // 
@@ -117,7 +117,7 @@
             this.btnAddNewPerson.FillColor = System.Drawing.Color.White;
             this.btnAddNewPerson.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddNewPerson.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPerson.Image = global::DVLD.Properties.Resources.add_user;
+//            this.btnAddNewPerson.Image = global::DVLD.Properties.Resources.add_user;
             this.btnAddNewPerson.ImageSize = new System.Drawing.Size(28, 28);
             this.btnAddNewPerson.Location = new System.Drawing.Point(499, 24);
             this.btnAddNewPerson.Name = "btnAddNewPerson";
@@ -135,7 +135,7 @@
             this.btnSearch.FillColor = System.Drawing.Color.White;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::DVLD.Properties.Resources.magnifying_glass;
+          //  this.btnSearch.Image = global::DVLD.Properties.Resources.magnifying_glass;
             this.btnSearch.ImageOffset = new System.Drawing.Point(1, 0);
             this.btnSearch.ImageSize = new System.Drawing.Size(28, 28);
             this.btnSearch.Location = new System.Drawing.Point(458, 23);
@@ -149,7 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbPersonFilter);
-            this.Controls.Add(this.personUserControl11);
+//            this.Controls.Add(this.personUserControl11);
             this.Name = "PersonInfoWithFilter";
             this.Size = new System.Drawing.Size(649, 377);
             this.Load += new System.EventHandler(this.PersonInfoWithFilter_Load);
