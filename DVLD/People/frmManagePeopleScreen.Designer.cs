@@ -102,7 +102,7 @@
             // deleteToolStripMenuItem1
             // 
             this.deleteToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.deleteToolStripMenuItem1.Image = global::DVLD.Properties.Resources.pen;
+            this.deleteToolStripMenuItem1.Image = null;
             this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
             this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
             this.deleteToolStripMenuItem1.Text = "Edit";
@@ -111,7 +111,7 @@
             // deleteToolStripMenuItem2
             // 
             this.deleteToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.deleteToolStripMenuItem2.Image = global::DVLD.Properties.Resources.delete;
+            this.deleteToolStripMenuItem2.Image = null;
             this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
             this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
             this.deleteToolStripMenuItem2.Text = "Delete";
@@ -120,7 +120,7 @@
             // sendEmailToolStripMenuItem
             // 
             this.sendEmailToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.sendEmailToolStripMenuItem.Image = global::DVLD.Properties.Resources.send_message;
+            this.sendEmailToolStripMenuItem.Image = null;
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
             this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
@@ -129,7 +129,7 @@
             // phoneCallToolStripMenuItem
             // 
             this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.phoneCallToolStripMenuItem.Image = global::DVLD.Properties.Resources.phone_call;
+            this.phoneCallToolStripMenuItem.Image = null;
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
             this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.phoneCallToolStripMenuItem.Text = "Phone Call";
