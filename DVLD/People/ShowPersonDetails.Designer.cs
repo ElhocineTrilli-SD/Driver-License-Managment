@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
-            this.personUserControl11 = new DVLD.PersonUserControl1();
             this.SuspendLayout();
             // 
             // label1
@@ -62,18 +61,13 @@
             // 
             // personUserControl11
             // 
-            this.personUserControl11.Location = new System.Drawing.Point(24, 52);
-            this.personUserControl11.Name = "personUserControl11";
-            this.personUserControl11.Size = new System.Drawing.Size(647, 312);
-            this.personUserControl11.TabIndex = 4;
-            // 
+          
             // ShowPersonDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(702, 419);
-            this.Controls.Add(this.personUserControl11);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.label1);
             this.Name = "ShowPersonDetails";
@@ -89,6 +83,5 @@
 
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnclose;
-        private PersonUserControl1 personUserControl11;
     }
 }
