@@ -32,11 +32,11 @@
             this.gbPersonFilter = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFilterValue = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnAddNewPerson = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.personUserControl11 = new DVLD.PersonUserControl1();
+            this.btnAddNewPerson = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.gbPersonFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -49,7 +49,7 @@
             this.gbPersonFilter.Controls.Add(this.txtFilterValue);
             this.gbPersonFilter.Controls.Add(this.label1);
             this.gbPersonFilter.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.gbPersonFilter.Location = new System.Drawing.Point(3, 18);
+            this.gbPersonFilter.Location = new System.Drawing.Point(3, 6);
             this.gbPersonFilter.Name = "gbPersonFilter";
             this.gbPersonFilter.Size = new System.Drawing.Size(601, 87);
             this.gbPersonFilter.TabIndex = 1;
@@ -84,6 +84,28 @@
             this.txtFilterValue.TabIndex = 2;
             this.txtFilterValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterValue_KeyPress);
             this.txtFilterValue.Validating += new System.ComponentModel.CancelEventHandler(this.txtFilterValue_Validating);
+            // 
+            // cbFilterBy
+            // 
+            this.cbFilterBy.FormattingEnabled = true;
+            this.cbFilterBy.Items.AddRange(new object[] {
+            "NationalNo",
+            "PersonID"});
+            this.cbFilterBy.Location = new System.Drawing.Point(97, 32);
+            this.cbFilterBy.Name = "cbFilterBy";
+            this.cbFilterBy.Size = new System.Drawing.Size(178, 27);
+            this.cbFilterBy.TabIndex = 5;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // personUserControl11
+            // 
+            this.personUserControl11.Location = new System.Drawing.Point(3, 99);
+            this.personUserControl11.Name = "personUserControl11";
+            this.personUserControl11.Size = new System.Drawing.Size(647, 275);
+            this.personUserControl11.TabIndex = 0;
             // 
             // btnAddNewPerson
             // 
@@ -121,28 +143,6 @@
             this.btnSearch.Size = new System.Drawing.Size(35, 35);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // cbFilterBy
-            // 
-            this.cbFilterBy.FormattingEnabled = true;
-            this.cbFilterBy.Items.AddRange(new object[] {
-            "NationalNo",
-            "PersonID"});
-            this.cbFilterBy.Location = new System.Drawing.Point(97, 32);
-            this.cbFilterBy.Name = "cbFilterBy";
-            this.cbFilterBy.Size = new System.Drawing.Size(178, 27);
-            this.cbFilterBy.TabIndex = 5;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // personUserControl11
-            // 
-            this.personUserControl11.Location = new System.Drawing.Point(3, 99);
-            this.personUserControl11.Name = "personUserControl11";
-            this.personUserControl11.Size = new System.Drawing.Size(647, 275);
-            this.personUserControl11.TabIndex = 0;
             // 
             // PersonInfoWithFilter
             // 
