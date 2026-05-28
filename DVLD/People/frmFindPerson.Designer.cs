@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.personInfoWithFilter1 = new DVLD.People.Controlls.PersonInfoWithFilter();
             this.SuspendLayout();
             // 
             // label1
@@ -62,12 +61,7 @@
             // 
             // personInfoWithFilter1
             // 
-            this.personInfoWithFilter1.FilterEnabled = true;
-            this.personInfoWithFilter1.Location = new System.Drawing.Point(12, 59);
-            this.personInfoWithFilter1.Name = "personInfoWithFilter1";
-            this.personInfoWithFilter1.ShowAddPerson = true;
-            this.personInfoWithFilter1.Size = new System.Drawing.Size(672, 373);
-            this.personInfoWithFilter1.TabIndex = 0;
+          
             // 
             // frmFindPerson
             // 
@@ -77,7 +71,6 @@
             this.ClientSize = new System.Drawing.Size(696, 505);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.personInfoWithFilter1);
             this.Name = "frmFindPerson";
             this.Text = "frmFindPerson";
             this.ResumeLayout(false);
@@ -87,7 +80,7 @@
 
         #endregion
 
-        private Controlls.PersonInfoWithFilter personInfoWithFilter1;
+     
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
