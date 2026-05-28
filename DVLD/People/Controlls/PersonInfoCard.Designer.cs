@@ -1,6 +1,6 @@
 ﻿namespace DVLD
 {
-    partial class PersonUserControl1
+    partial class PersonInfoCard1
     {
         /// <summary> 
         /// Required designer variable.
@@ -78,7 +78,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(639, 285);
+            this.groupBox1.Size = new System.Drawing.Size(623, 285);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Person information";
@@ -277,13 +277,13 @@
             this.label2.TabIndex = 25;
             this.label2.Text = " Name:";
             // 
-            // PersonUserControl1
+            // PersonInfoCard1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Name = "PersonUserControl1";
-            this.Size = new System.Drawing.Size(647, 290);
+            this.Name = "PersonInfoCard1";
+            this.Size = new System.Drawing.Size(629, 290);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbFoto)).EndInit();

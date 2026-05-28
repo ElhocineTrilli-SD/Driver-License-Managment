@@ -30,16 +30,17 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
+            this.PersonInfoCard1 = new DVLD.PersonInfoCard1();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(276, 9);
+            this.label1.Location = new System.Drawing.Point(239, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 30);
+            this.label1.Size = new System.Drawing.Size(210, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Person Details";
             // 
@@ -59,21 +60,25 @@
             this.btnclose.Text = "Close";
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
-            // personUserControl11
+            // personInfoCard11
             // 
-          
+            this.PersonInfoCard1.Location = new System.Drawing.Point(30, 74);
+            this.PersonInfoCard1.Name = "personInfoCard11";
+            this.PersonInfoCard1.Size = new System.Drawing.Size(629, 290);
+            this.PersonInfoCard1.TabIndex = 3;
+            // 
             // ShowPersonDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(702, 419);
+            this.Controls.Add(this.PersonInfoCard1);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.label1);
             this.Name = "ShowPersonDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PersonDetails";
-           
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,5 +88,6 @@
 
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnclose;
+        private PersonInfoCard1 PersonInfoCard1;
     }
 }

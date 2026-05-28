@@ -15,9 +15,9 @@ using static DVLD.frmAddUpdatePerson;
 
 namespace DVLD
 {
-    public partial  class PersonUserControl1 : UserControl
+    public partial  class PersonInfoCard1 : UserControl
     {
-        public PersonUserControl1()
+        public PersonInfoCard1()
         {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace DVLD
             get { return _Person; }
         }
 
-        public void LoadPersonInfo(int PersonID)
+        public  void LoadPersonInfo(int PersonID)
         {
             _Person = clsPerson.Find(PersonID);
             if (_Person == null)

@@ -18,13 +18,13 @@ namespace DVLD
         public ShowPersonDetails(int PersonID)
         {
             InitializeComponent();
-            personUserControl11.LoadPersonInfo(PersonID); 
+           PersonInfoCard1.LoadPersonInfo(PersonID);
         }
 
         public ShowPersonDetails(string NationalNo)
         {
             InitializeComponent();
-            personUserControl11.LoadPersonInfo(NationalNo);
+            PersonInfoCard1.LoadPersonInfo(NationalNo);
         }
 
 

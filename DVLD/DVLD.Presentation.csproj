@@ -53,12 +53,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Globle Classes\clsUtil.cs" />
     <Compile Include="Globle Classes\clsValidation.cs" />
+    <Compile Include="People\Controlls\PersonInfoCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\Controlls\PersonInfoCard.Designer.cs">
+      <DependentUpon>PersonInfoCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\Controlls\PersonInfoWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="People\Controlls\PersonInfoWithFilter.Designer.cs">
+      <DependentUpon>PersonInfoWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="People\frmAdd&amp;UpdatePeople.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="People\frmAdd&amp;UpdatePeople.Designer.cs">
       <DependentUpon>frmAdd&amp;UpdatePeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="People\frmFindPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="People\frmFindPerson.Designer.cs">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
     </Compile>
     <Compile Include="People\frmManagePeopleScreen.cs">
       <SubType>Form</SubType>
@@ -78,16 +97,19 @@
     <Compile Include="People\ShowPersonDetails.Designer.cs">
       <DependentUpon>ShowPersonDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controlls\PersonInfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Controlls\PersonInfo.Designer.cs">
-      <DependentUpon>PersonInfo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="People\Controlls\PersonInfoCard.resx">
+      <DependentUpon>PersonInfoCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\Controlls\PersonInfoWithFilter.resx">
+      <DependentUpon>PersonInfoWithFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="People\frmAdd&amp;UpdatePeople.resx">
       <DependentUpon>frmAdd&amp;UpdatePeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="People\frmFindPerson.resx">
+      <DependentUpon>frmFindPerson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\frmManagePeopleScreen.resx">
       <DependentUpon>frmManagePeopleScreen.cs</DependentUpon>
@@ -97,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="People\ShowPersonDetails.resx">
       <DependentUpon>ShowPersonDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Controlls\PersonInfo.resx">
-      <DependentUpon>PersonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -298,6 +317,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\detain license.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magnifying-glass1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

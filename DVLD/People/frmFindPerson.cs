@@ -28,7 +28,7 @@ namespace DVLD.People
         private void guna2Button1_Click(object sender, EventArgs e)
         {
 
-            DataBack?.Invoke(this, personInfoWithFilter1.PersonID);
+            DataBack?.Invoke(this,PersonInfoCard1.PersonID);
 
         }
     }
