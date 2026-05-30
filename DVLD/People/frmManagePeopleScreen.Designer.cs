@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dgvPeopleList = new System.Windows.Forms.DataGridView();
+            this.dgvPeople = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showDetailsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
@@ -39,29 +39,30 @@
             this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblRecordCount = new System.Windows.Forms.Label();
+            this.lblRecordsCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbfiltering = new System.Windows.Forms.ComboBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtFilterValue = new System.Windows.Forms.TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnAddPeople = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeopleList)).BeginInit();
+            this.label3 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvPeopleList
+            // dgvPeople
             // 
-            this.dgvPeopleList.AllowUserToAddRows = false;
-            this.dgvPeopleList.AllowUserToDeleteRows = false;
-            this.dgvPeopleList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPeopleList.ContextMenuStrip = this.contextMenuStrip2;
-            this.dgvPeopleList.Location = new System.Drawing.Point(26, 182);
-            this.dgvPeopleList.Name = "dgvPeopleList";
-            this.dgvPeopleList.ReadOnly = true;
-            this.dgvPeopleList.Size = new System.Drawing.Size(1160, 291);
-            this.dgvPeopleList.TabIndex = 0;
+            this.dgvPeople.AllowUserToAddRows = false;
+            this.dgvPeople.AllowUserToDeleteRows = false;
+            this.dgvPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeople.ContextMenuStrip = this.contextMenuStrip2;
+            this.dgvPeople.Location = new System.Drawing.Point(26, 221);
+            this.dgvPeople.Name = "dgvPeople";
+            this.dgvPeople.ReadOnly = true;
+            this.dgvPeople.Size = new System.Drawing.Size(1160, 291);
+            this.dgvPeople.TabIndex = 0;
             // 
             // contextMenuStrip2
             // 
@@ -74,64 +75,60 @@
             this.sendEmailToolStripMenuItem,
             this.phoneCallToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(181, 176);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(178, 154);
             // 
             // showDetailsToolStripMenuItem1
             // 
             this.showDetailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.showDetailsToolStripMenuItem1.Image = global::DVLD.Properties.Resources.open_enrollment__1_;
             this.showDetailsToolStripMenuItem1.Name = "showDetailsToolStripMenuItem1";
-            this.showDetailsToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.showDetailsToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
             this.showDetailsToolStripMenuItem1.Text = "Show Details";
             this.showDetailsToolStripMenuItem1.Click += new System.EventHandler(this.showDetailsTool_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 6);
             // 
             // editToolStripMenuItem1
             // 
             this.editToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.editToolStripMenuItem1.Image = global::DVLD.Properties.Resources.addpeople;
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
             this.editToolStripMenuItem1.Text = "Add New Person";
             this.editToolStripMenuItem1.Click += new System.EventHandler(this.ADDTools_Click);
             // 
             // deleteToolStripMenuItem1
             // 
             this.deleteToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.deleteToolStripMenuItem1.Image = null;
             this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(180, 24);
+            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
             this.deleteToolStripMenuItem1.Text = "Edit";
             this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.EditTool_Click);
             // 
             // deleteToolStripMenuItem2
             // 
             this.deleteToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.deleteToolStripMenuItem2.Image = null;
             this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
-            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(180, 24);
+            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(177, 24);
             this.deleteToolStripMenuItem2.Text = "Delete";
             this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteTool_Click);
             // 
             // sendEmailToolStripMenuItem
             // 
             this.sendEmailToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.sendEmailToolStripMenuItem.Image = null;
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
             this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailTool_Click);
             // 
             // phoneCallToolStripMenuItem
             // 
             this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.phoneCallToolStripMenuItem.Image = null;
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
             this.phoneCallToolStripMenuItem.Text = "Phone Call";
             this.phoneCallToolStripMenuItem.Click += new System.EventHandler(this.phoneCallTool_Click);
             // 
@@ -139,27 +136,27 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(28, 476);
+            this.label1.Location = new System.Drawing.Point(32, 518);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "#Records: ";
             // 
-            // lblRecordCount
+            // lblRecordsCount
             // 
-            this.lblRecordCount.AutoSize = true;
-            this.lblRecordCount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordCount.Location = new System.Drawing.Point(116, 476);
-            this.lblRecordCount.Name = "lblRecordCount";
-            this.lblRecordCount.Size = new System.Drawing.Size(17, 19);
-            this.lblRecordCount.TabIndex = 3;
-            this.lblRecordCount.Text = "?";
+            this.lblRecordsCount.AutoSize = true;
+            this.lblRecordsCount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecordsCount.Location = new System.Drawing.Point(120, 518);
+            this.lblRecordsCount.Name = "lblRecordsCount";
+            this.lblRecordsCount.Size = new System.Drawing.Size(17, 19);
+            this.lblRecordsCount.TabIndex = 3;
+            this.lblRecordsCount.Text = "?";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 148);
+            this.label2.Location = new System.Drawing.Point(22, 187);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 22);
             this.label2.TabIndex = 4;
@@ -168,21 +165,21 @@
             // cbfiltering
             // 
             this.cbfiltering.FormattingEnabled = true;
-            this.cbfiltering.Location = new System.Drawing.Point(108, 151);
+            this.cbfiltering.Location = new System.Drawing.Point(120, 187);
             this.cbfiltering.Name = "cbfiltering";
             this.cbfiltering.Size = new System.Drawing.Size(161, 21);
             this.cbfiltering.TabIndex = 1;
             this.cbfiltering.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // txtSearch
+            // txtFilterValue
             // 
-            this.txtSearch.Location = new System.Drawing.Point(275, 152);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(137, 20);
-            this.txtSearch.TabIndex = 2;
-            this.txtSearch.Visible = false;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtToFind_TextChanged);
-            this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
+            this.txtFilterValue.Location = new System.Drawing.Point(287, 187);
+            this.txtFilterValue.Name = "txtFilterValue";
+            this.txtFilterValue.Size = new System.Drawing.Size(137, 20);
+            this.txtFilterValue.TabIndex = 2;
+            this.txtFilterValue.Visible = false;
+            this.txtFilterValue.TextChanged += new System.EventHandler(this.txtToFind_TextChanged);
+            this.txtFilterValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // guna2Button1
             // 
@@ -193,7 +190,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2Button1.Location = new System.Drawing.Point(739, 483);
+            this.guna2Button1.Location = new System.Drawing.Point(878, 518);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(155, 53);
             this.guna2Button1.TabIndex = 9;
@@ -204,7 +201,7 @@
             // 
             this.guna2CirclePictureBox1.Image = global::DVLD.Properties.Resources.Manage_People;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(525, 12);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(512, 3);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(184, 113);
@@ -217,34 +214,46 @@
             this.btnAddPeople.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAddPeople.BackgroundImage = global::DVLD.Properties.Resources.addpeople;
             this.btnAddPeople.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddPeople.Location = new System.Drawing.Point(739, 131);
+            this.btnAddPeople.Location = new System.Drawing.Point(441, 164);
             this.btnAddPeople.Name = "btnAddPeople";
             this.btnAddPeople.Size = new System.Drawing.Size(47, 45);
             this.btnAddPeople.TabIndex = 3;
             this.btnAddPeople.UseVisualStyleBackColor = true;
             this.btnAddPeople.Click += new System.EventHandler(this.btnAddPeople_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(506, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(229, 36);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Manage People";
+            // 
             // frmManagePeopleScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1191, 548);
+            this.ClientSize = new System.Drawing.Size(1205, 583);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2CirclePictureBox1);
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.txtFilterValue);
             this.Controls.Add(this.btnAddPeople);
             this.Controls.Add(this.cbfiltering);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblRecordCount);
+            this.Controls.Add(this.lblRecordsCount);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvPeopleList);
+            this.Controls.Add(this.dgvPeople);
             this.Name = "frmManagePeopleScreen";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage People";
             this.Load += new System.EventHandler(this.ManagePeople_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPeopleList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -254,13 +263,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvPeopleList;
+        private System.Windows.Forms.DataGridView dgvPeople;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblRecordCount;
+        private System.Windows.Forms.Label lblRecordsCount;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbfiltering;
         private System.Windows.Forms.Button btnAddPeople;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtFilterValue;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
@@ -271,5 +280,6 @@
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
     }
 }

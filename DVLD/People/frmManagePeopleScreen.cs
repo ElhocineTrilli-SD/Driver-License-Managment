@@ -18,6 +18,7 @@ namespace DVLD
         // Declare an event using the delegate
         public event handler DataBack;
 
+        private DataTable _dtPeople = clsPerson.GetallPeople();
 
         public frmManagePeopleScreen()
         {
@@ -26,13 +27,13 @@ namespace DVLD
         }
         private void _FillcbfilteringwithItems()
         {
-            cbfiltering.Items.Add("none");
-            cbfiltering.Items.Add("PersonID");
-            cbfiltering.Items.Add("NationalN");
-            cbfiltering.Items.Add("First name");
-            cbfiltering.Items.Add("Second name");
-            cbfiltering.Items.Add("Third name");
-            cbfiltering.Items.Add("Last name");
+            cbfiltering.Items.Add("None");
+            cbfiltering.Items.Add("Person ID");
+            cbfiltering.Items.Add("National No");
+            cbfiltering.Items.Add("First Name");
+            cbfiltering.Items.Add("Second Name");
+            cbfiltering.Items.Add("Third Name");
+            cbfiltering.Items.Add("Last Name");
             cbfiltering.Items.Add("Natinality");
             cbfiltering.Items.Add("Gender");
             cbfiltering.Items.Add("Phone");
@@ -43,13 +44,13 @@ namespace DVLD
         }
         public  void _RefrechPeopleList()
         {
-            dgvPeopleList.DataSource = clsPerson.GetallPeople();
+            dgvPeople.DataSource = _dtPeople;
             _RefrechRecordCount();
         }
         public void _RefrechRecordCount()
         {
-            int Records = dgvPeopleList.RowCount;
-            lblRecordCount.Text = Records.ToString();
+            int Records = dgvPeople.RowCount;
+            lblRecordsCount.Text = Records.ToString();
 
 
             DataBack?.Invoke(this, Records);
@@ -71,11 +72,13 @@ namespace DVLD
        
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cbfiltering.SelectedIndex != 0)
+            txtFilterValue.Visible = (cbfiltering.Text != "None");
+            if(txtFilterValue.Visible)
             {
-                txtSearch.Visible = true;
+                txtFilterValue.Text = "";
+                txtFilterValue.Focus();
             }
-            else { txtSearch.Visible = false; }
+            
 
            
 
@@ -83,44 +86,79 @@ namespace DVLD
         }
         private void txtToFind_TextChanged(object sender, EventArgs e)
         {
-            // Get the text entered by the user and convert it to lowercase
-            // to make the search case-insensitive
-            string searchValue = txtSearch.Text.ToLower();
-
-            // Get the CurrencyManager associated with the DataGridView data source
-            CurrencyManager currencyManager =
-            (CurrencyManager)BindingContext[dgvPeopleList.DataSource];
-
-            // Temporarily suspend data binding to avoid errors
-            // when hiding/showing rows
-            currencyManager.SuspendBinding();
-
-
-            foreach (DataGridViewRow row in dgvPeopleList.Rows)
+            string FilterColumn = "";
+            //Map Selected Filter to real Column name 
+            switch (cbfiltering.Text)
             {
-                // Skip the empty "new row" at the bottom of the DataGridView
-                if (row.IsNewRow)
-                    continue;
-                bool found = false;
+                case "Person ID":
+                    FilterColumn = "PersonID";
+                    break;
 
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    // Check if the cell contains a value
-                    // and if that value contains the search text
-                    if (cell.Value != null &&
-                        cell.Value.ToString().ToLower().Contains(searchValue))
-                    {
-                        found = true;
-                        break;// Stop searching in this row once a match is found
-                    }
-                   
-                }
+                case "National No.":
+                    FilterColumn = "NationalNo";
+                    break;
 
-                row.Visible = found;
+                case "First Name":
+                    FilterColumn = "FirstName";
+                    break;
+
+                case "Second Name":
+                    FilterColumn = "SecondName";
+                    break;
+
+                case "Third Name":
+                    FilterColumn = "ThirdName";
+                    break;
+
+                case "Last Name":
+                    FilterColumn = "LastName";
+                    break;
+
+                case "Nationality":
+                    FilterColumn = "CountryName";
+                    break;
+
+                case "Gendor":
+                    FilterColumn = "GendorCaption";
+                    break;
+
+                case "Phone":
+                    FilterColumn = "Phone";
+                    break;
+
+                case "Email":
+                    FilterColumn = "Email";
+                    break;
+
+                default:
+                    FilterColumn = "None";
+                    break;
 
             }
-            // Resume data binding after finishing the filtering process
-            currencyManager.ResumeBinding();
+
+
+
+
+
+            //Reset the filters in case nothing selected or filter value conains nothing.
+            if (txtFilterValue.Text.Trim() == "" || FilterColumn == "None")
+            {
+                _dtPeople.DefaultView.RowFilter = "";
+                lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
+                return;
+            }
+
+            if (FilterColumn == "PersonID")
+                //in this case we deal with integer not string.
+
+                _dtPeople.DefaultView.RowFilter = string.Format("[{0}] = {1}", FilterColumn, txtFilterValue.Text.Trim());
+            else
+                _dtPeople.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", FilterColumn, txtFilterValue.Text.Trim());
+
+            lblRecordsCount.Text = dgvPeople.Rows.Count.ToString();
+
+
+
         }
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -142,10 +180,10 @@ namespace DVLD
         private void deleteTool_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("are you sure do you want to delete Person " +
-          "[" + dgvPeopleList.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+          "[" + dgvPeople.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-
-                if (clsPerson.DeletePerson((int)dgvPeopleList.CurrentRow.Cells[0].Value))
+                int PersonID = (int)dgvPeople.CurrentRow.Cells[0].Value;
+                if (clsPerson.DeletePerson(PersonID))
                 {
                     MessageBox.Show("Contact Deleted Successfully.");
                     _RefrechPeopleList();
@@ -165,12 +203,14 @@ namespace DVLD
         }
         private void showDetailsTool_Click(object sender, EventArgs e)
         {
-            Form form = new ShowPersonDetails((int)dgvPeopleList.CurrentRow.Cells[0].Value);
+            int PersonID = (int)dgvPeople.CurrentRow.Cells[0].Value;
+            Form form = new ShowPersonDetails(PersonID);
             form.ShowDialog();
         }
         private void EditTool_Click(object sender, EventArgs e)
         {
-            Form frm = new frmAddUpdatePerson((int)dgvPeopleList.CurrentRow.Cells[0].Value);
+            int PersonID = (int)dgvPeople.CurrentRow.Cells[0].Value;
+            Form frm = new frmAddUpdatePerson(PersonID);
             frm.ShowDialog();
             _RefrechPeopleList();
         }
