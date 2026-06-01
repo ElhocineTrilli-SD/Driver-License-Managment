@@ -142,6 +142,7 @@ namespace DVLD
             this.linklblForgetPass.TabIndex = 8;
             this.linklblForgetPass.TabStop = true;
             this.linklblForgetPass.Text = "Forget Password ?";
+            this.linklblForgetPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblForgetPass_LinkClicked);
             // 
             // btnLogIn
             // 

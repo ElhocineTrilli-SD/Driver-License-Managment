@@ -16,5 +16,11 @@ namespace DVLD
         {
             InitializeComponent();
         }
+
+        private void linklblForgetPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        }
     }
 }
