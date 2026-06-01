@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\guna.ui2.winforms.2.0.4.7\lib\net40\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\guna.ui2.winforms.2.0.4.7\lib\net45\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Globle Classes\clsUtil.cs" />
     <Compile Include="Globle Classes\clsValidation.cs" />
     <Compile Include="People\Controlls\PersonInfoCard.cs">
@@ -99,6 +105,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="People\Controlls\PersonInfoCard.resx">
       <DependentUpon>PersonInfoCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,10 +156,6 @@
     <None Include="Resources\addpeople.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
-      <Project>{c4581dbe-4609-46d6-a881-29b7333cbd2d}</Project>
-      <Name>BusinessLayer</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DVLD_BUSINESS\DVLD.Business.csproj">
       <Project>{7739fd20-b904-4422-8bca-a32e8b24cd48}</Project>
       <Name>DVLD.Business</Name>
@@ -323,6 +328,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add-user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Users\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\locked-computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
