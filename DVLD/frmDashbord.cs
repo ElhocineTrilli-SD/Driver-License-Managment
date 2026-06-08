@@ -1,4 +1,5 @@
-﻿using DVLD_BUSINESS;
+﻿using DVLD.Globle_Classes;
+using DVLD_BUSINESS;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,12 @@ namespace DVLD
 {
     public partial class frmDashbord : Form
     {
-        public frmDashbord()
+       
+        frmLogIn _frmLogin;
+        public frmDashbord(frmLogIn frm)
         {
             InitializeComponent();
+            _frmLogin = frm;
         }
 
         private void ActiveButton(Guna2Button btn)
@@ -187,7 +191,9 @@ namespace DVLD
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            GlobalClass.CurrentUser = null;
+            _frmLogin.Show();
+            this.Close();
 
         }
 

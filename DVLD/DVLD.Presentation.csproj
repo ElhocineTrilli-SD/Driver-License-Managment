@@ -53,14 +53,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogIn.cs">
+    <Compile Include="login\frmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogIn.Designer.cs">
+    <Compile Include="login\frmLogIn.Designer.cs">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Globle Classes\clsUtil.cs" />
     <Compile Include="Globle Classes\clsValidation.cs" />
+    <Compile Include="Globle Classes\GlobalClass.cs" />
     <Compile Include="People\Controlls\PersonInfoCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,7 +106,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmLogIn.resx">
+    <EmbeddedResource Include="login\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="People\Controlls\PersonInfoCard.resx">
