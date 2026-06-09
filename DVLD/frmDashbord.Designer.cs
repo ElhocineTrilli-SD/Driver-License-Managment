@@ -171,7 +171,7 @@
             this.sighToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.AccountMenu.Name = "AccountMenu";
-            this.AccountMenu.Size = new System.Drawing.Size(192, 110);
+            this.AccountMenu.Size = new System.Drawing.Size(192, 88);
             // 
             // currentUserInfoToolStripMenuItem
             // 

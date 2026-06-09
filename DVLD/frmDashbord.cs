@@ -1,4 +1,5 @@
 ﻿using DVLD.Globle_Classes;
+using DVLD.Users;
 using DVLD_BUSINESS;
 using Guna.UI2.WinForms;
 using System;
@@ -92,8 +93,9 @@ namespace DVLD
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+          //  MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+          frmManageUsers frm = new frmManageUsers();
+          frm.ShowDialog();
 
         }
 
