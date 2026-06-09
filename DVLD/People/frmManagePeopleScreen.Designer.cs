@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.dgvPeople = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showDetailsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,9 +42,11 @@
             this.cbfiltering = new System.Windows.Forms.ComboBox();
             this.txtFilterValue = new System.Windows.Forms.TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnAddPeople = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.showDetailsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeople)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -77,28 +77,10 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(178, 154);
             // 
-            // showDetailsToolStripMenuItem1
-            // 
-            this.showDetailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.showDetailsToolStripMenuItem1.Image = global::DVLD.Properties.Resources.open_enrollment__1_;
-            this.showDetailsToolStripMenuItem1.Name = "showDetailsToolStripMenuItem1";
-            this.showDetailsToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
-            this.showDetailsToolStripMenuItem1.Text = "Show Details";
-            this.showDetailsToolStripMenuItem1.Click += new System.EventHandler(this.showDetailsTool_Click);
-            // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 6);
-            // 
-            // editToolStripMenuItem1
-            // 
-            this.editToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.editToolStripMenuItem1.Image = global::DVLD.Properties.Resources.addpeople;
-            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
-            this.editToolStripMenuItem1.Text = "Add New Person";
-            this.editToolStripMenuItem1.Click += new System.EventHandler(this.ADDTools_Click);
             // 
             // deleteToolStripMenuItem1
             // 
@@ -197,6 +179,17 @@
             this.guna2Button1.Text = "Close";
             this.guna2Button1.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(506, 119);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(229, 36);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Manage People";
+            // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = global::DVLD.Properties.Resources.Manage_People;
@@ -221,16 +214,23 @@
             this.btnAddPeople.UseVisualStyleBackColor = true;
             this.btnAddPeople.Click += new System.EventHandler(this.btnAddPeople_Click);
             // 
-            // label3
+            // showDetailsToolStripMenuItem1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(506, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(229, 36);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Manage People";
+            this.showDetailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.showDetailsToolStripMenuItem1.Image = global::DVLD.Properties.Resources.open_enrollment__1_;
+            this.showDetailsToolStripMenuItem1.Name = "showDetailsToolStripMenuItem1";
+            this.showDetailsToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
+            this.showDetailsToolStripMenuItem1.Text = "Show Details";
+            this.showDetailsToolStripMenuItem1.Click += new System.EventHandler(this.showDetailsTool_Click);
+            // 
+            // editToolStripMenuItem1
+            // 
+            this.editToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.editToolStripMenuItem1.Image = global::DVLD.Properties.Resources.addpeople;
+            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
+            this.editToolStripMenuItem1.Text = "Add New Person";
+            this.editToolStripMenuItem1.Click += new System.EventHandler(this.ADDTools_Click);
             // 
             // frmManagePeopleScreen
             // 
