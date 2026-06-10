@@ -142,7 +142,7 @@ namespace DVLD_BUSINESS
 
             public static clsPerson Find(string NationalNo)
             {
-                string NatinalN = "", Firstname = "", secondname = "", thirdname = "";
+               string Firstname = "", secondname = "", thirdname = "";
                 string lastname = "", Email = "", Phone = "", Address = "";
                 string ImagePath = "";
                 DateTime DateOfBirth = DateTime.Now;
@@ -152,7 +152,7 @@ namespace DVLD_BUSINESS
                 bool IsFound = clsPersonData.GetPersonInfoByNationalN
 
                     (
-                     NatinalN, ref ID, ref Firstname, ref secondname, ref thirdname,
+                     NationalNo, ref ID, ref Firstname, ref secondname, ref thirdname,
                      ref lastname, ref Email,
                      ref Phone, ref Address, ref DateOfBirth, ref gender,
                      ref ImagePath, ref NationalityCountryID
@@ -161,7 +161,7 @@ namespace DVLD_BUSINESS
 
                 if (IsFound)
                     return new clsPerson(
-                        ID, NatinalN, Firstname, secondname,
+                        ID,NationalNo, Firstname, secondname,
                         thirdname, lastname, Email, Phone,
                         Address, DateOfBirth, gender, ImagePath,
                         NationalityCountryID

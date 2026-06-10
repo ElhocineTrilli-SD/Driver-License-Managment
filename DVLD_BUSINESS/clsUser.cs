@@ -50,7 +50,7 @@ namespace DVLD_BUSINESS
 
         private bool _AddNewUser()
         {
-            this.UserID = clsUserData.AddNewUser(this.PersonInfo.PersonID, this.UserName
+            this.UserID = clsUserData.AddNewUser(this.PersonID, this.UserName
                                                 , this.Password, this.IsActive);
 
             return (this.UserID != -1);
@@ -167,7 +167,10 @@ namespace DVLD_BUSINESS
             return clsUserData.DeleteUser(UserID);
         }
 
-
+        public static bool isUserExistForPersonID(int PersonID)
+        {
+            return clsUserData.IsUserExistForPersonID(PersonID);
+        }
 
 
 

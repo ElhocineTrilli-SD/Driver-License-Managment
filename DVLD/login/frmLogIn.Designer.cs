@@ -177,7 +177,7 @@ namespace DVLD
             // 
             this.txtUsername.BorderRadius = 10;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsername.DefaultText = "     Enter Your User Name";
+            this.txtUsername.DefaultText = "   ";
             this.txtUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -188,7 +188,7 @@ namespace DVLD
             this.txtUsername.IconLeft = global::DVLD.Properties.Resources.user__1_;
             this.txtUsername.Location = new System.Drawing.Point(388, 140);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PlaceholderText = "";
+            this.txtUsername.PlaceholderText = "  Enter Your User Name";
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(381, 52);
             this.txtUsername.TabIndex = 11;
@@ -197,7 +197,7 @@ namespace DVLD
             // 
             this.txtPassword.BorderRadius = 10;
             this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassword.DefaultText = "     Enter Your User Password";
+            this.txtPassword.DefaultText = "    ";
             this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -209,7 +209,7 @@ namespace DVLD
             this.txtPassword.IconRight = global::DVLD.Properties.Resources.visible;
             this.txtPassword.Location = new System.Drawing.Point(388, 228);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PlaceholderText = "";
+            this.txtPassword.PlaceholderText = " Enter Your User Password";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(381, 52);
             this.txtPassword.TabIndex = 10;
