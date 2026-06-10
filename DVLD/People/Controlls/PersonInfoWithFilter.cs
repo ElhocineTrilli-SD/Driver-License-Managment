@@ -68,13 +68,13 @@ namespace DVLD.People.Controlls
 
         public int PersonID
         {
-            get { return PersonInfoCard1.PersonID; }
+            get { return PersonInfoCard01.PersonID; }
             
         }
 
         public clsPerson SelectedPersonInfo
         {
-            get { return PersonInfoCard1.SelectedPersonInfo; }
+            get { return PersonInfoCard01.SelectedPersonInfo; }
         }
 
         public void LoadPersonInfo(int PersonID)
@@ -89,12 +89,13 @@ namespace DVLD.People.Controlls
            switch(cbFilterBy.Text)
             {
                 case "PersonID":
-                    PersonInfoCard1.LoadPersonInfo(int.Parse(txtFilterValue.Text));
+                    PersonInfoCard01.LoadPersonInfo(int.Parse(txtFilterValue.Text));
 
                     break;
 
                 case "NationalNo":
-                    PersonInfoCard1.LoadPersonInfo(txtFilterValue.Text);
+                
+                    PersonInfoCard01.LoadPersonInfo(txtFilterValue.Text.Trim());
 
                     break;
 
@@ -107,8 +108,8 @@ namespace DVLD.People.Controlls
             }
 
             if (OnPersonSelected != null && FilterEnabled)
-
-                OnPersonSelected(PersonInfoCard1.PersonID);
+              //  if (PersonInfoCard1 != null)
+                    OnPersonSelected(PersonInfoCard01.PersonID);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -132,16 +133,16 @@ namespace DVLD.People.Controlls
 
         private void txtFilterValue_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtFilterValue.Text.Trim()))
-            {
-                e.Cancel = true;
-               errorProvider1.SetError(txtFilterValue, "This field is required!");
-            }
-            else
-            {
-                //e.Cancel = false;
-                errorProvider1.SetError(txtFilterValue, null);
-            }
+            //if (string.IsNullOrEmpty(txtFilterValue.Text.Trim()))
+            //{
+            //    e.Cancel = true;
+            //   errorProvider1.SetError(txtFilterValue, "This field is required!");
+            //}
+            //else
+            //{
+            //    //e.Cancel = false;
+            //    errorProvider1.SetError(txtFilterValue, null);
+            //}
             
         }
 
@@ -158,7 +159,7 @@ namespace DVLD.People.Controlls
         {
             cbFilterBy.SelectedIndex = 1;
             txtFilterValue.Text = PersonID.ToString();
-           PersonInfoCard1.LoadPersonInfo(PersonID);
+           PersonInfoCard01.LoadPersonInfo(PersonID);
         }
 
         public void FilterFocus()

@@ -63,7 +63,7 @@
             // personInfoWithFilter11
             // 
             this.personInfoWithFilter11.FilterEnabled = true;
-            this.personInfoWithFilter11.Location = new System.Drawing.Point(12, 66);
+            this.personInfoWithFilter11.Location = new System.Drawing.Point(25, 66);
             this.personInfoWithFilter11.Name = "personInfoWithFilter11";
             this.personInfoWithFilter11.ShowAddPerson = true;
             this.personInfoWithFilter11.Size = new System.Drawing.Size(637, 377);

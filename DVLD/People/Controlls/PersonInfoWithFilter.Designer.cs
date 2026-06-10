@@ -32,11 +32,11 @@
             this.gbPersonFilter = new System.Windows.Forms.GroupBox();
             this.cbFilterBy = new System.Windows.Forms.ComboBox();
             this.btnAddNewPerson = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.txtFilterValue = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.personInfoCard11 = new DVLD.PersonInfoCard1();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.PersonInfoCard01 = new DVLD.PersonInfoCard1();
             this.gbPersonFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -85,6 +85,25 @@
             this.btnAddNewPerson.TabIndex = 4;
             this.btnAddNewPerson.Click += new System.EventHandler(this.btnAddNewPerson_Click);
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BorderRadius = 10;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.White;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::DVLD.Properties.Resources.magnifying_glass1;
+            this.btnSearch.ImageOffset = new System.Drawing.Point(1, 0);
+            this.btnSearch.ImageSize = new System.Drawing.Size(28, 28);
+            this.btnSearch.Location = new System.Drawing.Point(458, 23);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(35, 35);
+            this.btnSearch.TabIndex = 3;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // txtFilterValue
             // 
             this.txtFilterValue.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -118,37 +137,18 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // personInfoCard11
+            // PersonInfoCard01
             // 
-            this.personInfoCard11.Location = new System.Drawing.Point(3, 99);
-            this.personInfoCard11.Name = "personInfoCard11";
-            this.personInfoCard11.Size = new System.Drawing.Size(623, 275);
-            this.personInfoCard11.TabIndex = 2;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BorderRadius = 10;
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.FillColor = System.Drawing.Color.White;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::DVLD.Properties.Resources.magnifying_glass1;
-            this.btnSearch.ImageOffset = new System.Drawing.Point(1, 0);
-            this.btnSearch.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnSearch.Location = new System.Drawing.Point(458, 23);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(35, 35);
-            this.btnSearch.TabIndex = 3;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.PersonInfoCard01.Location = new System.Drawing.Point(3, 99);
+            this.PersonInfoCard01.Name = "PersonInfoCard01";
+            this.PersonInfoCard01.Size = new System.Drawing.Size(623, 275);
+            this.PersonInfoCard01.TabIndex = 2;
             // 
             // PersonInfoWithFilter1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.personInfoCard11);
+            this.Controls.Add(this.PersonInfoCard01);
             this.Controls.Add(this.gbPersonFilter);
             this.Name = "PersonInfoWithFilter1";
             this.Size = new System.Drawing.Size(637, 377);
@@ -170,6 +170,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbFilterBy;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private PersonInfoCard1 personInfoCard11;
+        private PersonInfoCard1 PersonInfoCard01;
     }
 }
