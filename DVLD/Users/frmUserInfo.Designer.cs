@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ctrlUserCard1 = new DVLD.Users.Controlls_User.ctrlUserCard();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.ctrlUserCard1 = new DVLD.Users.Controlls_User.ctrlUserCard();
             this.SuspendLayout();
-            // 
-            // ctrlUserCard1
-            // 
-            this.ctrlUserCard1.Location = new System.Drawing.Point(8, 12);
-            this.ctrlUserCard1.Name = "ctrlUserCard1";
-            this.ctrlUserCard1.Size = new System.Drawing.Size(660, 396);
-            this.ctrlUserCard1.TabIndex = 0;
             // 
             // guna2Button1
             // 
@@ -55,6 +48,13 @@
             this.guna2Button1.Text = "Close";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
+            // ctrlUserCard1
+            // 
+            this.ctrlUserCard1.Location = new System.Drawing.Point(8, 12);
+            this.ctrlUserCard1.Name = "ctrlUserCard1";
+            this.ctrlUserCard1.Size = new System.Drawing.Size(660, 396);
+            this.ctrlUserCard1.TabIndex = 0;
+            // 
             // frmUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -65,6 +65,7 @@
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.ctrlUserCard1);
             this.Name = "frmUserInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Info";
             this.Load += new System.EventHandler(this.frmUserInfo_Load);
             this.ResumeLayout(false);

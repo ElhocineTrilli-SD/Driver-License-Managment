@@ -181,7 +181,11 @@ namespace DVLD
 
         private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //  MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            int UserID = GlobalClass.CurrentUser.UserID;
+            frmUserInfo frm = new frmUserInfo(UserID);
+            frm.ShowDialog();
+
 
         }
 

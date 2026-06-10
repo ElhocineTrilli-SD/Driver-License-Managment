@@ -32,7 +32,6 @@
             this.tbUserInfo = new Guna.UI2.WinForms.Guna2TabControl();
             this.tbPersonalInfo = new System.Windows.Forms.TabPage();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
-            this.personInfoWithFilter11 = new DVLD.People.Controlls.PersonInfoWithFilter1();
             this.tbLogIn_Info = new System.Windows.Forms.TabPage();
             this.txtConfirm_Password = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,6 +46,7 @@
             this.btnsave = new Guna.UI2.WinForms.Guna2Button();
             this.lblTitel = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.personInfoWithFilter11 = new DVLD.People.Controlls.PersonInfoWithFilter1();
             this.tbUserInfo.SuspendLayout();
             this.tbPersonalInfo.SuspendLayout();
             this.tbLogIn_Info.SuspendLayout();
@@ -109,15 +109,6 @@
             this.btnNext.TabIndex = 22;
             this.btnNext.Text = "Next";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
-            // personInfoWithFilter11
-            // 
-            this.personInfoWithFilter11.FilterEnabled = true;
-            this.personInfoWithFilter11.Location = new System.Drawing.Point(3, 6);
-            this.personInfoWithFilter11.Name = "personInfoWithFilter11";
-            this.personInfoWithFilter11.ShowAddPerson = true;
-            this.personInfoWithFilter11.Size = new System.Drawing.Size(695, 370);
-            this.personInfoWithFilter11.TabIndex = 0;
             // 
             // tbLogIn_Info
             // 
@@ -216,11 +207,11 @@
             // txtUserID
             // 
             this.txtUserID.AutoSize = true;
-            this.txtUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.txtUserID.ForeColor = System.Drawing.Color.Red;
-            this.txtUserID.Location = new System.Drawing.Point(186, 91);
+            this.txtUserID.Location = new System.Drawing.Point(188, 87);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(24, 18);
+            this.txtUserID.Size = new System.Drawing.Size(23, 19);
             this.txtUserID.TabIndex = 50;
             this.txtUserID.Text = "??";
             // 
@@ -310,6 +301,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // personInfoWithFilter11
+            // 
+            this.personInfoWithFilter11.FilterEnabled = true;
+            this.personInfoWithFilter11.Location = new System.Drawing.Point(3, 6);
+            this.personInfoWithFilter11.Name = "personInfoWithFilter11";
+            this.personInfoWithFilter11.ShowAddPerson = true;
+            this.personInfoWithFilter11.Size = new System.Drawing.Size(695, 370);
+            this.personInfoWithFilter11.TabIndex = 0;
+            // 
             // frmAdd_Update_Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +321,7 @@
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.tbUserInfo);
             this.Name = "frmAdd_Update_Users";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add/Update User";
             this.Activated += new System.EventHandler(this.frmAdd_Update_Users_Activated);
             this.Load += new System.EventHandler(this.frmAdd_Update_Users_Load);

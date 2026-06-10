@@ -154,6 +154,7 @@
             this.guna2Button6.FillColor = System.Drawing.Color.MidnightBlue;
             this.guna2Button6.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
+            this.guna2Button6.Image = global::DVLD.Properties.Resources.set_removebg_preview;
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.Location = new System.Drawing.Point(0, 407);
             this.guna2Button6.Name = "guna2Button6";
@@ -164,6 +165,7 @@
             // 
             // AccountMenu
             // 
+            this.AccountMenu.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold);
             this.AccountMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.currentUserInfoToolStripMenuItem,
             this.toolStripMenuItem2,
@@ -171,13 +173,13 @@
             this.sighToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.AccountMenu.Name = "AccountMenu";
-            this.AccountMenu.Size = new System.Drawing.Size(192, 88);
+            this.AccountMenu.Size = new System.Drawing.Size(230, 106);
             // 
             // currentUserInfoToolStripMenuItem
             // 
-            this.currentUserInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.currentUserInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.currentUserInfoToolStripMenuItem.Name = "currentUserInfoToolStripMenuItem";
-            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.currentUserInfoToolStripMenuItem.Size = new System.Drawing.Size(229, 30);
             this.currentUserInfoToolStripMenuItem.Text = "Current User Info";
             this.currentUserInfoToolStripMenuItem.Click += new System.EventHandler(this.currentUserInfoToolStripMenuItem_Click);
             // 
@@ -188,9 +190,9 @@
             // 
             // changePasswordToolStripMenuItem
             // 
-            this.changePasswordToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.changePasswordToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(229, 30);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
@@ -201,9 +203,9 @@
             // 
             // signOutToolStripMenuItem
             // 
-            this.signOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.signOutToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(191, 24);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(229, 30);
             this.signOutToolStripMenuItem.Text = "Sign Out";
             this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
@@ -217,6 +219,7 @@
             this.guna2Button5.FillColor = System.Drawing.Color.MidnightBlue;
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.Image = global::DVLD.Properties.Resources.Exit2_removebg_preview;
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.Location = new System.Drawing.Point(3, 504);
             this.guna2Button5.Name = "guna2Button5";
@@ -235,6 +238,7 @@
             this.guna2Button4.FillColor = System.Drawing.Color.MidnightBlue;
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Image = global::DVLD.Properties.Resources.people_removebg_preview;
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2Button4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -255,6 +259,7 @@
             this.guna2Button3.FillColor = System.Drawing.Color.MidnightBlue;
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Image = global::DVLD.Properties.Resources.people_removebg_preview;
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2Button3.Location = new System.Drawing.Point(3, 214);
@@ -274,6 +279,7 @@
             this.guna2Button2.FillColor = System.Drawing.Color.MidnightBlue;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Image = global::DVLD.Properties.Resources.people_removebg_preview;
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button2.ImageSize = new System.Drawing.Size(30, 30);
             this.guna2Button2.Location = new System.Drawing.Point(-1, 273);
@@ -294,6 +300,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.MidnightBlue;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Image = global::DVLD.Properties.Resources.open_enrollment__1_;
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button1.Location = new System.Drawing.Point(0, 155);
             this.guna2Button1.Name = "guna2Button1";
@@ -311,7 +318,7 @@
             this.manageApplicationTypesToolStripMenuItem,
             this.manageTestTypesToolStripMenuItem});
             this.ApplicationMenueStripe.Name = "ApplicationMenueStripe";
-            this.ApplicationMenueStripe.Size = new System.Drawing.Size(253, 124);
+            this.ApplicationMenueStripe.Size = new System.Drawing.Size(302, 154);
             // 
             // drivingLicenseServicesToolStripMenuItem
             // 
@@ -323,9 +330,9 @@
             this.toolStripMenuItem1,
             this.releaseToolStripMenuItem,
             this.retakeTestToolStripMenuItem});
-            this.drivingLicenseServicesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.drivingLicenseServicesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.drivingLicenseServicesToolStripMenuItem.Name = "drivingLicenseServicesToolStripMenuItem";
-            this.drivingLicenseServicesToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
+            this.drivingLicenseServicesToolStripMenuItem.Size = new System.Drawing.Size(278, 30);
             this.drivingLicenseServicesToolStripMenuItem.Text = "Driving License services";
             // 
             // newDrivingLicenseToolStripMenuItem
@@ -378,9 +385,9 @@
             this.manageApplicationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.localDrivingLicenseApplicationToolStripMenuItem,
             this.intenationalDrivingLicenseApplicationToolStripMenuItem});
-            this.manageApplicationsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.manageApplicationsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
-            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
+            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(278, 30);
             this.manageApplicationsToolStripMenuItem.Text = "Manage Applications";
             // 
             // localDrivingLicenseApplicationToolStripMenuItem
@@ -403,9 +410,9 @@
             this.manageDetainedLicensesToolStripMenuItem,
             this.detainLicenseToolStripMenuItem,
             this.releaseDetainedLicenseToolStripMenuItem});
-            this.detainLicensesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.detainLicensesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
-            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
+            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(301, 30);
             this.detainLicensesToolStripMenuItem.Text = "Detain Licenses";
             // 
             // manageDetainedLicensesToolStripMenuItem
@@ -431,16 +438,16 @@
             // 
             // manageApplicationTypesToolStripMenuItem
             // 
-            this.manageApplicationTypesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.manageApplicationTypesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
-            this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
+            this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(301, 30);
             this.manageApplicationTypesToolStripMenuItem.Text = "Manage Application Types";
             // 
             // manageTestTypesToolStripMenuItem
             // 
-            this.manageTestTypesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.manageTestTypesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
-            this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
+            this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(301, 30);
             this.manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
             // 
             // guna2Panel2
@@ -602,6 +609,7 @@
             // UserPicture
             // 
             this.UserPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UserPicture.ContextMenuStrip = this.AccountMenu;
             this.UserPicture.Image = global::DVLD.Properties.Resources.mypic;
             this.UserPicture.ImageRotate = 0F;
             this.UserPicture.Location = new System.Drawing.Point(611, 12);

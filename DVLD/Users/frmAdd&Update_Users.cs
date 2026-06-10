@@ -151,7 +151,7 @@ namespace DVLD.Users
 
             if (_User.Save())
             {
-                lblUserID.Text = _User.UserID.ToString();
+               txtUserID.Text = _User.UserID.ToString();
                 //change form mode to update.
                 _Mode = enMode.Update;
                 lblTitel.Text = "Update User";
