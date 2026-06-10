@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pbUsers = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnAddUser = new System.Windows.Forms.Button();
             this.txtFilterValueUser = new System.Windows.Forms.TextBox();
             this.cbfilterUsers = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,22 +48,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.cbIsActive = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsers)).BeginInit();
+            this.btnAddUser = new System.Windows.Forms.Button();
+            this.pbUsers = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.contextMenuStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsers)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pbUsers
-            // 
-            this.pbUsers.Image = global::DVLD.Properties.Resources.Manage_People;
-            this.pbUsers.ImageRotate = 0F;
-            this.pbUsers.Location = new System.Drawing.Point(316, 12);
-            this.pbUsers.Name = "pbUsers";
-            this.pbUsers.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pbUsers.Size = new System.Drawing.Size(184, 113);
-            this.pbUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbUsers.TabIndex = 9;
-            this.pbUsers.TabStop = false;
             // 
             // label3
             // 
@@ -77,17 +65,6 @@
             this.label3.Size = new System.Drawing.Size(209, 36);
             this.label3.TabIndex = 11;
             this.label3.Text = "Manage Users";
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAddUser.BackgroundImage = global::DVLD.Properties.Resources.addpeople;
-            this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddUser.Location = new System.Drawing.Point(717, 128);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(71, 66);
-            this.btnAddUser.TabIndex = 12;
-            this.btnAddUser.UseVisualStyleBackColor = true;
             // 
             // txtFilterValueUser
             // 
@@ -262,6 +239,30 @@
             this.cbIsActive.TabIndex = 20;
             this.cbIsActive.SelectedIndexChanged += new System.EventHandler(this.cbIsActive_SelectedIndexChanged);
             // 
+            // btnAddUser
+            // 
+            this.btnAddUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAddUser.BackgroundImage = global::DVLD.Properties.Resources.addpeople;
+            this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddUser.Location = new System.Drawing.Point(717, 128);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(71, 66);
+            this.btnAddUser.TabIndex = 12;
+            this.btnAddUser.UseVisualStyleBackColor = true;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
+            // pbUsers
+            // 
+            this.pbUsers.Image = global::DVLD.Properties.Resources.Manage_People;
+            this.pbUsers.ImageRotate = 0F;
+            this.pbUsers.Location = new System.Drawing.Point(316, 12);
+            this.pbUsers.Name = "pbUsers";
+            this.pbUsers.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pbUsers.Size = new System.Drawing.Size(184, 113);
+            this.pbUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUsers.TabIndex = 9;
+            this.pbUsers.TabStop = false;
+            // 
             // frmManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,9 +284,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manage Users";
             this.Load += new System.EventHandler(this.frmManageUsers_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.contextMenuStrip2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbUsers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

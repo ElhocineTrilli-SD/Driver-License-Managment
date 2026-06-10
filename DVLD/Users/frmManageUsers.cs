@@ -241,5 +241,11 @@ namespace DVLD.Users
             if (cbfilterUsers.Text == "Person ID" || cbfilterUsers.Text == "User ID")
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            frmAdd_Update_Users frm = new frmAdd_Update_Users();
+            frm.ShowDialog();
+        }
     }
 }
