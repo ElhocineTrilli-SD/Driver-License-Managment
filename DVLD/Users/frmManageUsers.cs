@@ -143,7 +143,11 @@ namespace DVLD.Users
 
         private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //  MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            int UserID = (int)dgvUser.CurrentRow.Cells[0].Value;
+
+            frmAdd_Update_Users frm = new frmAdd_Update_Users(UserID);
+            frm.ShowDialog();
 
         }
 
@@ -155,8 +159,10 @@ namespace DVLD.Users
 
         private void showDetailsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            int UserID = (int)dgvUser.CurrentRow.Cells[0].Value;
+            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            frmUserInfo frm = new frmUserInfo(UserID);
+            frm.ShowDialog();
         }
 
         private void txtFilterValueUser_TextChanged(object sender, EventArgs e)
