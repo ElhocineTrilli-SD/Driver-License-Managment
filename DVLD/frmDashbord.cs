@@ -191,8 +191,11 @@ namespace DVLD
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready",
+            //MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            int UserID = GlobalClass.CurrentUser.UserID;
+            frmChangePassword frm = new frmChangePassword(UserID);
+            frm.ShowDialog();
         }
 
         private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
