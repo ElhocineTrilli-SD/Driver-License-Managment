@@ -1,4 +1,5 @@
-﻿using DVLD.Globle_Classes;
+﻿using DVLD.Application.ApplicationType;
+using DVLD.Globle_Classes;
 using DVLD.Users;
 using DVLD_BUSINESS;
 using Guna.UI2.WinForms;
@@ -216,6 +217,12 @@ namespace DVLD
 
             AccountMenu.Show(UserPicture, 0, UserPicture.Height);
 
+        }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageApplicationType frm = new frmManageApplicationType();
+            frm.ShowDialog();
         }
     }
 }
