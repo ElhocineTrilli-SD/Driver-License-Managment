@@ -158,6 +158,7 @@ namespace DVLD
             // 
             // btnLogIn
             // 
+            this.btnLogIn.BorderRadius = 10;
             this.btnLogIn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogIn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogIn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
