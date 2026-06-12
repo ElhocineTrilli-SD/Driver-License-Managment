@@ -129,9 +129,15 @@ namespace DVLD.Users
 
         }
 
-        private void phoneCallToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChangePass_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //change pass
+
+            int UserID = (int)dgvUser.CurrentRow.Cells[0].Value;
+
+           frmChangePassword frm = new frmChangePassword(UserID);
+            frm.ShowDialog();
 
         }
 
@@ -153,8 +159,10 @@ namespace DVLD.Users
 
         private void editToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            // MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //ADD NEW USER.
+            frmAdd_Update_Users frm = new frmAdd_Update_Users();
+            frm.ShowDialog();
         }
 
         private void showDetailsToolStripMenuItem1_Click(object sender, EventArgs e)

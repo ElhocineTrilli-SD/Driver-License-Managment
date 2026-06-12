@@ -32,6 +32,7 @@
             this.tbUserInfo = new Guna.UI2.WinForms.Guna2TabControl();
             this.tbPersonalInfo = new System.Windows.Forms.TabPage();
             this.btnNext = new Guna.UI2.WinForms.Guna2Button();
+            this.personInfoWithFilter11 = new DVLD.People.Controlls.PersonInfoWithFilter1();
             this.tbLogIn_Info = new System.Windows.Forms.TabPage();
             this.txtConfirm_Password = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -46,7 +47,6 @@
             this.btnsave = new Guna.UI2.WinForms.Guna2Button();
             this.lblTitel = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.personInfoWithFilter11 = new DVLD.People.Controlls.PersonInfoWithFilter1();
             this.tbUserInfo.SuspendLayout();
             this.tbPersonalInfo.SuspendLayout();
             this.tbLogIn_Info.SuspendLayout();
@@ -109,6 +109,15 @@
             this.btnNext.TabIndex = 22;
             this.btnNext.Text = "Next";
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // personInfoWithFilter11
+            // 
+            this.personInfoWithFilter11.FilterEnabled = true;
+            this.personInfoWithFilter11.Location = new System.Drawing.Point(3, 6);
+            this.personInfoWithFilter11.Name = "personInfoWithFilter11";
+            this.personInfoWithFilter11.ShowAddPerson = true;
+            this.personInfoWithFilter11.Size = new System.Drawing.Size(695, 370);
+            this.personInfoWithFilter11.TabIndex = 0;
             // 
             // tbLogIn_Info
             // 
@@ -300,15 +309,6 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // personInfoWithFilter11
-            // 
-            this.personInfoWithFilter11.FilterEnabled = true;
-            this.personInfoWithFilter11.Location = new System.Drawing.Point(3, 6);
-            this.personInfoWithFilter11.Name = "personInfoWithFilter11";
-            this.personInfoWithFilter11.ShowAddPerson = true;
-            this.personInfoWithFilter11.Size = new System.Drawing.Size(695, 370);
-            this.personInfoWithFilter11.TabIndex = 0;
             // 
             // frmAdd_Update_Users
             // 

@@ -167,7 +167,7 @@
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
             this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(228, 30);
             this.phoneCallToolStripMenuItem.Text = "Change Password";
-            this.phoneCallToolStripMenuItem.Click += new System.EventHandler(this.phoneCallToolStripMenuItem_Click);
+            this.phoneCallToolStripMenuItem.Click += new System.EventHandler(this.ChangePass_Click);
             // 
             // toolStripMenuItem1
             // 
