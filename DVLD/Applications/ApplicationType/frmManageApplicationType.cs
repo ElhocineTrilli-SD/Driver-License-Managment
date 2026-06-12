@@ -1,4 +1,5 @@
-﻿using DVLD_BUSINESS;
+﻿using DVLD.Applications.ApplicationType;
+using DVLD_BUSINESS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,6 +56,19 @@ namespace DVLD.Application.ApplicationType
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void editApplicationTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int Id = (int)dgvApplicationtypes.CurrentRow.Cells[0].Value;
+            frmEditApplicationType frm = new frmEditApplicationType(Id);
+            frm.DataUpdated += LoadData;
+            frm.ShowDialog();
+        }
+
+        private void LoadData()
+        {
+            _RefreschAplicationTypesList();
         }
     }
 }

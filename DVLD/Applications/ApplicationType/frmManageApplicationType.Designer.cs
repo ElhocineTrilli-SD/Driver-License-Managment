@@ -70,7 +70,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editApplicationTypeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(257, 34);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(257, 56);
             // 
             // editApplicationTypeToolStripMenuItem
             // 
@@ -78,6 +78,7 @@
             this.editApplicationTypeToolStripMenuItem.Name = "editApplicationTypeToolStripMenuItem";
             this.editApplicationTypeToolStripMenuItem.Size = new System.Drawing.Size(256, 30);
             this.editApplicationTypeToolStripMenuItem.Text = "Edit Application Type";
+            this.editApplicationTypeToolStripMenuItem.Click += new System.EventHandler(this.editApplicationTypeToolStripMenuItem_Click);
             // 
             // btnclose
             // 
