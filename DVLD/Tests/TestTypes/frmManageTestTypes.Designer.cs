@@ -118,7 +118,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editTestTypeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(193, 34);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(193, 56);
             // 
             // editTestTypeToolStripMenuItem
             // 
@@ -126,6 +126,7 @@
             this.editTestTypeToolStripMenuItem.Name = "editTestTypeToolStripMenuItem";
             this.editTestTypeToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
             this.editTestTypeToolStripMenuItem.Text = "Edit Test Type";
+            this.editTestTypeToolStripMenuItem.Click += new System.EventHandler(this.editTestTypeToolStripMenuItem_Click);
             // 
             // frmManageTestTypes
             // 

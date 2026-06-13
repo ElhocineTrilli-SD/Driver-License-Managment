@@ -58,6 +58,21 @@ namespace DVLD.Tests.TestTypes
         {
             this.Close();
         }
+
+        private void editTestTypeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsTestType.enTestType ID = (clsTestType.enTestType)dgvTestTypes.CurrentRow.Cells[0].Value;
+            frmEditTestTypes frm = new frmEditTestTypes(ID);
+
+            frm.DataUpdated += Frm_DataUpdated;
+
+            frm.ShowDialog();
+        }
+
+        private void Frm_DataUpdated()
+        {
+            _RefreschTestTypesList();
+        }
     }
     
 }
