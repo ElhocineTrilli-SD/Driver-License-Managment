@@ -1,5 +1,6 @@
 ﻿using DVLD.Application.ApplicationType;
 using DVLD.Globle_Classes;
+using DVLD.Tests.TestTypes;
 using DVLD.Users;
 using DVLD_BUSINESS;
 using Guna.UI2.WinForms;
@@ -222,6 +223,12 @@ namespace DVLD
         private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmManageApplicationType frm = new frmManageApplicationType();
+            frm.ShowDialog();
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageTestTypes frm = new frmManageTestTypes();
             frm.ShowDialog();
         }
     }
