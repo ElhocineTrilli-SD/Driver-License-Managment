@@ -56,11 +56,7 @@ namespace DVLD.Applications.ApplicationType
                 return;
 
             }
-            if (_ApplicationType == null)
-            {
-                MessageBox.Show("_ApplicationType is null");
-                return;
-            }
+           
             _ApplicationType.Titel = txtTitel.Text;
             _ApplicationType.Fees = Convert.ToSingle(txtFees.Text);
 
