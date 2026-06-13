@@ -33,7 +33,7 @@ namespace DataAccess
                     // The record was found
                     IsFound = true;
                     Titel = (string)reader["ApplicationTypeTitle"];
-                    Fees = (float)reader["ApplicationFees"];
+                    Fees = Convert.ToSingle(reader["ApplicationFees"]);
 
                 }
                 else
@@ -66,7 +66,7 @@ namespace DataAccess
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
 
-            string Query = "Select * ApplicationTypes order by ApplicationTypeTitle ";
+            string Query = "Select * from ApplicationTypes order by ApplicationTypeTitle ";
 
             SqlCommand command = new SqlCommand(Query, connection);
 
@@ -143,13 +143,14 @@ namespace DataAccess
             string Query = @"UPDATE ApplicationTypes
                             SET
                                 ApplicationTypeTitle   = @Titel ,
-                                ApplicationFees    = @Fees  ,
+                                ApplicationFees    = @Fees  
                               
                                WHERE ApplicationTypeID = @ApplicationTypeID";
 
             SqlCommand command = new SqlCommand(Query, connection);
-            command.Parameters.AddWithValue("@ApplicationTypeTitle", Titel);
-            command.Parameters.AddWithValue("@ApplicationFees", Fees);
+            command.Parameters.AddWithValue("@Titel", Titel);
+            command.Parameters.AddWithValue("@Fees", Fees);
+            command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
 
             try
             {
