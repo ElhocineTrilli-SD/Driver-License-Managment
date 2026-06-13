@@ -41,7 +41,7 @@ namespace DVLD_BUSINESS
 
         private bool _AddNewTestType()
         {
-            this.ID = (clsTestType.enTestType) clsTestTypeData.AddNewTestTypes(this.Titel,this.Description,this.Fees)
+            this.ID = (clsTestType.enTestType)clsTestTypeData.AddNewTestTypes(this.Titel, this.Description, this.Fees);
 
             return (this.Titel != "" );
         }
