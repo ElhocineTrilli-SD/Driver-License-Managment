@@ -135,7 +135,7 @@ namespace DataAccess
                 object Result = command.ExecuteScalar();
                 if (Result != null && int.TryParse(Result.ToString(), out int insertedID))
                 {
-                    ApplicationTypeID = insertedID;
+                    ApplicationID = insertedID;
                 }
 
             }

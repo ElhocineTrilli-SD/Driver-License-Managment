@@ -142,10 +142,10 @@ namespace DataAccess
             int RowsAffected = 0;
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string Query = @"UPDATE ApplicationTypes
+            string Query = @"UPDATE TestTypes
                             SET
                                 TestTypeTitle   = @Titel ,
-                                TestTypeDescription = @Description
+                                TestTypeDescription = @Description ,
                                 TestTypeFees    = @Fees  
                               
                                WHERE TestTypeID = @TestTypeID";
