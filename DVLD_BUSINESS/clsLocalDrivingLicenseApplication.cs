@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace DVLD_BUSINESS
 {
-    internal class clsLocalDrivingLicenseApplication : clsApplication
+    public class clsLocalDrivingLicenseApplication : clsApplication
     {
         public enum enMode { AddNew = 0, Update = 1 };
         public enMode Mode = enMode.AddNew;
