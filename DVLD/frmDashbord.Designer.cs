@@ -48,6 +48,7 @@
             this.ApplicationMenueStripe = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.drivingLicenseServicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newDrivingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.drivingLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.replecmentToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.replacmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,7 +81,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.localToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTotalA = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.AccountMenu.SuspendLayout();
@@ -94,6 +99,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -319,7 +326,7 @@
             this.manageApplicationTypesToolStripMenuItem,
             this.manageTestTypesToolStripMenuItem});
             this.ApplicationMenueStripe.Name = "ApplicationMenueStripe";
-            this.ApplicationMenueStripe.Size = new System.Drawing.Size(302, 176);
+            this.ApplicationMenueStripe.Size = new System.Drawing.Size(302, 154);
             // 
             // drivingLicenseServicesToolStripMenuItem
             // 
@@ -344,6 +351,13 @@
             this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(424, 30);
             this.newDrivingLicenseToolStripMenuItem.Text = "New Driving license";
             this.newDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.newDrivingLicenseToolStripMenuItem_Click);
+            // 
+            // localToolStripMenuItem
+            // 
+            this.localToolStripMenuItem.Name = "localToolStripMenuItem";
+            this.localToolStripMenuItem.Size = new System.Drawing.Size(128, 30);
+            this.localToolStripMenuItem.Text = "Local";
+            this.localToolStripMenuItem.Click += new System.EventHandler(this.localToolStripMenuItem_Click);
             // 
             // drivingLicenseToolStripMenuItem
             // 
@@ -462,7 +476,7 @@
             this.guna2Panel2.Controls.Add(this.lblTotalPeople);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Controls.Add(this.guna2CirclePictureBox2);
-            this.guna2Panel2.Location = new System.Drawing.Point(283, 87);
+            this.guna2Panel2.Location = new System.Drawing.Point(252, 87);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.BorderRadius = 20;
             this.guna2Panel2.Size = new System.Drawing.Size(203, 109);
@@ -482,7 +496,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 63);
+            this.label1.Location = new System.Drawing.Point(18, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 1;
@@ -652,12 +666,65 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // localToolStripMenuItem
+            // guna2Panel3
             // 
-            this.localToolStripMenuItem.Name = "localToolStripMenuItem";
-            this.localToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
-            this.localToolStripMenuItem.Text = "Local";
-            this.localToolStripMenuItem.Click += new System.EventHandler(this.localToolStripMenuItem_Click);
+            this.guna2Panel3.BackColor = System.Drawing.Color.White;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2Panel3.BorderRadius = 50;
+            this.guna2Panel3.Controls.Add(this.lblTotalA);
+            this.guna2Panel3.Controls.Add(this.label7);
+            this.guna2Panel3.Controls.Add(this.guna2CirclePictureBox3);
+            this.guna2Panel3.Location = new System.Drawing.Point(517, 87);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.BorderRadius = 20;
+            this.guna2Panel3.Size = new System.Drawing.Size(267, 109);
+            this.guna2Panel3.TabIndex = 8;
+            // 
+            // lblTotalA
+            // 
+            this.lblTotalA.AutoSize = true;
+            this.lblTotalA.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalA.Location = new System.Drawing.Point(27, 29);
+            this.lblTotalA.Name = "lblTotalA";
+            this.lblTotalA.Size = new System.Drawing.Size(0, 30);
+            this.lblTotalA.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(29, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 17);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Total Application";
+            // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.Image = global::DVLD.Properties.Resources.team;
+            this.guna2CirclePictureBox3.ImageRotate = 0F;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(181, 29);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(58, 51);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox3.TabIndex = 0;
+            this.guna2CirclePictureBox3.TabStop = false;
+            // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel5.AutoRoundedCorners = true;
+            this.guna2Panel5.BackColor = System.Drawing.Color.White;
+            this.guna2Panel5.BorderColor = System.Drawing.Color.White;
+            this.guna2Panel5.BorderRadius = 178;
+            this.guna2Panel5.Location = new System.Drawing.Point(252, 202);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.ShadowDecoration.BorderRadius = 20;
+            this.guna2Panel5.Size = new System.Drawing.Size(662, 358);
+            this.guna2Panel5.TabIndex = 8;
             // 
             // frmDashbord
             // 
@@ -665,6 +732,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(939, 572);
+            this.Controls.Add(this.guna2Panel5);
+            this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -690,6 +759,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -747,6 +819,11 @@
         private System.Windows.Forms.ToolStripSeparator sighToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem signOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem localToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.Label lblTotalA;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
     }
 }
 

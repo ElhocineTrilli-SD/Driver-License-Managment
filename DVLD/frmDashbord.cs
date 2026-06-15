@@ -78,8 +78,10 @@ namespace DVLD
         {
             int Total_P = clsPerson.GetPeopleCount();
 
-            lblTotalPeople.Text += Total_P.ToString();
+            lblTotalPeople.Text = Total_P.ToString();
         }
+      
+
 
         private void Main_Load(object sender, EventArgs e)
         {
@@ -154,8 +156,15 @@ namespace DVLD
 
         private void localDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            frmListlocalDrivingLicenseApplication frm = new frmListlocalDrivingLicenseApplication();
+            frm.DataBack += Frm_DataBack;
+            frm.ShowDialog();
+        }
 
+        private void Frm_DataBack(object sender, int records)
+        {
+            lblTotalA.Text = records.ToString();
         }
 
         private void intenationalDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
