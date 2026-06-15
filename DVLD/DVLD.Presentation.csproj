@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\guna.ui2.winforms.2.0.4.7\lib\net45\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\guna.ui2.winforms.2.0.4.7\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -64,6 +64,24 @@
     </Compile>
     <Compile Include="Applications\ApplicationType\frmManageApplicationType.Designer.cs">
       <DependentUpon>frmManageApplicationType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\controlls\UserControl_ApplicationBasic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Applications\controlls\UserControl_ApplicationBasic.Designer.cs">
+      <DependentUpon>UserControl_ApplicationBasic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\Local Driving License\ctrlDrivingLicenseApplication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Applications\Local Driving License\ctrlDrivingLicenseApplication.Designer.cs">
+      <DependentUpon>ctrlDrivingLicenseApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\Local Driving License\frmAdd&amp;EditLocalDrivingLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Local Driving License\frmAdd&amp;EditLocalDrivingLicenseApplication.Designer.cs">
+      <DependentUpon>frmAdd&amp;EditLocalDrivingLicenseApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="login\frmLogIn.cs">
       <SubType>Form</SubType>
@@ -166,6 +184,15 @@
     <EmbeddedResource Include="Applications\ApplicationType\frmManageApplicationType.resx">
       <DependentUpon>frmManageApplicationType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Applications\controlls\UserControl_ApplicationBasic.resx">
+      <DependentUpon>UserControl_ApplicationBasic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Local Driving License\ctrlDrivingLicenseApplication.resx">
+      <DependentUpon>ctrlDrivingLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Local Driving License\frmAdd&amp;EditLocalDrivingLicenseApplication.resx">
+      <DependentUpon>frmAdd&amp;EditLocalDrivingLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login\frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +248,7 @@
     <EmbeddedResource Include="Users\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
