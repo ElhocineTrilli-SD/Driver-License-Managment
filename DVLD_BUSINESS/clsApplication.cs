@@ -21,6 +21,9 @@ namespace DVLD_BUSINESS
 
         public int ApplicationID { set; get; }
         public int ApplicantPersonID { set; get; }
+
+        public clsPerson PersonInfo { set; get; }
+
         public string ApplicantFullName
         {
             get
@@ -80,6 +83,7 @@ namespace DVLD_BUSINESS
         {
             this.ApplicationID = ApplicationID;
             this.ApplicantPersonID = ApplicantPersonID;
+            this.PersonInfo = clsPerson.Find(ApplicantPersonID);
             this.ApplicationDate = ApplicationDate;
             this.ApplicationTypeID = ApplicationTypeID;
             this.ApplicationTypeInfo = clsApplicationType.Find(ApplicationTypeID);
