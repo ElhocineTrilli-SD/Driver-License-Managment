@@ -170,5 +170,88 @@ namespace DVLD.Applications.Local_Driving_License
             }
 
         }
+
+        private void cencelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you Sure do want to cancel this Application", "Confirm"
+               , MessageBoxButtons.OKCancel) != DialogResult.OK)
+            {
+                return;
+            }
+            int LocalDrivingLicenseApplicationID = (int)dgvLD.CurrentRow.Cells[0].Value;
+
+            clsLocalDrivingLicenseApplication cls =
+                clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID);
+
+            if(cls != null)
+            {
+                if(cls.Cancel())
+                {
+                    MessageBox.Show("Application Canceled Successfully", "Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmListlocalDrivingLicenseApplication_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Could Not Canceled Application", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            
+
+
+            }
+
+
+        }
+
+        private void showApplicationDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLocalDrivingLicenseApplicationInfo frm = new frmLocalDrivingLicenseApplicationInfo((int)dgvLD.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+
+            frmListlocalDrivingLicenseApplication_Load(null,null);
+        }
+
+        private void editApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAdd_EditLocalDrivingLicenseApplication frm = new frmAdd_EditLocalDrivingLicenseApplication((int)dgvLD.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            frmListlocalDrivingLicenseApplication_Load(null, null);
+
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           if( MessageBox.Show("Are you Sure do want to delete this Application","Confirm"
+                ,MessageBoxButtons.OKCancel  ) != DialogResult.OK)
+            {
+                return;
+            }
+
+            int LocalDrivingLicenseApplicationID = (int)dgvLD.CurrentRow.Cells[0].Value;
+
+            clsLocalDrivingLicenseApplication cls = 
+                clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID);
+            
+            if( cls != null )
+            {
+                if(cls.Delete())
+                {
+                    MessageBox.Show("Application Deleted Successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    frmListlocalDrivingLicenseApplication_Load(null, null);
+                }
+                else
+                {
+                    MessageBox.Show("Could Not Deleted Application", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+
+
+
+            }
+
+
+
+
+        }
     }
 }
