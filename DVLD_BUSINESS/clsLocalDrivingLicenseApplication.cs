@@ -106,7 +106,7 @@ namespace DVLD_BUSINESS
             bool IsFound = clsLocalDrivingLicenseApplicationData.GetLocalDrivingLicenseApplicationInfoByApplicationID
                 (ApplicationID, ref LocalDrivingLicenseApplicationID, ref LicenseClassID);
 
-
+            
             if (IsFound)
             {
                 //now we find the base application

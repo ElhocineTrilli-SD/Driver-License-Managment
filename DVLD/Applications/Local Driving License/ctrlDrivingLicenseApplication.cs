@@ -45,7 +45,7 @@ namespace DVLD.Applications.Local_Driving_License
 
         public void LoadApplicationInfoByApplicationID(int ApplicationID)
         {
-            _LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.FindByApplicationID(ApplicationID);
+            _LocalDrivingLicenseApplication =  clsLocalDrivingLicenseApplication.FindByApplicationID(ApplicationID);
             if (_LocalDrivingLicenseApplication == null)
             {
                 _ResetLocalDrivingLicenseApplicationInfo();

@@ -78,12 +78,12 @@ namespace DataAccess
             SqlCommand command = new SqlCommand(query, connection);
 
             command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
-
+            
             try
             {
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
-
+            
                 if (reader.Read())
                 {
 

@@ -41,7 +41,7 @@ namespace DataAccess
                     ApplicationTypeID = (int)reader["ApplicationTypeID"];
                     ApplicationStatus = (Byte)reader["ApplicationStatus"];
                     LastStatusDate = (DateTime)reader["LastStatusDate"];
-                    PaidFees = (float)reader["PaidFees"];
+                    PaidFees =Convert.ToSingle(reader["PaidFees"]);
                     CreatedByUserID = (int)reader["CreatedByUserID"];
 
                 }

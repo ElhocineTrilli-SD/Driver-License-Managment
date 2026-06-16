@@ -6,3 +6,6 @@
 /et --hard HEAD@{13}
 /DVLD_BUSINESS/bin/Debug
 /DVLD_BUSINESS/obj
+/DataAccess/bin/Debug/DataAccess.dll
+/DataAccess/bin/Debug/DataAccess.pdb
+/DataAccess/obj/Debug/DataAccess.dll

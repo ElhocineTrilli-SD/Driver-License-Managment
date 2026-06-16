@@ -74,7 +74,7 @@
             this.txtAppliedforL.AutoSize = true;
             this.txtAppliedforL.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.txtAppliedforL.ForeColor = System.Drawing.Color.Black;
-            this.txtAppliedforL.Location = new System.Drawing.Point(529, 40);
+            this.txtAppliedforL.Location = new System.Drawing.Point(480, 40);
             this.txtAppliedforL.Name = "txtAppliedforL";
             this.txtAppliedforL.Size = new System.Drawing.Size(23, 19);
             this.txtAppliedforL.TabIndex = 53;
@@ -116,7 +116,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(363, 40);
+            this.label1.Location = new System.Drawing.Point(314, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 19);
             this.label1.TabIndex = 49;

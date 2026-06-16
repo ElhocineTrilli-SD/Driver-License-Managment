@@ -54,6 +54,9 @@
             this.showLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
             this.showLisensePersonalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sechduelVisionTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sechduelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sechduelStreatTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbUsers)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -189,7 +192,7 @@
             this.toolStripMenuItem6,
             this.showLisensePersonalToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(353, 302);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(353, 280);
             // 
             // showApplicationDetailsToolStripMenuItem
             // 
@@ -240,6 +243,10 @@
             // 
             // sechudelToolStripMenuItem
             // 
+            this.sechudelToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sechduelVisionTestToolStripMenuItem,
+            this.sechduelToolStripMenuItem,
+            this.sechduelStreatTestToolStripMenuItem});
             this.sechudelToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.sechudelToolStripMenuItem.Name = "sechudelToolStripMenuItem";
             this.sechudelToolStripMenuItem.Size = new System.Drawing.Size(352, 30);
@@ -280,6 +287,24 @@
             this.showLisensePersonalToolStripMenuItem.Name = "showLisensePersonalToolStripMenuItem";
             this.showLisensePersonalToolStripMenuItem.Size = new System.Drawing.Size(352, 30);
             this.showLisensePersonalToolStripMenuItem.Text = "Show Lisense Personal";
+            // 
+            // sechduelVisionTestToolStripMenuItem
+            // 
+            this.sechduelVisionTestToolStripMenuItem.Name = "sechduelVisionTestToolStripMenuItem";
+            this.sechduelVisionTestToolStripMenuItem.Size = new System.Drawing.Size(266, 30);
+            this.sechduelVisionTestToolStripMenuItem.Text = "Sechduel Vision Test";
+            // 
+            // sechduelToolStripMenuItem
+            // 
+            this.sechduelToolStripMenuItem.Name = "sechduelToolStripMenuItem";
+            this.sechduelToolStripMenuItem.Size = new System.Drawing.Size(266, 30);
+            this.sechduelToolStripMenuItem.Text = "Sechduel Written Test";
+            // 
+            // sechduelStreatTestToolStripMenuItem
+            // 
+            this.sechduelStreatTestToolStripMenuItem.Name = "sechduelStreatTestToolStripMenuItem";
+            this.sechduelStreatTestToolStripMenuItem.Size = new System.Drawing.Size(266, 30);
+            this.sechduelStreatTestToolStripMenuItem.Text = "Sechduel streat Test";
             // 
             // frmListlocalDrivingLicenseApplication
             // 
@@ -335,5 +360,8 @@
         private System.Windows.Forms.ToolStripMenuItem showLicenseToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem showLisensePersonalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sechduelVisionTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sechduelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sechduelStreatTestToolStripMenuItem;
     }
 }
