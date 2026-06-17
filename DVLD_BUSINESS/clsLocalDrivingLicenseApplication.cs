@@ -185,6 +185,11 @@ namespace DVLD_BUSINESS
         }
 
 
+        public clsTest GetLastTestByTesttype(clsTestType.enTestType TestTypeID)
+
+        {
+            return clsTest.FindLastTestByPersonAndLicenseClassAndTestType(this.ApplicantPersonID,this.LicenseClassID,TestTypeID);
+        }
 
         public bool DoesPassTestType(clsTestType.enTestType TestTypeID)
 

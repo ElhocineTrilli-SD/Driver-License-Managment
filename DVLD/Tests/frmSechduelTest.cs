@@ -18,12 +18,12 @@ namespace DVLD.Tests
         private clsTestType.enTestType _testTypeID = clsTestType.enTestType.VisionTest;
 
 
-        public frmSechduelTest(int Local,int Test,clsTestType.enTestType testType)
+        public frmSechduelTest(int Local,clsTestType.enTestType testType, int TestAppoitment = -1)
         {
 
             InitializeComponent();
             _LocalDrivingLicenseApplication = Local;
-            _TestAppoitment = Test;
+            _TestAppoitment = TestAppoitment;
             _testTypeID = testType;
         }
 

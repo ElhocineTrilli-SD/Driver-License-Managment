@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListTestAppoitment));
-            this.ctrlDrivingLicenseApplication1 = new DVLD.Applications.Local_Driving_License.ctrlDrivingLicenseApplication();
             this.lblTitle = new System.Windows.Forms.Label();
             this.picture = new System.Windows.Forms.PictureBox();
             this.dgvLicenseTestAppointments = new System.Windows.Forms.DataGridView();
@@ -38,16 +38,14 @@
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.lblRecordsCountAppoitment = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ctrlDrivingLicenseApplication1 = new DVLD.Applications.Local_Driving_License.ctrlDrivingLicenseApplication();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLicenseTestAppointments)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ctrlDrivingLicenseApplication1
-            // 
-            this.ctrlDrivingLicenseApplication1.Location = new System.Drawing.Point(37, 156);
-            this.ctrlDrivingLicenseApplication1.Name = "ctrlDrivingLicenseApplication1";
-            this.ctrlDrivingLicenseApplication1.Size = new System.Drawing.Size(735, 372);
-            this.ctrlDrivingLicenseApplication1.TabIndex = 0;
             // 
             // lblTitle
             // 
@@ -76,6 +74,7 @@
             this.dgvLicenseTestAppointments.AllowUserToAddRows = false;
             this.dgvLicenseTestAppointments.AllowUserToDeleteRows = false;
             this.dgvLicenseTestAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLicenseTestAppointments.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvLicenseTestAppointments.Location = new System.Drawing.Point(37, 571);
             this.dgvLicenseTestAppointments.Name = "dgvLicenseTestAppointments";
             this.dgvLicenseTestAppointments.ReadOnly = true;
@@ -102,6 +101,7 @@
             this.btnAddAppoitment.Size = new System.Drawing.Size(53, 31);
             this.btnAddAppoitment.TabIndex = 76;
             this.btnAddAppoitment.UseVisualStyleBackColor = true;
+            this.btnAddAppoitment.Click += new System.EventHandler(this.btnAddAppoitment_Click);
             // 
             // btnclose
             // 
@@ -117,6 +117,7 @@
             this.btnclose.Size = new System.Drawing.Size(155, 53);
             this.btnclose.TabIndex = 83;
             this.btnclose.Text = "Close";
+            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
             // lblRecordsCountAppoitment
             // 
@@ -138,6 +139,34 @@
             this.label1.TabIndex = 81;
             this.label1.Text = "#Records: ";
             // 
+            // ctrlDrivingLicenseApplication1
+            // 
+            this.ctrlDrivingLicenseApplication1.Location = new System.Drawing.Point(37, 156);
+            this.ctrlDrivingLicenseApplication1.Name = "ctrlDrivingLicenseApplication1";
+            this.ctrlDrivingLicenseApplication1.Size = new System.Drawing.Size(735, 372);
+            this.ctrlDrivingLicenseApplication1.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.takeTestToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(121, 48);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editToolStripMenuItem.Text = "edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // takeTestToolStripMenuItem
+            // 
+            this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
+            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.takeTestToolStripMenuItem.Text = "Take test";
+            // 
             // frmListTestAppoitment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +187,7 @@
             this.Load += new System.EventHandler(this.frmListTestAppoitment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLicenseTestAppointments)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -174,5 +204,8 @@
         private Guna.UI2.WinForms.Guna2Button btnclose;
         private System.Windows.Forms.Label lblRecordsCountAppoitment;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem takeTestToolStripMenuItem;
     }
 }

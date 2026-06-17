@@ -253,5 +253,56 @@ namespace DVLD.Applications.Local_Driving_License
 
 
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dgvLD.CurrentRow.Cells[0].Value;
+            clsLocalDrivingLicenseApplication LocalDrivingLicenseApplication =
+                    clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID
+                                                    (LocalDrivingLicenseApplicationID);
+
+            int TotalPassedTests = (int)dgvLD.CurrentRow.Cells[5].Value;
+
+        ///    bool LicenseExists = LocalDrivingLicenseApplication.();
+
+            //Enabled only if person passed all tests and Does not have license. 
+           /// issueDrivingLicenseFirstTimeToolStripMenuItem.Enabled = (TotalPassedTests == 3) && !LicenseExists;
+
+         //   showLicenseToolStripMenuItem.Enabled = LicenseExists;
+           // editToolStripMenuItem.Enabled = !LicenseExists && (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+            //ScheduleTestsMenue.Enabled = !LicenseExists;
+
+            //Enable/Disable Cancel Menue Item
+            //We only canel the applications with status=new.
+            //CancelApplicaitonToolStripMenuItem.Enabled = (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+
+            ////Enable/Disable Delete Menue Item
+            ////We only allow delete incase the application status is new not complete or Cancelled.
+            //DeleteApplicationToolStripMenuItem.Enabled =
+            //    (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+
+
+
+            ////Enable Disable Schedule menue and it's sub menue
+            //bool PassedVisionTest = LocalDrivingLicenseApplication.DoesPassTestType(clsTestType.enTestType.VisionTest); ;
+            //bool PassedWrittenTest = LocalDrivingLicenseApplication.DoesPassTestType(clsTestType.enTestType.WrittenTest);
+            //bool PassedStreetTest = LocalDrivingLicenseApplication.DoesPassTestType(clsTestType.enTestType.StreetTest);
+
+            //ScheduleTestsMenue.Enabled = (!PassedVisionTest || !PassedWrittenTest || !PassedStreetTest) && (LocalDrivingLicenseApplication.ApplicationStatus == clsApplication.enApplicationStatus.New);
+
+            //if (ScheduleTestsMenue.Enabled)
+            //{
+            //    //To Allow Schdule vision test, Person must not passed the same test before.
+            //    scheduleVisionTestToolStripMenuItem.Enabled = !PassedVisionTest;
+
+            //    //To Allow Schdule written test, Person must pass the vision test and must not passed the same test before.
+            //    scheduleWrittenTestToolStripMenuItem.Enabled = PassedVisionTest && !PassedWrittenTest;
+
+            //    //To Allow Schdule steet test, Person must pass the vision * written tests, and must not passed the same test before.
+            //    scheduleStreetTestToolStripMenuItem.Enabled = PassedVisionTest && PassedWrittenTest && !PassedStreetTest;
+
+            //}
+
+        }
     }
 }

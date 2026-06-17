@@ -19,8 +19,6 @@ namespace DVLD.Tests
         private int _LocalDrivingLicenseApplication = -1;
         private clsTestType.enTestType _testType = clsTestType.enTestType.VisionTest;
 
-
-
         public frmListTestAppoitment(int Local, clsTestType.enTestType testType)
         {
             InitializeComponent();
@@ -79,15 +77,60 @@ namespace DVLD.Tests
                 dgvLicenseTestAppointments.Columns[3].Width = 100;
             }
 
-
+            lblRecordsCountAppoitment.Text = dgvLicenseTestAppointments.RowCount.ToString();
 
 
 
         }
 
+        private void btnAddAppoitment_Click(object sender, EventArgs e)
+        {
+            clsLocalDrivingLicenseApplication LocalDrivingLicenseApplication =
+                clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(_LocalDrivingLicenseApplication);
+
+            if(LocalDrivingLicenseApplication.IsThereAnActiveScheduledTest(_testType))
+                {
+                MessageBox.Show("Person Already have an active appoitment","error",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                return;
+                 }
+
+            clsTest LastTest = LocalDrivingLicenseApplication.GetLastTestByTesttype(_testType);
+
+            if(LastTest == null)
+            {
+                frmSechduelTest frm1 = new frmSechduelTest(_LocalDrivingLicenseApplication, _testType);
+                frm1.ShowDialog();
+                frmListTestAppoitment_Load(null, null);
+                return;
+
+            }
 
 
+            if(LastTest.TestResult == 1)
+            {
+                MessageBox.Show("This person already passed this test before, you can only retake faild test", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            frmSechduelTest frm = new frmSechduelTest(LastTest._TestAppoitmentsInfo.LocalDrivingLicenseApplicationID,_testType);
+            frm.ShowDialog();
+            frmListTestAppoitment_Load(null, null);
 
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int TestAppoitment = (int)dgvLicenseTestAppointments.CurrentRow.Cells[0].Value;
+
+            frmSechduelTest frm = new frmSechduelTest(_LocalDrivingLicenseApplication,_testType, TestAppoitment);
+            frm.ShowDialog();
+            frmListTestAppoitment_Load(null, null);
+
+        }
+
+        private void btnclose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
