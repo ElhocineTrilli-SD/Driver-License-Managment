@@ -12,7 +12,7 @@ namespace DVLD_BUSINESS
     {
         public enum enMode { AddNew = 0, Update = 1 };
         private enMode Mode = enMode.AddNew;
-        public enum enTestType { VisionTest = 1, WrittenTest = 2,StreatTest=3 };
+        public enum enTestType { VisionTest = 1, WrittenTest = 2,StreetTest=3 };
 
         public clsTestType.enTestType ID {  get; set; }
         public string Titel { get; set; }
