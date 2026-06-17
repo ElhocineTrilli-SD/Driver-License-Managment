@@ -278,7 +278,7 @@ namespace DataAccess
 
 
 
-            return TestAppoitment;
+            return TestAppoitmentID;
         }
 
         public static bool UpdateTestApoitment(int TestAppointmentID, 
