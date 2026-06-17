@@ -194,33 +194,18 @@ namespace DataAccess
 
 
             SqlCommand command = new SqlCommand(query, connection);
-
             try
             {
                 connection.Open();
-
                 SqlDataReader reader = command.ExecuteReader();
-
                 if (reader.HasRows)
-
                 {
                     dt.Load(reader);
                 }
-
                 reader.Close();
-
-
             }
-
-            catch (Exception ex)
-            {
-                // Console.WriteLine("Error: " + ex.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
+            catch (Exception ex) { }
+            finally{connection.Close();}
             return dt;
         }
 

@@ -21,7 +21,7 @@ namespace DVLD.Tests
 
 
 
-        public frmListTestAppoitment(int Local,clsTestType.enTestType testType )
+        public frmListTestAppoitment(int Local, clsTestType.enTestType testType)
         {
             InitializeComponent();
             _LocalDrivingLicenseApplication = Local;
@@ -60,7 +60,7 @@ namespace DVLD.Tests
         {
             _LoadTestTypeImageAndTitle();
 
-            ctrlDrivingLicenseApplication1.LoadApplicationInfoByLocalDrivingAppID( _LocalDrivingLicenseApplication );
+            ctrlDrivingLicenseApplication1.LoadApplicationInfoByLocalDrivingAppID(_LocalDrivingLicenseApplication);
             _dtLicenseAppoitment =
                 clsTestAppoitments.GetApplicationTestAppointmentsPerTestType(_LocalDrivingLicenseApplication, _testType);
 
@@ -84,5 +84,10 @@ namespace DVLD.Tests
 
 
         }
+
+
+
+
+
     }
 }
