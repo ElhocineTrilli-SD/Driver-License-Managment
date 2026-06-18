@@ -82,12 +82,7 @@ namespace DVLD_BUSINESS
                 return null;
 
         }
-        public static int GetActiveLicenseIDByPersonID(int PersonID, int LicenseClassID)
-        {
-
-            return clsLicenseClassData.GetActiveLicenseIDByPersonID(PersonID, LicenseClassID);
-
-        }
+       
         private bool _AddNewLicenseClass()
         {
             //call DataAccess Layer 
@@ -131,9 +126,6 @@ namespace DVLD_BUSINESS
 
             return false;
         }
-
-
-      
 
     }
 }
