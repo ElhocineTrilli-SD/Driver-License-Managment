@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,7 +21,8 @@ namespace DVLD_BUSINESS
         {
             get
             {
-                return base.PersonInfo.Fullname;
+
+                return clsPerson.Find(ApplicantPersonID).Fullname;
             }
         }
 
@@ -39,8 +41,8 @@ namespace DVLD_BUSINESS
 
         {
             this.LicenseClassInfo = clsLicenseClass.Find(LicenseClassID);
-
-            this.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID; ;
+            
+            this.LocalDrivingLicenseApplicationID = LocalDrivingLicenseApplicationID; 
             this.ApplicationID = ApplicationID;
             this.ApplicantPersonID = ApplicantPersonID;
             this.ApplicationDate = ApplicationDate;
@@ -99,8 +101,14 @@ namespace DVLD_BUSINESS
 
 
         }
-
-
+        public bool IsLicenseIssued()
+        {
+            return (GetActiveLicenseID() != -1);
+        }
+        public int GetActiveLicenseID()
+        {//this will get the license id that belongs to this application
+            return clsLicenseClass.GetActiveLicenseIDByPersonID(this.ApplicantPersonID, this.LicenseClassID);
+        }
         public static clsLocalDrivingLicenseApplication FindByApplicationID(int ApplicationID)
         {
             // 
@@ -128,7 +136,6 @@ namespace DVLD_BUSINESS
 
 
         }
-
 
         public bool Save()
         {

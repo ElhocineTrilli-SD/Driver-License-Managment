@@ -14,20 +14,20 @@ namespace DVLD_BUSINESS
         public int TestID { get; set; }
         public int TestAppoitmentID { get; set; }
         public clsTestAppoitments _TestAppoitmentsInfo;
-        public byte TestResult { get; set; }
+        public bool TestResult { get; set; }
         public string Notes { get; set; }
         public int CreatedByUserID { get; set; }
         public clsTest()
         {
             this.TestID = -1;
             this.TestAppoitmentID = -1;
-            this.TestResult = 0;
+            this.TestResult = false;
             this.Notes = "";
             this.CreatedByUserID = -1;
 
             Mode = enMode.AddNew;
         }
-        public clsTest ( int testID, int testAppoitmentID, byte testResult, string notes, int createdByUserID)
+        public clsTest ( int testID, int testAppoitmentID, bool testResult, string notes, int createdByUserID)
         {
             
             this.TestID = testID;
@@ -41,7 +41,7 @@ namespace DVLD_BUSINESS
         public static clsTest Find(int TestID)
         {
            int  testAppoitmentID = -1  , createdByUserID = -1;
-            byte testResult = 0;
+            bool testResult = false;
             string notes = "";
 
             bool IsFound = clsTestData.GetTestInfoByID(TestID, ref testAppoitmentID, ref testResult, ref notes, ref createdByUserID);
@@ -60,7 +60,7 @@ namespace DVLD_BUSINESS
             clsTestType.enTestType testTypeID)
         {
             int testAppoitmentID = -1, CreatedByUserID = -1, TestID = -1;
-            byte testResult = 0;
+            bool testResult = false;
             string notes = "";
 
             bool IsFound = clsTestData.GetLastTestByPersonAndTestTypeAndLicenseClass(PersonID, LicenseClassID,(int) testTypeID,

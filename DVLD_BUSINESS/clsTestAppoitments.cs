@@ -22,6 +22,8 @@ namespace DVLD_BUSINESS
         public float PaidFees { get; set; }
         public bool IsLocked { get; set; }
         public int RetakeTestApplicationID { get; set; }
+
+
         public clsApplication RetakeTestAppInfo;
         public int TestID 
             {
@@ -111,7 +113,7 @@ namespace DVLD_BUSINESS
         {
             //call DataAccess Layer 
 
-            return clsTestAppointmentData.UpdateTestApoitment(this.TestAppoitmentID, (int)this.TestTypeID, this.LocalDrivingLicenseApplicationID,
+            return clsTestAppointmentData.UpdateTestApoitment(this.TestAppoitmentID, this.LocalDrivingLicenseApplicationID, (int)this.TestTypeID,
                 this.AppoitmentDate, this.PaidFees, this.CreatedByUserID, this.IsLocked, this.RetakeTestApplicationID);
         }
         public static DataTable GetAllTestAppointments()
