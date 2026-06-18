@@ -150,7 +150,10 @@ namespace DVLD
 
         private void retakeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            frmListlocalDrivingLicenseApplication frm = new frmListlocalDrivingLicenseApplication();
+            frm.DataBack += Frm_DataBack;
+            frm.ShowDialog();
 
         }
 

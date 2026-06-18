@@ -61,6 +61,7 @@ namespace DVLD.Tests
             ctrlDrivingLicenseApplication1.LoadApplicationInfoByLocalDrivingAppID(_LocalDrivingLicenseApplication);
             _dtLicenseAppoitment =
                 clsTestAppoitments.GetApplicationTestAppointmentsPerTestType(_LocalDrivingLicenseApplication, _testType);
+            dgvLicenseTestAppointments.DataSource = _dtLicenseAppoitment;
 
             if (dgvLicenseTestAppointments.Rows.Count > 0)
             {
@@ -106,7 +107,7 @@ namespace DVLD.Tests
             }
 
 
-            if(LastTest.TestResult == 1)
+            if(LastTest.TestResult)
             {
                 MessageBox.Show("This person already passed this test before, you can only retake faild test", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -131,6 +132,17 @@ namespace DVLD.Tests
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void takeTestToolStripMenuItem_Click(object sender, EventArgs e)
+        { 
+            int TestAppointmentID = (int)dgvLicenseTestAppointments.CurrentRow.Cells[0].Value;
+
+
+            frmTakeTest frm = new frmTakeTest(TestAppointmentID, _testType);
+            frm.ShowDialog();
+
+
         }
     }
 }
