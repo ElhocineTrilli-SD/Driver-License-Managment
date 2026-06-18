@@ -11,7 +11,7 @@ namespace DataAccess
     public class clsTestData
     {
 
-        public static bool GetTestInfoByID(int TestID,ref int TestAppointmentID,ref byte TestResult,
+        public static bool GetTestInfoByID(int TestID,ref int TestAppointmentID,ref bool TestResult,
             ref string Notes,ref int CreatedByUserID)
         {
             bool IsFound = false;
@@ -35,7 +35,7 @@ namespace DataAccess
                     IsFound = true;
 
                     TestAppointmentID = (int)reader["TestAppointmentID"];
-                    TestResult = (byte)reader["TestResult"];
+                    TestResult = (bool)reader["TestResult"];
                     Notes = (string)reader["Notes"];
                     CreatedByUserID = (int)reader["CreatedByUserID"];
 
@@ -52,7 +52,7 @@ namespace DataAccess
         }
         public static bool GetLastTestByPersonAndTestTypeAndLicenseClass
               (int PersonID, int LicenseClassID, int TestTypeID, ref int TestID,
-                ref int TestAppointmentID, ref byte TestResult,
+                ref int TestAppointmentID, ref bool TestResult,
                 ref string Notes, ref int CreatedByUserID)
         {
             bool isFound = false;
@@ -89,7 +89,7 @@ namespace DataAccess
                     isFound = true;
                     TestID = (int)reader["TestID"];
                     TestAppointmentID = (int)reader["TestAppointmentID"];
-                    TestResult = (byte)reader["TestResult"];
+                    TestResult = (bool)reader["TestResult"];
                     if (reader["Notes"] == DBNull.Value)
 
                         Notes = "";
@@ -122,9 +122,7 @@ namespace DataAccess
             return isFound;
         }
 
-
-
-        public static int _AddNewTest( int TestAppointmentID,  byte TestResult,
+        public static int _AddNewTest( int TestAppointmentID,  bool TestResult,
              string Notes,  int CreatedByUserID)
         {
             int TestID = -1;
@@ -176,7 +174,7 @@ namespace DataAccess
             return TestID;
         }
 
-        public static bool _UpdateTest(int TestID,int TestAppointmentID, byte TestResult,
+        public static bool _UpdateTest(int TestID,int TestAppointmentID, bool TestResult,
              string Notes, int CreatedByUserID)
         {
             int RowsAffcted = 0;

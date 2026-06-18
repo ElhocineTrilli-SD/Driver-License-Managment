@@ -42,13 +42,13 @@ namespace DataAccess
                     CreatedByUserID = (int)reader["CreatedByUserID"];
                     IsLocked = (bool)reader["IsLocked"];
 
-                    if(reader["RetakeTestApplicationID"] != DBNull.Value)
+                    if (reader["RetakeTestApplicationID"] != DBNull.Value)
                     {
                         RetakeTestApplicationID = (int)reader["RetakeTestApplicationID"];
                     }
                     else
                     {
-                        RetakeTestApplicationID = 0;
+                        RetakeTestApplicationID = -1;
                     }
                     reader.Close();
                 }
@@ -229,7 +229,10 @@ namespace DataAccess
             command.Parameters.AddWithValue("@AppointmentDate",AppointmentDate);
             command.Parameters.AddWithValue("@PaidFees", PaidFees);
             command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
-            command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
+            if (RetakeTestApplicationID == -1)
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", DBNull.Value);
+            else
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
             command.Parameters.AddWithValue("@IsLocked", IsLocked);
             
 
