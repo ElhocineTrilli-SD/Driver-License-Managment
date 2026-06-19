@@ -72,7 +72,7 @@ namespace DVLD.Licenses.LocalLicenses
                    "Succeeded", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 this.Close();
-
+                
             }
             else
             {

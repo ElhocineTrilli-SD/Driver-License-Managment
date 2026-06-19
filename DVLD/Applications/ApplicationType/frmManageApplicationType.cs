@@ -15,7 +15,7 @@ namespace DVLD.Application.ApplicationType
     public partial class frmManageApplicationType : Form
     {
 
-        private DataTable _dtApplicationType = clsApplicationType.GetAllApplicationTypes();
+        private DataTable _dtApplicationType;
 
         public frmManageApplicationType()
         {
@@ -43,7 +43,8 @@ namespace DVLD.Application.ApplicationType
 
         private void _RefreschAplicationTypesList()
         {
-            dgvApplicationtypes.DataSource = _dtApplicationType;
+            _dtApplicationType = clsApplicationType.GetAllApplicationTypes();
+            dgvApplicationtypes.DataSource = _dtApplicationType ;
             _RefreschCount();
         }
 

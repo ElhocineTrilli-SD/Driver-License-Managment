@@ -18,7 +18,7 @@ namespace DVLD
         // Declare an event using the delegate
         public event handler DataBack;
 
-        private DataTable _dtPeople = clsPerson.GetallPeople();
+        private DataTable _dtPeople;
 
         public frmManagePeopleScreen()
         {
@@ -44,6 +44,7 @@ namespace DVLD
         }
         public  void _RefrechPeopleList()
         {
+            _dtPeople = clsPerson.GetallPeople();
             dgvPeople.DataSource = _dtPeople;
             _RefrechRecordCount();
         }

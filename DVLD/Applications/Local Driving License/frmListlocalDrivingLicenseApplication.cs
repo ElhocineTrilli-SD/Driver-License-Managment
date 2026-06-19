@@ -22,7 +22,7 @@ namespace DVLD.Applications.Local_Driving_License
         public event handler DataBack;
 
 
-        private DataTable _LDA = clsLocalDrivingLicenseApplication.GetAllLocalDrivingLicenseApplications();
+        private DataTable _LDA; 
 
         public frmListlocalDrivingLicenseApplication()
         {
@@ -43,7 +43,8 @@ namespace DVLD.Applications.Local_Driving_License
 
         public void _RefrechUserList()
         {
-            dgvLD.DataSource = _LDA ;
+            _LDA = clsLocalDrivingLicenseApplication.GetAllLocalDrivingLicenseApplications();
+            dgvLD.DataSource = _LDA  ;
             _RefrechRecordCount();
         }
         public void _RefrechRecordCount()

@@ -25,7 +25,7 @@ namespace DVLD.Users
             InitializeComponent();
         }
 
-        private DataTable _dtUser = clsUser.GetAllUser();
+        private DataTable _dtUser;
 
         private void _FillcbfilteringwithItems()
         {
@@ -42,6 +42,7 @@ namespace DVLD.Users
 
         public void _RefrechUserList()
         {
+            _dtUser = clsUser.GetAllUser();
             dgvUser.DataSource = _dtUser;
             _RefrechRecordCount();
         }
