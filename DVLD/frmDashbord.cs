@@ -80,12 +80,18 @@ namespace DVLD
 
             lblTotalPeople.Text = Total_P.ToString();
         }
-      
+        private void _RefrechNumberOfApplication()
+        {
+            int Total_Application = clsApplication.GetApplicationCount();
+
+            lblTotalA.Text = Total_Application.ToString();
+        }
 
 
         private void Main_Load(object sender, EventArgs e)
         {
             _RefrechNumberOfPeople();
+            _RefrechNumberOfApplication();
             timer1.Start();
         }
 
@@ -124,29 +130,9 @@ namespace DVLD
 
       
 
-        private void newDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+      
 
-        }
-
-        private void drivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-        }
-
-        private void replacmentToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-        }
-
-        private void releaseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-        }
+     
 
         private void retakeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -249,6 +235,24 @@ namespace DVLD
         {
             frmAdd_EditLocalDrivingLicenseApplication frm = new frmAdd_EditLocalDrivingLicenseApplication();
             frm.ShowDialog();
+        }
+
+        private void drivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        }
+
+        private void replacmentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+        }
+
+        private void releaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
         }
     }
 }

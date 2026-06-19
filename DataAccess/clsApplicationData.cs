@@ -10,7 +10,29 @@ namespace DataAccess
 {
     public class clsApplicationData
     {
+        public static int GetApplicationCount()
+        {
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
 
+            string query = "SELECT COUNT(*) FROM Applications";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            try
+            {
+                connection.Open();
+
+                return (int)command.ExecuteScalar();
+            }
+            catch
+            {
+                return 0;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        }
         public static bool GetApplicationByID
             (int ApplicationID,ref int ApplicantPersonID,
             ref DateTime ApplicationDate,ref int ApplicationTypeID,

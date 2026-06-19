@@ -147,7 +147,10 @@ namespace DVLD_BUSINESS
         {
             return clsApplicationData.UpdateStatus(ApplicationID, 2);
         }
-
+        public static int GetApplicationCount()
+        {
+            return clsApplicationData.GetApplicationCount();
+        }
         public bool SetComplete()
 
         {

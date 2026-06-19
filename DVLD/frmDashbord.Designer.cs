@@ -326,7 +326,7 @@
             this.manageApplicationTypesToolStripMenuItem,
             this.manageTestTypesToolStripMenuItem});
             this.ApplicationMenueStripe.Name = "ApplicationMenueStripe";
-            this.ApplicationMenueStripe.Size = new System.Drawing.Size(302, 154);
+            this.ApplicationMenueStripe.Size = new System.Drawing.Size(302, 176);
             // 
             // drivingLicenseServicesToolStripMenuItem
             // 
@@ -350,7 +350,6 @@
             this.newDrivingLicenseToolStripMenuItem.Name = "newDrivingLicenseToolStripMenuItem";
             this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(424, 30);
             this.newDrivingLicenseToolStripMenuItem.Text = "New Driving license";
-            this.newDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.newDrivingLicenseToolStripMenuItem_Click);
             // 
             // localToolStripMenuItem
             // 
