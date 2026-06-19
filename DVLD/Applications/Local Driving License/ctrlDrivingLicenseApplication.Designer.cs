@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.grDrivingLicenseA = new System.Windows.Forms.GroupBox();
-            this.txtTest = new System.Windows.Forms.Label();
+            this.lblPassedTest = new System.Windows.Forms.Label();
             this.txtAppliedforL = new System.Windows.Forms.Label();
             this.txtDLApplicationID = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.llblShowLicenseInfo = new System.Windows.Forms.LinkLabel();
+            this.lblPassedTe = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUserID = new System.Windows.Forms.Label();
             this.userControl_ApplicationBasic1 = new DVLD.Applications.controlls.UserControl_ApplicationBasic();
@@ -42,11 +42,11 @@
             // 
             // grDrivingLicenseA
             // 
-            this.grDrivingLicenseA.Controls.Add(this.txtTest);
+            this.grDrivingLicenseA.Controls.Add(this.lblPassedTest);
             this.grDrivingLicenseA.Controls.Add(this.txtAppliedforL);
             this.grDrivingLicenseA.Controls.Add(this.txtDLApplicationID);
-            this.grDrivingLicenseA.Controls.Add(this.linkLabel1);
-            this.grDrivingLicenseA.Controls.Add(this.label2);
+            this.grDrivingLicenseA.Controls.Add(this.llblShowLicenseInfo);
+            this.grDrivingLicenseA.Controls.Add(this.lblPassedTe);
             this.grDrivingLicenseA.Controls.Add(this.label1);
             this.grDrivingLicenseA.Controls.Add(this.lblUserID);
             this.grDrivingLicenseA.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold);
@@ -58,16 +58,16 @@
             this.grDrivingLicenseA.Text = " Driving License Application Info";
             this.grDrivingLicenseA.Enter += new System.EventHandler(this.grDrivingLicenseA_Enter);
             // 
-            // txtTest
+            // lblPassedTest
             // 
-            this.txtTest.AutoSize = true;
-            this.txtTest.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.txtTest.ForeColor = System.Drawing.Color.Black;
-            this.txtTest.Location = new System.Drawing.Point(480, 78);
-            this.txtTest.Name = "txtTest";
-            this.txtTest.Size = new System.Drawing.Size(34, 19);
-            this.txtTest.TabIndex = 54;
-            this.txtTest.Text = "0/0";
+            this.lblPassedTest.AutoSize = true;
+            this.lblPassedTest.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblPassedTest.ForeColor = System.Drawing.Color.Black;
+            this.lblPassedTest.Location = new System.Drawing.Point(480, 78);
+            this.lblPassedTest.Name = "lblPassedTest";
+            this.lblPassedTest.Size = new System.Drawing.Size(34, 19);
+            this.lblPassedTest.TabIndex = 54;
+            this.lblPassedTest.Text = "0/0";
             // 
             // txtAppliedforL
             // 
@@ -91,26 +91,27 @@
             this.txtDLApplicationID.TabIndex = 52;
             this.txtDLApplicationID.Text = "??";
             // 
-            // linkLabel1
+            // llblShowLicenseInfo
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.linkLabel1.Location = new System.Drawing.Point(64, 78);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(145, 19);
-            this.linkLabel1.TabIndex = 51;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Show License Info";
+            this.llblShowLicenseInfo.AutoSize = true;
+            this.llblShowLicenseInfo.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
+            this.llblShowLicenseInfo.Location = new System.Drawing.Point(64, 78);
+            this.llblShowLicenseInfo.Name = "llblShowLicenseInfo";
+            this.llblShowLicenseInfo.Size = new System.Drawing.Size(145, 19);
+            this.llblShowLicenseInfo.TabIndex = 51;
+            this.llblShowLicenseInfo.TabStop = true;
+            this.llblShowLicenseInfo.Text = "Show License Info";
+            this.llblShowLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // label2
+            // lblPassedTe
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(363, 78);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 19);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Passed Tests :";
+            this.lblPassedTe.AutoSize = true;
+            this.lblPassedTe.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblPassedTe.Location = new System.Drawing.Point(363, 78);
+            this.lblPassedTe.Name = "lblPassedTe";
+            this.lblPassedTe.Size = new System.Drawing.Size(111, 19);
+            this.lblPassedTe.TabIndex = 50;
+            this.lblPassedTe.Text = "Passed Tests :";
             // 
             // label1
             // 
@@ -158,11 +159,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grDrivingLicenseA;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.LinkLabel llblShowLicenseInfo;
+        private System.Windows.Forms.Label lblPassedTe;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUserID;
-        private System.Windows.Forms.Label txtTest;
+        private System.Windows.Forms.Label lblPassedTest;
         private System.Windows.Forms.Label txtAppliedforL;
         private System.Windows.Forms.Label txtDLApplicationID;
         private controlls.UserControl_ApplicationBasic userControl_ApplicationBasic1;

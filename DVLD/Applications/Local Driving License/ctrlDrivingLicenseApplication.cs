@@ -1,4 +1,5 @@
-﻿using DVLD_BUSINESS;
+﻿using DVLD.Licenses.LocalLicenses;
+using DVLD_BUSINESS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,15 +71,15 @@ namespace DVLD.Applications.Local_Driving_License
 
         private void _FillLocalDrivingLicenseApplicationInfo()
         {
-           // _LicenseID = _LocalDrivingLicenseApplication.GetActiveLicenseID();
+            _LicenseID = _LocalDrivingLicenseApplication.GetActiveLicenseID();
 
             //incase there is license enable the show link.
-          //  llShowLicenceInfo.Enabled = (_LicenseID != -1);
+            llblShowLicenseInfo.Enabled = (_LicenseID != -1);
 
 
             txtDLApplicationID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
             txtAppliedforL.Text = clsLicenseClass.Find(_LocalDrivingLicenseApplication.LicenseClassID).ClassName;
-           // lblPassedTests.Text = _LocalDrivingLicenseApplication.GetPassedTestCount().ToString() + "/3";
+            lblPassedTest.Text = _LocalDrivingLicenseApplication.GetPassedTestCount().ToString() + "/3";
             userControl_ApplicationBasic1.LoadApplicationInfo(_LocalDrivingLicenseApplication.ApplicationID);
 
         }
@@ -96,6 +97,15 @@ namespace DVLD.Applications.Local_Driving_License
         private void userControl_ApplicationBasic1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            int LicenseID = 
+            _LicenseID = _LocalDrivingLicenseApplication.GetActiveLicenseID();
+
+            frmShowLicenseInfo frm = new frmShowLicenseInfo(LicenseID );
+            frm.ShowDialog();
         }
     }
 }
