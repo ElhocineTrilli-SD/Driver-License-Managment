@@ -1,4 +1,5 @@
-﻿using DVLD.Tests;
+﻿using DVLD.Licenses.LocalLicenses;
+using DVLD.Tests;
 using DVLD_BUSINESS;
 using System;
 using System.Collections.Generic;
@@ -332,6 +333,15 @@ namespace DVLD.Applications.Local_Driving_License
         {
             _ScheduleTest(clsTestType.enTestType.StreetTest);
 
+        }
+
+        private void issueDrivingLicenseFirstTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dgvLD.CurrentRow.Cells[0].Value;
+            frmIssueLicenseForthefirsttime frm = new frmIssueLicenseForthefirsttime(LocalDrivingLicenseApplicationID);
+            frm.ShowDialog();
+
+            frmListlocalDrivingLicenseApplication_Load(null, null);
         }
     }
 }
