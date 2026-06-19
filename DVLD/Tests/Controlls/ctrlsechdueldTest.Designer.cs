@@ -30,8 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctrlsechdueldTest));
             this.grTestType = new System.Windows.Forms.GroupBox();
-            this.lblUserMessage = new System.Windows.Forms.Label();
+            this.lblTestID = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.picture = new System.Windows.Forms.PictureBox();
             this.lblDrivingClass = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
@@ -43,10 +46,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.picture = new System.Windows.Forms.PictureBox();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblTestID = new System.Windows.Forms.Label();
             this.grTestType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
@@ -56,7 +55,6 @@
             this.grTestType.Controls.Add(this.lblTestID);
             this.grTestType.Controls.Add(this.label2);
             this.grTestType.Controls.Add(this.lblDate);
-            this.grTestType.Controls.Add(this.lblUserMessage);
             this.grTestType.Controls.Add(this.lblTitle);
             this.grTestType.Controls.Add(this.picture);
             this.grTestType.Controls.Add(this.lblDrivingClass);
@@ -78,16 +76,37 @@
             this.grTestType.Text = "TestType";
             this.grTestType.Enter += new System.EventHandler(this.grTestType_Enter);
             // 
-            // lblUserMessage
+            // lblTestID
             // 
-            this.lblUserMessage.AutoSize = true;
-            this.lblUserMessage.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblUserMessage.Location = new System.Drawing.Point(134, 152);
-            this.lblUserMessage.Name = "lblUserMessage";
-            this.lblUserMessage.Size = new System.Drawing.Size(111, 20);
-            this.lblUserMessage.TabIndex = 75;
-            this.lblUserMessage.Text = "Sechduel Test";
+            this.lblTestID.AutoSize = true;
+            this.lblTestID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblTestID.ForeColor = System.Drawing.Color.Black;
+            this.lblTestID.Location = new System.Drawing.Point(131, 393);
+            this.lblTestID.Name = "lblTestID";
+            this.lblTestID.Size = new System.Drawing.Size(23, 19);
+            this.lblTestID.TabIndex = 78;
+            this.lblTestID.Text = "??";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(51, 393);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 19);
+            this.label2.TabIndex = 77;
+            this.label2.Text = "TestID :";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblDate.ForeColor = System.Drawing.Color.Black;
+            this.lblDate.Location = new System.Drawing.Point(134, 321);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(23, 19);
+            this.lblDate.TabIndex = 76;
+            this.lblDate.Text = "??";
             // 
             // lblTitle
             // 
@@ -99,6 +118,17 @@
             this.lblTitle.Size = new System.Drawing.Size(203, 36);
             this.lblTitle.TabIndex = 73;
             this.lblTitle.Text = "Sechduel Test";
+            // 
+            // picture
+            // 
+            this.picture.Image = global::DVLD.Properties.Resources.examination;
+            this.picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture.InitialImage")));
+            this.picture.Location = new System.Drawing.Point(135, 1);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(186, 102);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture.TabIndex = 72;
+            this.picture.TabStop = false;
             // 
             // lblDrivingClass
             // 
@@ -215,49 +245,6 @@
             this.label3.TabIndex = 61;
             this.label3.Text = "D.L AppID :";
             // 
-            // picture
-            // 
-            this.picture.Image = global::DVLD.Properties.Resources.examination;
-            this.picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture.InitialImage")));
-            this.picture.Location = new System.Drawing.Point(135, 1);
-            this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(186, 102);
-            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picture.TabIndex = 72;
-            this.picture.TabStop = false;
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(134, 321);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(23, 19);
-            this.lblDate.TabIndex = 76;
-            this.lblDate.Text = "??";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(51, 393);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 19);
-            this.label2.TabIndex = 77;
-            this.label2.Text = "TestID :";
-            // 
-            // lblTestID
-            // 
-            this.lblTestID.AutoSize = true;
-            this.lblTestID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblTestID.ForeColor = System.Drawing.Color.Black;
-            this.lblTestID.Location = new System.Drawing.Point(131, 393);
-            this.lblTestID.Name = "lblTestID";
-            this.lblTestID.Size = new System.Drawing.Size(23, 19);
-            this.lblTestID.TabIndex = 78;
-            this.lblTestID.Text = "??";
-            // 
             // ctrlsechdueldTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,7 +262,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grTestType;
-        private System.Windows.Forms.Label lblUserMessage;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.PictureBox picture;
         private System.Windows.Forms.Label lblDrivingClass;

@@ -49,13 +49,13 @@
             this.lblLocalDrivingLicenseAppID = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
             this.lblDrivingClass = new System.Windows.Forms.Label();
-            this.picture = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblUserMessage = new System.Windows.Forms.Label();
             this.grTestType = new System.Windows.Forms.GroupBox();
+            this.picture = new System.Windows.Forms.PictureBox();
             this.gbRetakeTestInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.grTestType.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTrial
@@ -281,17 +281,6 @@
             this.lblDrivingClass.TabIndex = 70;
             this.lblDrivingClass.Text = "??";
             // 
-            // picture
-            // 
-            this.picture.Image = global::DVLD.Properties.Resources.examination;
-            this.picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture.InitialImage")));
-            this.picture.Location = new System.Drawing.Point(135, 1);
-            this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(186, 102);
-            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picture.TabIndex = 72;
-            this.picture.TabStop = false;
-            // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
@@ -313,6 +302,7 @@
             this.lblUserMessage.Size = new System.Drawing.Size(111, 20);
             this.lblUserMessage.TabIndex = 75;
             this.lblUserMessage.Text = "Sechduel Test";
+            this.lblUserMessage.Visible = false;
             // 
             // grTestType
             // 
@@ -338,6 +328,17 @@
             this.grTestType.TabStop = false;
             this.grTestType.Text = "TestType";
             // 
+            // picture
+            // 
+            this.picture.Image = global::DVLD.Properties.Resources.examination;
+            this.picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture.InitialImage")));
+            this.picture.Location = new System.Drawing.Point(135, 1);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(186, 102);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture.TabIndex = 72;
+            this.picture.TabStop = false;
+            // 
             // ctrlSechduelTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -350,9 +351,9 @@
             this.Load += new System.EventHandler(this.ctrlSechduelTest_Load);
             this.gbRetakeTestInfo.ResumeLayout(false);
             this.gbRetakeTestInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.grTestType.ResumeLayout(false);
             this.grTestType.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
 
         }
