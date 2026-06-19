@@ -33,13 +33,13 @@
             this.lblRecordsCountTestTypes = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvTestTypes = new System.Windows.Forms.DataGridView();
-            this.lblTitel = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editTestTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblTitel = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTestTypes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnclose
@@ -90,6 +90,21 @@
             this.dgvTestTypes.Size = new System.Drawing.Size(661, 300);
             this.dgvTestTypes.TabIndex = 25;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editTestTypeToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(193, 34);
+            // 
+            // editTestTypeToolStripMenuItem
+            // 
+            this.editTestTypeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.editTestTypeToolStripMenuItem.Name = "editTestTypeToolStripMenuItem";
+            this.editTestTypeToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
+            this.editTestTypeToolStripMenuItem.Text = "Edit Test Type";
+            this.editTestTypeToolStripMenuItem.Click += new System.EventHandler(this.editTestTypeToolStripMenuItem_Click);
+            // 
             // lblTitel
             // 
             this.lblTitel.AutoSize = true;
@@ -113,21 +128,6 @@
             this.guna2CirclePictureBox1.TabIndex = 29;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editTestTypeToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(193, 56);
-            // 
-            // editTestTypeToolStripMenuItem
-            // 
-            this.editTestTypeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.editTestTypeToolStripMenuItem.Name = "editTestTypeToolStripMenuItem";
-            this.editTestTypeToolStripMenuItem.Size = new System.Drawing.Size(192, 30);
-            this.editTestTypeToolStripMenuItem.Text = "Edit Test Type";
-            this.editTestTypeToolStripMenuItem.Click += new System.EventHandler(this.editTestTypeToolStripMenuItem_Click);
-            // 
             // frmManageTestTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -142,11 +142,11 @@
             this.Controls.Add(this.lblTitel);
             this.Name = "frmManageTestTypes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmManageTestTypes";
+            this.Text = "ManageTestTypes";
             this.Load += new System.EventHandler(this.frmManageTestTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTestTypes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

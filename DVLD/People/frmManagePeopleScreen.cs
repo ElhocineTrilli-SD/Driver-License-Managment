@@ -69,6 +69,7 @@ namespace DVLD
         {
             Form frm = new frmAddUpdatePerson();
             frm.ShowDialog();
+            ManagePeople_Load(null, null);
         }
        
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -199,8 +200,10 @@ namespace DVLD
         private void ADDTools_Click(object sender, EventArgs e)
         {
 
-            Form frm = new frmAddUpdatePerson();
+            frmAddUpdatePerson frm = new frmAddUpdatePerson();
             frm.ShowDialog();
+            ManagePeople_Load(null, null);
+
         }
         private void showDetailsTool_Click(object sender, EventArgs e)
         {
@@ -213,7 +216,8 @@ namespace DVLD
             int PersonID = (int)dgvPeople.CurrentRow.Cells[0].Value;
             Form frm = new frmAddUpdatePerson(PersonID);
             frm.ShowDialog();
-            _RefrechPeopleList();
+            ManagePeople_Load(null, null);
+
         }
         private void sendEmailTool_Click(object sender, EventArgs e)
         {

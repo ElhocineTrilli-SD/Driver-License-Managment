@@ -67,6 +67,7 @@ namespace DVLD.Tests.TestTypes
             frm.DataUpdated += Frm_DataUpdated;
 
             frm.ShowDialog();
+            frmManageTestTypes_Load(null, null);   
         }
 
         private void Frm_DataUpdated()

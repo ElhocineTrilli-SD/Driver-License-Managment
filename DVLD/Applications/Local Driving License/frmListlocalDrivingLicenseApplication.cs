@@ -103,6 +103,7 @@ namespace DVLD.Applications.Local_Driving_License
         {
             frmAdd_EditLocalDrivingLicenseApplication frm = new frmAdd_EditLocalDrivingLicenseApplication();
             frm.ShowDialog();
+            frmListlocalDrivingLicenseApplication_Load(null, null);
         }
 
         private void txtFilterValue_TextChanged(object sender, EventArgs e)
@@ -308,7 +309,6 @@ namespace DVLD.Applications.Local_Driving_License
 
         }
 
-        
         private void _ScheduleTest(clsTestType.enTestType TestType)
         {
 

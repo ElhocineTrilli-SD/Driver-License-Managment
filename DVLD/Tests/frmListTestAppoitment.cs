@@ -141,7 +141,7 @@ namespace DVLD.Tests
 
             frmTakeTest frm = new frmTakeTest(TestAppointmentID, _testType);
             frm.ShowDialog();
-
+            frmListTestAppoitment_Load(null, null); 
 
         }
     }

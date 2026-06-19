@@ -65,6 +65,7 @@ namespace DVLD.Application.ApplicationType
             frmEditApplicationType frm = new frmEditApplicationType(Id);
             frm.DataUpdated += LoadData;
             frm.ShowDialog();
+            frmManageApplicationType_Load(null, null);
         }
 
         private void LoadData()
