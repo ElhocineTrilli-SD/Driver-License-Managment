@@ -128,14 +128,14 @@
             this.toolStripMenuItem6,
             this.showLisensePersonalToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(353, 302);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(394, 334);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showApplicationDetailsToolStripMenuItem
             // 
-            this.showApplicationDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.showApplicationDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showApplicationDetailsToolStripMenuItem.Name = "showApplicationDetailsToolStripMenuItem";
-            this.showApplicationDetailsToolStripMenuItem.Size = new System.Drawing.Size(352, 30);
+            this.showApplicationDetailsToolStripMenuItem.Size = new System.Drawing.Size(352, 34);
             this.showApplicationDetailsToolStripMenuItem.Text = "Show Application details";
             this.showApplicationDetailsToolStripMenuItem.Click += new System.EventHandler(this.showApplicationDetailsToolStripMenuItem_Click);
             // 
@@ -146,17 +146,17 @@
             // 
             // editToolStripMenuItem
             // 
-            this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(352, 30);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(393, 34);
             this.editToolStripMenuItem.Text = "Edit Application";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editApplicationToolStripMenuItem_Click);
             // 
             // DeleteApplicationToolStripMenuItem
             // 
-            this.DeleteApplicationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.DeleteApplicationToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.DeleteApplicationToolStripMenuItem.Name = "DeleteApplicationToolStripMenuItem";
-            this.DeleteApplicationToolStripMenuItem.Size = new System.Drawing.Size(352, 30);
+            this.DeleteApplicationToolStripMenuItem.Size = new System.Drawing.Size(393, 34);
             this.DeleteApplicationToolStripMenuItem.Text = "Delete Application";
             this.DeleteApplicationToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
@@ -167,9 +167,9 @@
             // 
             // CancelApplicaitonToolStripMenuItem
             // 
-            this.CancelApplicaitonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.CancelApplicaitonToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.CancelApplicaitonToolStripMenuItem.Name = "CancelApplicaitonToolStripMenuItem";
-            this.CancelApplicaitonToolStripMenuItem.Size = new System.Drawing.Size(352, 30);
+            this.CancelApplicaitonToolStripMenuItem.Size = new System.Drawing.Size(393, 34);
             this.CancelApplicaitonToolStripMenuItem.Text = "Cancel Application";
             this.CancelApplicaitonToolStripMenuItem.Click += new System.EventHandler(this.cencelToolStripMenuItem_Click);
             // 
@@ -184,9 +184,9 @@
             this.scheduleVisionTestToolStripMenuItem,
             this.scheduleWrittenTestToolStripMenuItem,
             this.scheduleStreetTestToolStripMenuItem});
-            this.ScheduleTestsMenue.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.ScheduleTestsMenue.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.ScheduleTestsMenue.Name = "ScheduleTestsMenue";
-            this.ScheduleTestsMenue.Size = new System.Drawing.Size(352, 30);
+            this.ScheduleTestsMenue.Size = new System.Drawing.Size(393, 34);
             this.ScheduleTestsMenue.Text = "Sechduel Tests";
             // 
             // scheduleVisionTestToolStripMenuItem
@@ -217,9 +217,9 @@
             // 
             // issueDrivingLicenseFirstTimeToolStripMenuItem
             // 
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.issueDrivingLicenseFirstTimeToolStripMenuItem.Name = "issueDrivingLicenseFirstTimeToolStripMenuItem";
-            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(352, 30);
+            this.issueDrivingLicenseFirstTimeToolStripMenuItem.Size = new System.Drawing.Size(393, 34);
             this.issueDrivingLicenseFirstTimeToolStripMenuItem.Text = "Issue Driving License (First Time)";
             this.issueDrivingLicenseFirstTimeToolStripMenuItem.Click += new System.EventHandler(this.issueDrivingLicenseFirstTimeToolStripMenuItem_Click);
             // 
@@ -230,10 +230,11 @@
             // 
             // showLicenseToolStripMenuItem
             // 
-            this.showLicenseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.showLicenseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.showLicenseToolStripMenuItem.Name = "showLicenseToolStripMenuItem";
-            this.showLicenseToolStripMenuItem.Size = new System.Drawing.Size(352, 30);
+            this.showLicenseToolStripMenuItem.Size = new System.Drawing.Size(393, 34);
             this.showLicenseToolStripMenuItem.Text = "Show License ";
+            this.showLicenseToolStripMenuItem.Click += new System.EventHandler(this.showLicenseToolStripMenuItem_Click);
             // 
             // toolStripMenuItem6
             // 
@@ -242,9 +243,9 @@
             // 
             // showLisensePersonalToolStripMenuItem
             // 
-            this.showLisensePersonalToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.showLisensePersonalToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.showLisensePersonalToolStripMenuItem.Name = "showLisensePersonalToolStripMenuItem";
-            this.showLisensePersonalToolStripMenuItem.Size = new System.Drawing.Size(352, 30);
+            this.showLisensePersonalToolStripMenuItem.Size = new System.Drawing.Size(393, 34);
             this.showLisensePersonalToolStripMenuItem.Text = "Show Lisense Personal";
             // 
             // txtFilterValue

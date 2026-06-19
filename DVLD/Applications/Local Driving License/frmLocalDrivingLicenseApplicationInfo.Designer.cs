@@ -55,17 +55,17 @@
             this.ctrlDrivingLicenseApplication1.Size = new System.Drawing.Size(785, 389);
             this.ctrlDrivingLicenseApplication1.TabIndex = 5;
             // 
-            // frmLocalDrivingLicenseApplication
+            // frmLocalDrivingLicenseApplicationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(809, 465);
             this.Controls.Add(this.ctrlDrivingLicenseApplication1);
             this.Controls.Add(this.guna2Button1);
-            this.Name = "frmLocalDrivingLicenseApplication";
+            this.Name = "frmLocalDrivingLicenseApplicationInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Local Driving License Application";
+            this.Text = "Local Driving License Application Info";
             this.Load += new System.EventHandler(this.frmLocalDrivingLicenseApplication_Load);
             this.ResumeLayout(false);
 
