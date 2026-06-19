@@ -311,6 +311,10 @@ namespace DVLD_BUSINESS
                 return -1;
         }
 
+        public byte GetPassedTestCount()
+        {
+            return clsTest.GetPassedTestCount(this.LocalDrivingLicenseApplicationID);
+        }
 
     }
 }

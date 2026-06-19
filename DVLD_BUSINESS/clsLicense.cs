@@ -15,7 +15,6 @@ namespace DVLD_BUSINESS
         enMode Mode;
 
         public enum enIssueReason { FirstTime = 1, Renew = 2, DamagedReplacement = 3, LostReplacement = 4 };
-
         public clsDrivers DriversInfo;
         public int LicenseID { set; get; }
         public int ApplicationID { set; get; }
@@ -73,7 +72,7 @@ namespace DVLD_BUSINESS
             this.DriversInfo = clsDrivers.FindByDriverID(this.DriverID);
             this.LicenseClassIfo = clsLicenseClass.Find(this.LicenseClass);
            // this.DetainedInfo = clsDetainedLicense.FindByLicenseID(this.LicenseID);
-
+           
             Mode = enMode.Update;
         }
         

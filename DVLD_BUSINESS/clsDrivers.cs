@@ -12,7 +12,8 @@ namespace DVLD_BUSINESS
     {
         public enum enMode { AddNew = 0, Update = 1 };
         enMode Mode;
-        clsPerson PersonInfo;
+
+        public clsPerson PersonInfo;
 
         public int DriverID { get; set; }
         public int PersonID {  get; set; }
