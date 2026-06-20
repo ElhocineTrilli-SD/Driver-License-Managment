@@ -116,6 +116,7 @@
             this.PBFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBFoto.TabIndex = 31;
             this.PBFoto.TabStop = false;
+         //   this.PBFoto.Click += new System.EventHandler(this.PBFoto_Click);
             // 
             // lblRemove
             // 
