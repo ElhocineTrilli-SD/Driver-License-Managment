@@ -1,5 +1,6 @@
 ﻿using DVLD.Application.ApplicationType;
 using DVLD.Applications.Local_Driving_License;
+using DVLD.Applications.Renew_License_Info;
 using DVLD.Globle_Classes;
 using DVLD.Tests.TestTypes;
 using DVLD.Users;
@@ -237,10 +238,13 @@ namespace DVLD
             frm.ShowDialog();
         }
 
-        private void drivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void RenewLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+          //
+          //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+          //renew
+          frmRenewLicenseApplication frm = new frmRenewLicenseApplication();
+            frm.ShowDialog();
         }
 
         private void replacmentToolStripMenuItem_Click(object sender, EventArgs e)

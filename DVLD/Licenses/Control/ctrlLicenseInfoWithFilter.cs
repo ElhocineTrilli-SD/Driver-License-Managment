@@ -54,7 +54,7 @@ namespace DVLD.Licenses.Control
             _LicenseID = ctrlLicenseInfo1.LicenseID;
             if(OnLicenseSelected != null && FilterEnabled)
             {
-                LicenseSelected(licenseID);
+                LicenseSelected(_LicenseID);
             }
         }
 
@@ -77,7 +77,7 @@ namespace DVLD.Licenses.Control
 
             }
             _LicenseID = int.Parse(txtFilter.Text);
-            ctrlLicenseInfo1.LoadInfo(_LicenseID);
+            LoadLicenseInfo(_LicenseID);
         }
 
         private void txtFilter_Validating(object sender, CancelEventArgs e)
