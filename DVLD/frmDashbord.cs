@@ -1,6 +1,7 @@
 ﻿using DVLD.Application.ApplicationType;
 using DVLD.Applications.Local_Driving_License;
 using DVLD.Applications.Renew_License_Info;
+using DVLD.Applications.ReplaceLostOrDamagedLicense;
 using DVLD.Globle_Classes;
 using DVLD.Tests.TestTypes;
 using DVLD.Users;
@@ -249,8 +250,10 @@ namespace DVLD
 
         private void replacmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            // replacement
+            frmReplecmentLicense frm = new frmReplecmentLicense();
+            frm.ShowDialog();
         }
 
         private void releaseToolStripMenuItem_Click(object sender, EventArgs e)
