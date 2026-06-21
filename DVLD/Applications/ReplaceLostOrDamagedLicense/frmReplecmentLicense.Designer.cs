@@ -35,7 +35,6 @@
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.llblShowHistory = new System.Windows.Forms.LinkLabel();
             this.llblShowNewLicenseInfo = new System.Windows.Forms.LinkLabel();
-            this.ctrlLicenseInfoWithFilter2 = new DVLD.Licenses.Control.ctrlLicenseInfoWithFilter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblAppDate = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTitel = new System.Windows.Forms.Label();
+            this.ctrlLicenseInfoWithFilter2 = new DVLD.Licenses.Control.ctrlLicenseInfoWithFilter();
             this.grReplacement.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -145,6 +145,7 @@
             this.llblShowHistory.TabIndex = 95;
             this.llblShowHistory.TabStop = true;
             this.llblShowHistory.Text = "Show License History";
+            this.llblShowHistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblShowHistory_LinkClicked);
             // 
             // llblShowNewLicenseInfo
             // 
@@ -157,16 +158,6 @@
             this.llblShowNewLicenseInfo.TabStop = true;
             this.llblShowNewLicenseInfo.Text = "Show New License Info";
             this.llblShowNewLicenseInfo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblShowNewLicenseInfo_LinkClicked);
-            // 
-            // ctrlLicenseInfoWithFilter2
-            // 
-            this.ctrlLicenseInfoWithFilter2.FilterEnabled = true;
-            this.ctrlLicenseInfoWithFilter2.Location = new System.Drawing.Point(26, 56);
-            this.ctrlLicenseInfoWithFilter2.Name = "ctrlLicenseInfoWithFilter2";
-            this.ctrlLicenseInfoWithFilter2.Size = new System.Drawing.Size(699, 438);
-            this.ctrlLicenseInfoWithFilter2.TabIndex = 93;
-            this.ctrlLicenseInfoWithFilter2.OnLicenseSelected += new System.Action<int>(this.ctrlLicenseInfoWithFilter2_OnLicenseSelected);
-            this.ctrlLicenseInfoWithFilter2.Load += new System.EventHandler(this.ctrlLicenseInfoWithFilter2_Load);
             // 
             // groupBox1
             // 
@@ -325,6 +316,16 @@
             this.lblTitel.Size = new System.Drawing.Size(302, 36);
             this.lblTitel.TabIndex = 99;
             this.lblTitel.Text = "License Replacement";
+            // 
+            // ctrlLicenseInfoWithFilter2
+            // 
+            this.ctrlLicenseInfoWithFilter2.FilterEnabled = true;
+            this.ctrlLicenseInfoWithFilter2.Location = new System.Drawing.Point(26, 56);
+            this.ctrlLicenseInfoWithFilter2.Name = "ctrlLicenseInfoWithFilter2";
+            this.ctrlLicenseInfoWithFilter2.Size = new System.Drawing.Size(699, 438);
+            this.ctrlLicenseInfoWithFilter2.TabIndex = 93;
+            this.ctrlLicenseInfoWithFilter2.OnLicenseSelected += new System.Action<int>(this.ctrlLicenseInfoWithFilter2_OnLicenseSelected);
+            this.ctrlLicenseInfoWithFilter2.Load += new System.EventHandler(this.ctrlLicenseInfoWithFilter2_Load);
             // 
             // frmReplecmentLicense
             // 

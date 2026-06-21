@@ -1,4 +1,5 @@
 ﻿using DVLD.Globle_Classes;
+using DVLD.Licenses;
 using DVLD.Licenses.Control;
 using DVLD.Licenses.LocalLicenses;
 using DVLD_BUSINESS;
@@ -142,5 +143,12 @@ namespace DVLD.Applications.ReplaceLostOrDamagedLicense
             frmShowLicenseInfo frm = new frmShowLicenseInfo(_NewLicense);
             frm.ShowDialog();
          }
+
+        private void llblShowHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmShowPersonLicenseHistory frm =
+                new frmShowPersonLicenseHistory(ctrlLicenseInfoWithFilter2.SelectedLicenseInfo.DriversInfo.PersonID);
+            frm.ShowDialog();
+        }
     }
 }
