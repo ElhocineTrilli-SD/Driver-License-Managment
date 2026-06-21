@@ -110,6 +110,12 @@
     <Compile Include="Applications\ReplaceLostOrDamagedLicense\frmReplecmentLicense.Designer.cs">
       <DependentUpon>frmReplecmentLicense.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dricers\frmListDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dricers\frmListDrivers.Designer.cs">
+      <DependentUpon>frmListDrivers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Control\ctrlLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\ReplaceLostOrDamagedLicense\frmReplecmentLicense.resx">
       <DependentUpon>frmReplecmentLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dricers\frmListDrivers.resx">
+      <DependentUpon>frmListDrivers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Control\ctrlLicenseInfo.resx">
       <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
