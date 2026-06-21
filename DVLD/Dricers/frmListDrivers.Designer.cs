@@ -33,13 +33,13 @@
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDrivers = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showDriverInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPersonLicenseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
             this.cbfilter = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFilterValue = new System.Windows.Forms.TextBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showDriverInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showPersonLicenseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDrivers)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +92,30 @@
             this.dgvDrivers.Size = new System.Drawing.Size(759, 291);
             this.dgvDrivers.TabIndex = 10;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showDriverInfoToolStripMenuItem,
+            this.showPersonLicenseHistoryToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(341, 94);
+            // 
+            // showDriverInfoToolStripMenuItem
+            // 
+            this.showDriverInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.showDriverInfoToolStripMenuItem.Name = "showDriverInfoToolStripMenuItem";
+            this.showDriverInfoToolStripMenuItem.Size = new System.Drawing.Size(340, 34);
+            this.showDriverInfoToolStripMenuItem.Text = "Show Person Info";
+            this.showDriverInfoToolStripMenuItem.Click += new System.EventHandler(this.showDriverInfoToolStripMenuItem_Click);
+            // 
+            // showPersonLicenseHistoryToolStripMenuItem
+            // 
+            this.showPersonLicenseHistoryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
+            this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(340, 34);
+            this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show Person License history";
+            this.showPersonLicenseHistoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicenseHistoryToolStripMenuItem_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -132,29 +156,6 @@
             this.txtFilterValue.TextChanged += new System.EventHandler(this.txtFilterValue_TextChanged);
             this.txtFilterValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFilterValue_KeyPress);
             this.txtFilterValue.Validating += new System.ComponentModel.CancelEventHandler(this.txtFilterValue_Validating);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showDriverInfoToolStripMenuItem,
-            this.showPersonLicenseHistoryToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(341, 94);
-            // 
-            // showDriverInfoToolStripMenuItem
-            // 
-            this.showDriverInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
-            this.showDriverInfoToolStripMenuItem.Name = "showDriverInfoToolStripMenuItem";
-            this.showDriverInfoToolStripMenuItem.Size = new System.Drawing.Size(340, 34);
-            this.showDriverInfoToolStripMenuItem.Text = "Show Person Info";
-            this.showDriverInfoToolStripMenuItem.Click += new System.EventHandler(this.showDriverInfoToolStripMenuItem_Click);
-            // 
-            // showPersonLicenseHistoryToolStripMenuItem
-            // 
-            this.showPersonLicenseHistoryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
-            this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
-            this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(340, 34);
-            this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show Person License history";
             // 
             // frmListDrivers
             // 

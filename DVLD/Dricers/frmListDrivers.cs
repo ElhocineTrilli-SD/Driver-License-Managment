@@ -1,4 +1,5 @@
-﻿using DVLD_BUSINESS;
+﻿using DVLD.Licenses;
+using DVLD_BUSINESS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -168,6 +169,14 @@ namespace DVLD.Dricers
             
             ShowPersonDetails showPerson = new ShowPersonDetails((int)dgvDrivers.CurrentRow.Cells[1].Value);
             showPerson.ShowDialog();
+        }
+
+       
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory((int)dgvDrivers.CurrentRow.Cells[1].Value);
+            frm.ShowDialog();
         }
     }
     
