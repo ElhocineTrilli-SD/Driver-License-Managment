@@ -1,4 +1,5 @@
 ﻿using DVLD.Globle_Classes;
+using DVLD.Licenses;
 using DVLD.Licenses.LocalLicenses;
 using DVLD_BUSINESS;
 using System;
@@ -109,6 +110,13 @@ namespace DVLD.Applications.Renew_License_Info
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void llblShowHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmShowPersonLicenseHistory frm = 
+                new frmShowPersonLicenseHistory(ctrlLicenseInfoWithFilter1.SelectedLicenseInfo.DriversInfo.PersonID); 
+            frm.ShowDialog();
         }
     }
 }
