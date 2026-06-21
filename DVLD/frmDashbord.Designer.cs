@@ -703,7 +703,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(207, 51);
             this.guna2Button2.TabIndex = 6;
             this.guna2Button2.Text = " Drivers";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.guna2Button2.Click += new System.EventHandler(this.Drivers_Click);
             // 
             // guna2Button1
             // 
