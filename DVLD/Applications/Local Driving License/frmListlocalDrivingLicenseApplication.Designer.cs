@@ -135,14 +135,14 @@
             // 
             this.showApplicationDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showApplicationDetailsToolStripMenuItem.Name = "showApplicationDetailsToolStripMenuItem";
-            this.showApplicationDetailsToolStripMenuItem.Size = new System.Drawing.Size(352, 34);
+            this.showApplicationDetailsToolStripMenuItem.Size = new System.Drawing.Size(393, 34);
             this.showApplicationDetailsToolStripMenuItem.Text = "Show Application details";
             this.showApplicationDetailsToolStripMenuItem.Click += new System.EventHandler(this.showApplicationDetailsToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(349, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(390, 6);
             // 
             // editToolStripMenuItem
             // 
@@ -163,7 +163,7 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(349, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(390, 6);
             // 
             // CancelApplicaitonToolStripMenuItem
             // 
@@ -176,7 +176,7 @@
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(349, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(390, 6);
             // 
             // ScheduleTestsMenue
             // 
@@ -192,28 +192,28 @@
             // scheduleVisionTestToolStripMenuItem
             // 
             this.scheduleVisionTestToolStripMenuItem.Name = "scheduleVisionTestToolStripMenuItem";
-            this.scheduleVisionTestToolStripMenuItem.Size = new System.Drawing.Size(266, 30);
+            this.scheduleVisionTestToolStripMenuItem.Size = new System.Drawing.Size(296, 34);
             this.scheduleVisionTestToolStripMenuItem.Text = "Sechduel Vision Test";
             this.scheduleVisionTestToolStripMenuItem.Click += new System.EventHandler(this.sechduelVisionTestToolStripMenuItem_Click);
             // 
             // scheduleWrittenTestToolStripMenuItem
             // 
             this.scheduleWrittenTestToolStripMenuItem.Name = "scheduleWrittenTestToolStripMenuItem";
-            this.scheduleWrittenTestToolStripMenuItem.Size = new System.Drawing.Size(266, 30);
+            this.scheduleWrittenTestToolStripMenuItem.Size = new System.Drawing.Size(296, 34);
             this.scheduleWrittenTestToolStripMenuItem.Text = "Sechduel Written Test";
             this.scheduleWrittenTestToolStripMenuItem.Click += new System.EventHandler(this.scheduleWrittenTestToolStripMenuItem_Click);
             // 
             // scheduleStreetTestToolStripMenuItem
             // 
             this.scheduleStreetTestToolStripMenuItem.Name = "scheduleStreetTestToolStripMenuItem";
-            this.scheduleStreetTestToolStripMenuItem.Size = new System.Drawing.Size(266, 30);
+            this.scheduleStreetTestToolStripMenuItem.Size = new System.Drawing.Size(296, 34);
             this.scheduleStreetTestToolStripMenuItem.Text = "Sechduel street Test";
             this.scheduleStreetTestToolStripMenuItem.Click += new System.EventHandler(this.scheduleStreetTestToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(349, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(390, 6);
             // 
             // issueDrivingLicenseFirstTimeToolStripMenuItem
             // 
@@ -226,7 +226,7 @@
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(349, 6);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(390, 6);
             // 
             // showLicenseToolStripMenuItem
             // 
@@ -239,7 +239,7 @@
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(349, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(390, 6);
             // 
             // showLisensePersonalToolStripMenuItem
             // 
@@ -247,6 +247,7 @@
             this.showLisensePersonalToolStripMenuItem.Name = "showLisensePersonalToolStripMenuItem";
             this.showLisensePersonalToolStripMenuItem.Size = new System.Drawing.Size(393, 34);
             this.showLisensePersonalToolStripMenuItem.Text = "Show Lisense Personal";
+            this.showLisensePersonalToolStripMenuItem.Click += new System.EventHandler(this.showLisensePersonalToolStripMenuItem_Click);
             // 
             // txtFilterValue
             // 

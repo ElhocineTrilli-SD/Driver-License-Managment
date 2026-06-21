@@ -1,4 +1,5 @@
-﻿using DVLD.Licenses.LocalLicenses;
+﻿using DVLD.Licenses;
+using DVLD.Licenses.LocalLicenses;
 using DVLD.Tests;
 using DVLD_BUSINESS;
 using System;
@@ -363,6 +364,15 @@ namespace DVLD.Applications.Local_Driving_License
                 return;
             }
 
+        }
+
+        private void showLisensePersonalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LocalDrivingLicenseApplicationID = (int)dgvLD.CurrentRow.Cells[0].Value;
+            clsLocalDrivingLicenseApplication localDrivingLicenseApplication = clsLocalDrivingLicenseApplication.FindByLocalDrivingAppLicenseID(LocalDrivingLicenseApplicationID);
+
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(localDrivingLicenseApplication.ApplicantPersonID);
+            frm.ShowDialog();
         }
     }
 }
