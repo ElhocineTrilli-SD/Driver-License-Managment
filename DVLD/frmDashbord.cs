@@ -30,16 +30,16 @@ namespace DVLD
             _frmLogin = frm;
         }
 
-        private void ActiveButton(Guna2Button btn)
-        {
-            btn.ForeColor = Color.DarkOrange;
-            btn.FillColor = Color.FromArgb(35,35,48);
-        }
-        private void inActiveButton(Guna2Button btn)
-        {
-            btn.ForeColor = Color.DarkOrange;
-            btn.FillColor = Color.FromArgb(35, 35, 48);
-        }
+        //private void ActiveButton(Guna2Button btn)
+        //{
+        //    btn.ForeColor = Color.DarkOrange;
+        //    btn.FillColor = Color.FromArgb(35,35,48);
+        //}
+        //private void inActiveButton(Guna2Button btn)
+        //{
+        //    btn.ForeColor = Color.DarkOrange;
+        //    btn.FillColor = Color.FromArgb(35, 35, 48);
+        //}
 
         private void OpenManagePeopleForm()
         {
@@ -66,17 +66,7 @@ namespace DVLD
             this.Close();
         }
 
-        private void lblTime_Click(object sender, EventArgs e)
-        {
-
-            
-        }
-
-        private void guna2Panel4_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
-
+      
         private void _RefrechNumberOfPeople()
         {
             int Total_P = clsPerson.GetPeopleCount();
@@ -107,7 +97,6 @@ namespace DVLD
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-          //  MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
           frmManageUsers frm = new frmManageUsers();
           frm.ShowDialog();
 
@@ -115,20 +104,17 @@ namespace DVLD
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            //     MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             ApplicationMenueStripe.Show(guna2Button1,0,guna2Button1.Height);
         }
 
         private void Drivers_Click(object sender, EventArgs e)
         {
-           // MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
            frmListDrivers frm = new frmListDrivers();
             frm.ShowDialog();
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-          //  MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
           AccountMenu.Show(guna2Button6,0,guna2Button6.Height);
         }
 

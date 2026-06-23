@@ -63,9 +63,9 @@ namespace DataAccess
         {
             bool Isfound = false;
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-            string query = "SELECT * FROM DetainedLicenses WHERE DetainID = @DetainID";
+            string query = "SELECT * FROM DetainedLicenses WHERE LicenseID = @LicenseID";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@DetainID", DetainID);
+            command.Parameters.AddWithValue("@LicenseID", LicenseID);
             try
             {
                 connection.Open();
