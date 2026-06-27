@@ -1,6 +1,7 @@
 ﻿using DataAccess;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -82,6 +83,35 @@ namespace DVLD_BUSINESS
 
             return clsDetainLicenseData.UpdateDetainedLicense(
                 this.DetainID, this.LicenseID, this.DetainDate, this.FineFees, this.CreatedByUserID);
+        }
+
+        public static clsDetainedLicense Find(int DetainID)
+        {
+            int LicenseID = -1; DateTime DetainDate = DateTime.Now;
+            float FineFees = 0; int CreatedByUserID = -1;
+            bool IsReleased = false; DateTime ReleaseDate = DateTime.MaxValue;
+            int ReleasedByUserID = -1; int ReleaseApplicationID = -1;
+
+            if (clsDetainLicenseData.GetDetainlicenseInfoByID(DetainID,
+            ref LicenseID, ref DetainDate,
+            ref FineFees, ref CreatedByUserID,
+            ref IsReleased, ref ReleaseDate,
+            ref ReleasedByUserID, ref ReleaseApplicationID))
+
+                return new clsDetainedLicense(DetainID,
+                     LicenseID, DetainDate,
+                     FineFees, CreatedByUserID,
+                     IsReleased, ReleaseDate,
+                     ReleasedByUserID, ReleaseApplicationID);
+            else
+                return null;
+
+        }
+
+        public static DataTable GetAllDetainedLicenses()
+        {
+            return clsDetainLicenseData.GetAllDetainLicenses();
+
         }
     }
 }
