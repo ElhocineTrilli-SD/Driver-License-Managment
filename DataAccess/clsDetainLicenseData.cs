@@ -128,6 +128,109 @@ namespace DataAccess
             return dt;
         }
 
+        public static int AddNewDetainedLicense(
+          int LicenseID, DateTime DetainDate,
+          float FineFees, int CreatedByUserID)
+        {
+            int DetainID = -1;
+
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+
+            string query = @"INSERT INTO dbo.DetainedLicenses
+                               (LicenseID,
+                               DetainDate,
+                               FineFees,
+                               CreatedByUserID,
+                               IsReleased
+                               )
+                            VALUES
+                               (@LicenseID,
+                               @DetainDate, 
+                               @FineFees, 
+                               @CreatedByUserID,
+                               0
+                             );
+                            
+                            SELECT SCOPE_IDENTITY();";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@LicenseID", LicenseID);
+            command.Parameters.AddWithValue("@DetainDate", DetainDate);
+            command.Parameters.AddWithValue("@FineFees", FineFees);
+            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+
+            try
+            {
+                connection.Open();
+
+                object result = command.ExecuteScalar();
+
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    DetainID = insertedID;
+                }
+            }
+
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+
+            return DetainID;
+
+        }
+
+        public static bool UpdateDetainedLicense(int DetainID,
+            int LicenseID, DateTime DetainDate,
+            float FineFees, int CreatedByUserID)
+        {
+
+            int rowsAffected = 0;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+
+            string query = @"UPDATE dbo.DetainedLicenses
+                              SET LicenseID = @LicenseID, 
+                              DetainDate = @DetainDate, 
+                              FineFees = @FineFees,
+                              CreatedByUserID = @CreatedByUserID,   
+                              WHERE DetainID=@DetainID;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@DetainedLicenseID", DetainID);
+            command.Parameters.AddWithValue("@LicenseID", LicenseID);
+            command.Parameters.AddWithValue("@DetainDate", DetainDate);
+            command.Parameters.AddWithValue("@FineFees", FineFees);
+            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+
+
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                return false;
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowsAffected > 0);
+        }
 
     }
 }
