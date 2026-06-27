@@ -232,5 +232,45 @@ namespace DataAccess
             return (rowsAffected > 0);
         }
 
+
+        public static bool ReleaseDetainedLicense(int DetainID,
+                 int ReleasedByUserID, int ReleaseApplicationID)
+        {
+
+            int rowsAffected = 0;
+            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+
+            string query = @"UPDATE dbo.DetainedLicenses
+                              SET IsReleased = 1, 
+                              ReleaseDate = @ReleaseDate, 
+                              ReleaseApplicationID = @ReleaseApplicationID   
+                              WHERE DetainID=@DetainID;";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@DetainID", DetainID);
+            command.Parameters.AddWithValue("@ReleasedByUserID", ReleasedByUserID);
+            command.Parameters.AddWithValue("@ReleaseApplicationID", ReleaseApplicationID);
+            command.Parameters.AddWithValue("@ReleaseDate", DateTime.Now);
+            try
+            {
+                connection.Open();
+                rowsAffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                return false;
+            }
+
+            finally
+            {
+                connection.Close();
+            }
+
+            return (rowsAffected > 0);
+        }
+
     }
 }
