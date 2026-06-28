@@ -240,5 +240,10 @@ namespace DVLD.Applications.Release
             frmDetainLicenseApplication frm = new frmDetainLicenseApplication();
             frm.ShowDialog();
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            releasedDetainedLicenseToolStripMenuItem.Enabled = !(bool)dgvDetainedLicense.CurrentRow.Cells[3].Value;
+        }
     }
 }
