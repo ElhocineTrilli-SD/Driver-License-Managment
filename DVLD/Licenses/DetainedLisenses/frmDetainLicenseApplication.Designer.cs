@@ -199,6 +199,7 @@
             this.btnDetain.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDetain.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDetain.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDetain.Enabled = false;
             this.btnDetain.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetain.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDetain.Location = new System.Drawing.Point(618, 587);
@@ -276,6 +277,7 @@
             this.Controls.Add(this.gbDetainInfo);
             this.Controls.Add(this.ctrlLicenseInfoWithFilter1);
             this.Name = "frmDetainLicenseApplication";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detain License Application";
             this.Load += new System.EventHandler(this.frmDetainLicenseApplication_Load);
             this.gbDetainInfo.ResumeLayout(false);

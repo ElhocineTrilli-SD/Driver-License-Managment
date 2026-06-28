@@ -81,6 +81,7 @@ namespace DVLD.Licenses.DetainedLisenses
                 MessageBox.Show("Selected License is Already Detained.choose another one.", "error",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
+
             }
 
             txtFineFees.Focus();
