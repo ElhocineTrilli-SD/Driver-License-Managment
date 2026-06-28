@@ -649,6 +649,23 @@
   <ItemGroup>
     <None Include="Resources\drive.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\stop3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allowed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reset-password2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
