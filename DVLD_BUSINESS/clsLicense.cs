@@ -71,18 +71,18 @@ namespace DVLD_BUSINESS
 
             this.DriversInfo = clsDrivers.FindByDriverID(this.DriverID);
             this.LicenseClassIfo = clsLicenseClass.Find(this.LicenseClass);
-           // this.DetainedInfo = clsDetainedLicense.FindByLicenseID(this.LicenseID);
+            this.DetainedInfo = clsDetainedLicense.FindByLicenseID(this.LicenseID);
            
             Mode = enMode.Update;
         }
         
 
-        //   public clsDetainedLicense DetainedInfo { set; get; }
+           public clsDetainedLicense DetainedInfo { set; get; }
         public int CreatedByUserID { set; get; }
-        //public bool IsDetained
-        //{
-        //    get { return clsDetainedLicense.IsLicenseDetained(this.LicenseID); }
-        //}
+        public bool IsDetained
+        {
+            get { return clsDetainedLicense.IsLicenseDetained(this.LicenseID); }
+        }
         /// <summary>
 
 
@@ -239,6 +239,24 @@ namespace DVLD_BUSINESS
 
             return NewLicense;
         }
+
+        public int Detain(float fees,int createdUser)
+        {
+            clsDetainedLicense detainedLicense = new clsDetainedLicense();
+            detainedLicense.LicenseID = this.LicenseID;
+            detainedLicense.CreatedByUserID = (createdUser);
+            detainedLicense.DetainDate = DateTime.Now;
+            detainedLicense.FineFees = fees;
+
+            if(!detainedLicense.Save())
+            {
+                return -1;
+            }
+
+            return detainedLicense.DetainID;
+
+        }
+
 
         public clsLicense RenewLicense(string Notes, int CreatedByUserID)
         {
