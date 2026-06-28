@@ -103,6 +103,7 @@
             // showDriverInfoToolStripMenuItem
             // 
             this.showDriverInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.showDriverInfoToolStripMenuItem.Image = global::DVLD.Properties.Resources.personinfo;
             this.showDriverInfoToolStripMenuItem.Name = "showDriverInfoToolStripMenuItem";
             this.showDriverInfoToolStripMenuItem.Size = new System.Drawing.Size(340, 34);
             this.showDriverInfoToolStripMenuItem.Text = "Show Person Info";

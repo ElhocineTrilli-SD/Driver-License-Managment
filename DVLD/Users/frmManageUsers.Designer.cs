@@ -35,9 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showDetailsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.phoneCallToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +46,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.cbIsActive = new System.Windows.Forms.ComboBox();
+            this.showDetailsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddUser = new System.Windows.Forms.Button();
             this.pbUsers = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
@@ -120,73 +120,55 @@
             this.sendEmailToolStripMenuItem,
             this.phoneCallToolStripMenuItem1});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(229, 226);
-            // 
-            // showDetailsToolStripMenuItem1
-            // 
-            this.showDetailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.showDetailsToolStripMenuItem1.Image = global::DVLD.Properties.Resources.open_enrollment__1_;
-            this.showDetailsToolStripMenuItem1.Name = "showDetailsToolStripMenuItem1";
-            this.showDetailsToolStripMenuItem1.Size = new System.Drawing.Size(228, 30);
-            this.showDetailsToolStripMenuItem1.Text = "Show Details";
-            this.showDetailsToolStripMenuItem1.Click += new System.EventHandler(this.showDetailsToolStripMenuItem1_Click);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(244, 276);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(225, 6);
-            // 
-            // editToolStripMenuItem1
-            // 
-            this.editToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.editToolStripMenuItem1.Image = global::DVLD.Properties.Resources.addpeople;
-            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(228, 30);
-            this.editToolStripMenuItem1.Text = "Add New User";
-            this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(240, 6);
             // 
             // deleteToolStripMenuItem1
             // 
-            this.deleteToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.deleteToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(228, 30);
+            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(243, 34);
             this.deleteToolStripMenuItem1.Text = "Edit";
             this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.deleteToolStripMenuItem1_Click);
             // 
             // deleteToolStripMenuItem2
             // 
-            this.deleteToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.deleteToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
-            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(228, 30);
+            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(243, 34);
             this.deleteToolStripMenuItem2.Text = "Delete";
             this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteToolStripMenuItem2_Click);
             // 
             // phoneCallToolStripMenuItem
             // 
-            this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(228, 30);
+            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
             this.phoneCallToolStripMenuItem.Text = "Change Password";
             this.phoneCallToolStripMenuItem.Click += new System.EventHandler(this.ChangePass_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(225, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(240, 6);
             // 
             // sendEmailToolStripMenuItem
             // 
-            this.sendEmailToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.sendEmailToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(228, 30);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
             this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
             // 
             // phoneCallToolStripMenuItem1
             // 
-            this.phoneCallToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.phoneCallToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.phoneCallToolStripMenuItem1.Name = "phoneCallToolStripMenuItem1";
-            this.phoneCallToolStripMenuItem1.Size = new System.Drawing.Size(228, 30);
+            this.phoneCallToolStripMenuItem1.Size = new System.Drawing.Size(243, 34);
             this.phoneCallToolStripMenuItem1.Text = "Phone call";
             this.phoneCallToolStripMenuItem1.Click += new System.EventHandler(this.phoneCallToolStripMenuItem1_Click);
             // 
@@ -238,6 +220,24 @@
             this.cbIsActive.Size = new System.Drawing.Size(121, 21);
             this.cbIsActive.TabIndex = 20;
             this.cbIsActive.SelectedIndexChanged += new System.EventHandler(this.cbIsActive_SelectedIndexChanged);
+            // 
+            // showDetailsToolStripMenuItem1
+            // 
+            this.showDetailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.showDetailsToolStripMenuItem1.Image = global::DVLD.Properties.Resources.personinfo;
+            this.showDetailsToolStripMenuItem1.Name = "showDetailsToolStripMenuItem1";
+            this.showDetailsToolStripMenuItem1.Size = new System.Drawing.Size(243, 34);
+            this.showDetailsToolStripMenuItem1.Text = "Show Details";
+            this.showDetailsToolStripMenuItem1.Click += new System.EventHandler(this.showDetailsToolStripMenuItem1_Click);
+            // 
+            // editToolStripMenuItem1
+            // 
+            this.editToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.editToolStripMenuItem1.Image = global::DVLD.Properties.Resources.addpeople;
+            this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(243, 34);
+            this.editToolStripMenuItem1.Text = "Add New User";
+            this.editToolStripMenuItem1.Click += new System.EventHandler(this.editToolStripMenuItem1_Click);
             // 
             // btnAddUser
             // 

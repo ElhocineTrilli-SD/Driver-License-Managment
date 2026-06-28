@@ -75,60 +75,60 @@
             this.sendEmailToolStripMenuItem,
             this.phoneCallToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(178, 154);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(235, 236);
             // 
             // showDetailsToolStripMenuItem1
             // 
-            this.showDetailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.showDetailsToolStripMenuItem1.Image = global::DVLD.Properties.Resources.open_enrollment__1_;
+            this.showDetailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.showDetailsToolStripMenuItem1.Image = global::DVLD.Properties.Resources.personinfo;
             this.showDetailsToolStripMenuItem1.Name = "showDetailsToolStripMenuItem1";
-            this.showDetailsToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
+            this.showDetailsToolStripMenuItem1.Size = new System.Drawing.Size(234, 34);
             this.showDetailsToolStripMenuItem1.Text = "Show Details";
             this.showDetailsToolStripMenuItem1.Click += new System.EventHandler(this.showDetailsTool_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(174, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
             // 
             // editToolStripMenuItem1
             // 
-            this.editToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.editToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.editToolStripMenuItem1.Image = global::DVLD.Properties.Resources.addpeople;
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
-            this.editToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
+            this.editToolStripMenuItem1.Size = new System.Drawing.Size(234, 34);
             this.editToolStripMenuItem1.Text = "Add New Person";
             this.editToolStripMenuItem1.Click += new System.EventHandler(this.ADDTools_Click);
             // 
             // deleteToolStripMenuItem1
             // 
-            this.deleteToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.deleteToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.deleteToolStripMenuItem1.Name = "deleteToolStripMenuItem1";
-            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(177, 24);
+            this.deleteToolStripMenuItem1.Size = new System.Drawing.Size(234, 34);
             this.deleteToolStripMenuItem1.Text = "Edit";
             this.deleteToolStripMenuItem1.Click += new System.EventHandler(this.EditTool_Click);
             // 
             // deleteToolStripMenuItem2
             // 
-            this.deleteToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.deleteToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
-            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(177, 24);
+            this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(234, 34);
             this.deleteToolStripMenuItem2.Text = "Delete";
             this.deleteToolStripMenuItem2.Click += new System.EventHandler(this.deleteTool_Click);
             // 
             // sendEmailToolStripMenuItem
             // 
-            this.sendEmailToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.sendEmailToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
             this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailTool_Click);
             // 
             // phoneCallToolStripMenuItem
             // 
-            this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(177, 24);
+            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(234, 34);
             this.phoneCallToolStripMenuItem.Text = "Phone Call";
             this.phoneCallToolStripMenuItem.Click += new System.EventHandler(this.phoneCallTool_Click);
             // 
