@@ -34,6 +34,13 @@ namespace DVLD_BUSINESS
                 return GetIssueReasonText(this.IssueReason);
             }
         }
+        public clsDetainedLicense DetainedInfo { set; get; }
+        public int CreatedByUserID { set; get; }
+        public bool IsDetained
+        {
+            get { return clsDetainedLicense.IsLicenseDetained(this.LicenseID); }
+        }
+
         public clsLicense()
 
         {
@@ -77,15 +84,7 @@ namespace DVLD_BUSINESS
         }
         
 
-           public clsDetainedLicense DetainedInfo { set; get; }
-        public int CreatedByUserID { set; get; }
-        public bool IsDetained
-        {
-            get { return clsDetainedLicense.IsLicenseDetained(this.LicenseID); }
-        }
-        /// <summary>
-
-
+      
 
 
         public static clsLicense Find(int LicenseID)
@@ -257,6 +256,32 @@ namespace DVLD_BUSINESS
 
         }
 
+        public bool ReleaseDetainedLicense(int ReleasedByUserID, ref int ApplicationID)
+        {
+
+            //First Create Applicaiton 
+            clsApplication Application = new clsApplication();
+
+            Application.ApplicantPersonID = this.DriversInfo.PersonID;
+            Application.ApplicationDate = DateTime.Now;
+            Application.ApplicationTypeID = (int)clsApplication.enApplicationType.ReleaseDetainedDrivingLicsense;
+            Application.ApplicationStatus = clsApplication.enApplicationStatus.Completed;
+            Application.LastStatusDate = DateTime.Now;
+            Application.PaidFees = clsApplicationType.Find((int)clsApplication.enApplicationType.ReleaseDetainedDrivingLicsense).Fees;
+            Application.CreatedByUserID = ReleasedByUserID;
+
+            if (!Application.Save())
+            {
+                ApplicationID = -1;
+                return false;
+            }
+
+            ApplicationID = Application.ApplicationID;
+
+
+            return this.DetainedInfo.ReleaseDetainedLicense(ReleasedByUserID, Application.ApplicationID);
+
+        }
 
         public clsLicense RenewLicense(string Notes, int CreatedByUserID)
         {
