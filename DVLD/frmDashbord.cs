@@ -4,6 +4,7 @@ using DVLD.Applications.Renew_License_Info;
 using DVLD.Applications.ReplaceLostOrDamagedLicense;
 using DVLD.Dricers;
 using DVLD.Globle_Classes;
+using DVLD.Licenses.DetainedLisenses;
 using DVLD.Tests.TestTypes;
 using DVLD.Users;
 using DVLD_BUSINESS;
@@ -160,14 +161,17 @@ namespace DVLD
 
         private void detainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            
+            frmDetainLicenseApplication frm = new frmDetainLicenseApplication();
+            frm.ShowDialog();
         }
 
         private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            frmReleaseDetainedlicense frm
+                = new frmReleaseDetainedlicense();
+            frm.ShowDialog();
         }
 
         private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
