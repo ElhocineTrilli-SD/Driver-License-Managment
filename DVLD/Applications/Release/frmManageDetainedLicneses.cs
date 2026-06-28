@@ -1,4 +1,5 @@
 ﻿using DVLD.Licenses;
+using DVLD.Licenses.DetainedLisenses;
 using DVLD.Licenses.LocalLicenses;
 using DVLD_BUSINESS;
 using System;
@@ -218,6 +219,12 @@ namespace DVLD.Applications.Release
             int PersonID = clsLicense.Find(LicenseID).DriversInfo.PersonID;
 
             frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(PersonID) ;
+            frm.ShowDialog();
+        }
+
+        private void releasedDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReleaseDetainedlicense frm = new frmReleaseDetainedlicense((int)dgvDetainedLicense.CurrentRow.Cells[1].Value) ;
             frm.ShowDialog();
         }
     }
