@@ -66,12 +66,30 @@ namespace DataAccess
                     Isfound = true;
                     DetainID = (int)reader["DetainID"];
                     DetainDate = (DateTime)reader["DetainDate"];
-                    FineFees = (float)reader["FineFees"];
+                    FineFees = Convert.ToSingle( reader["FineFees"]);
                     CreatedByUserID = (int)reader["CreatedByUserID"];
                     IsReleased = (bool)reader["IsReleased"];
-                    ReleaseDate = (DateTime)reader["ReleaseDate"];
-                    ReleasedByUserID = (int)reader["ReleasedByUserID"];
-                    ReleaseApplicationID = (int)reader["ReleaseApplicationID"];
+
+                    if (reader["ReleaseDate"] == DBNull.Value)
+
+                        ReleaseDate = DateTime.MaxValue;
+                    else
+                        ReleaseDate = (DateTime)reader["ReleaseDate"];
+
+
+                    if (reader["ReleasedByUserID"] == DBNull.Value)
+
+                        ReleasedByUserID = -1;
+                    else
+                        ReleasedByUserID = (int)reader["ReleasedByUserID"];
+
+                    if (reader["ReleaseApplicationID"] == DBNull.Value)
+
+                        ReleaseApplicationID = -1;
+                    else
+                        ReleaseApplicationID = (int)reader["ReleaseApplicationID"];
+                  
+
                 }
 
                 reader.Close();
@@ -233,7 +251,7 @@ namespace DataAccess
 
             string query = @"UPDATE dbo.DetainedLicenses
                               SET IsReleased = 1, 
-                              ReleaseDate = @ReleaseDate
+                              ReleaseDate = @ReleaseDate,
                               ReleasedByUserID = @ReleasedByUserID, 
                               ReleaseApplicationID = @ReleaseApplicationID   
                               WHERE DetainID=@DetainID;";
