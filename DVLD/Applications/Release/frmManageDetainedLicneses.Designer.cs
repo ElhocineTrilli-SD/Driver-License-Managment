@@ -34,8 +34,6 @@
             this.txtFilterValue = new System.Windows.Forms.TextBox();
             this.cbfilter = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnDetain = new System.Windows.Forms.Button();
-            this.btnRelease = new System.Windows.Forms.Button();
             this.btnclose = new Guna.UI2.WinForms.Guna2Button();
             this.lblRecordsCountUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +41,9 @@
             this.showPersonInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showLicenseDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showPersonLicenseHistoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblTitel = new System.Windows.Forms.Label();
+            this.btnRelease = new System.Windows.Forms.Button();
+            this.btnDetain = new System.Windows.Forms.Button();
             this.releasedDetainedLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetainedLicense)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -102,27 +103,6 @@
             this.label2.TabIndex = 23;
             this.label2.Text = "Filter By: ";
             // 
-            // btnDetain
-            // 
-            this.btnDetain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnDetain.BackgroundImage = global::DVLD.Properties.Resources.addpeople;
-            this.btnDetain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDetain.Location = new System.Drawing.Point(705, 114);
-            this.btnDetain.Name = "btnDetain";
-            this.btnDetain.Size = new System.Drawing.Size(71, 66);
-            this.btnDetain.TabIndex = 26;
-            this.btnDetain.UseVisualStyleBackColor = true;
-            // 
-            // btnRelease
-            // 
-            this.btnRelease.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRelease.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRelease.Location = new System.Drawing.Point(621, 114);
-            this.btnRelease.Name = "btnRelease";
-            this.btnRelease.Size = new System.Drawing.Size(71, 66);
-            this.btnRelease.TabIndex = 27;
-            this.btnRelease.UseVisualStyleBackColor = true;
-            // 
             // btnclose
             // 
             this.btnclose.BorderRadius = 10;
@@ -167,34 +147,74 @@
             this.showPersonLicenseHistoryToolStripMenuItem,
             this.releasedDetainedLicenseToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(226, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(344, 140);
             // 
             // showPersonInfoToolStripMenuItem
             // 
+            this.showPersonInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.showPersonInfoToolStripMenuItem.Name = "showPersonInfoToolStripMenuItem";
-            this.showPersonInfoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.showPersonInfoToolStripMenuItem.Size = new System.Drawing.Size(343, 34);
             this.showPersonInfoToolStripMenuItem.Text = "Show Person Info";
             this.showPersonInfoToolStripMenuItem.Click += new System.EventHandler(this.showPersonInfoToolStripMenuItem_Click);
             // 
             // showLicenseDetailsToolStripMenuItem
             // 
+            this.showLicenseDetailsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.showLicenseDetailsToolStripMenuItem.Name = "showLicenseDetailsToolStripMenuItem";
-            this.showLicenseDetailsToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.showLicenseDetailsToolStripMenuItem.Size = new System.Drawing.Size(343, 34);
             this.showLicenseDetailsToolStripMenuItem.Text = "Show License Details";
             this.showLicenseDetailsToolStripMenuItem.Click += new System.EventHandler(this.showLicenseDetailsToolStripMenuItem_Click);
             // 
             // showPersonLicenseHistoryToolStripMenuItem
             // 
+            this.showPersonLicenseHistoryToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
-            this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+            this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(343, 34);
             this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show Person License History";
             this.showPersonLicenseHistoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicenseHistoryToolStripMenuItem_Click);
             // 
+            // lblTitel
+            // 
+            this.lblTitel.AutoSize = true;
+            this.lblTitel.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblTitel.ForeColor = System.Drawing.Color.Red;
+            this.lblTitel.Location = new System.Drawing.Point(235, 56);
+            this.lblTitel.Name = "lblTitel";
+            this.lblTitel.Size = new System.Drawing.Size(302, 36);
+            this.lblTitel.TabIndex = 109;
+            this.lblTitel.Text = "List Detained License";
+            // 
+            // btnRelease
+            // 
+            this.btnRelease.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnRelease.BackgroundImage = global::DVLD.Properties.Resources.allowed;
+            this.btnRelease.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRelease.Location = new System.Drawing.Point(621, 114);
+            this.btnRelease.Name = "btnRelease";
+            this.btnRelease.Size = new System.Drawing.Size(71, 66);
+            this.btnRelease.TabIndex = 27;
+            this.btnRelease.UseVisualStyleBackColor = true;
+            this.btnRelease.Click += new System.EventHandler(this.btnRelease_Click);
+            // 
+            // btnDetain
+            // 
+            this.btnDetain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDetain.BackgroundImage = global::DVLD.Properties.Resources.detain;
+            this.btnDetain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDetain.Location = new System.Drawing.Point(705, 114);
+            this.btnDetain.Name = "btnDetain";
+            this.btnDetain.Size = new System.Drawing.Size(71, 66);
+            this.btnDetain.TabIndex = 26;
+            this.btnDetain.UseVisualStyleBackColor = true;
+            this.btnDetain.Click += new System.EventHandler(this.btnDetain_Click);
+            // 
             // releasedDetainedLicenseToolStripMenuItem
             // 
+            this.releasedDetainedLicenseToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.releasedDetainedLicenseToolStripMenuItem.Image = global::DVLD.Properties.Resources.allowed;
             this.releasedDetainedLicenseToolStripMenuItem.Name = "releasedDetainedLicenseToolStripMenuItem";
-            this.releasedDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
-            this.releasedDetainedLicenseToolStripMenuItem.Text = "Released Detained License ";
+            this.releasedDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(343, 34);
+            this.releasedDetainedLicenseToolStripMenuItem.Text = "Release Detained License ";
             this.releasedDetainedLicenseToolStripMenuItem.Click += new System.EventHandler(this.releasedDetainedLicenseToolStripMenuItem_Click);
             // 
             // frmManageDetainedLicneses
@@ -202,6 +222,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 545);
+            this.Controls.Add(this.lblTitel);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.lblRecordsCountUser);
             this.Controls.Add(this.label1);
@@ -240,5 +261,6 @@
         private System.Windows.Forms.ToolStripMenuItem showLicenseDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showPersonLicenseHistoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem releasedDetainedLicenseToolStripMenuItem;
+        private System.Windows.Forms.Label lblTitel;
     }
 }

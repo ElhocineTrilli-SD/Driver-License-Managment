@@ -227,5 +227,18 @@ namespace DVLD.Applications.Release
             frmReleaseDetainedlicense frm = new frmReleaseDetainedlicense((int)dgvDetainedLicense.CurrentRow.Cells[1].Value) ;
             frm.ShowDialog();
         }
+
+        private void btnRelease_Click(object sender, EventArgs e)
+        {
+            frmReleaseDetainedlicense frm =
+                new frmReleaseDetainedlicense();
+            frm.ShowDialog();
+        }
+
+        private void btnDetain_Click(object sender, EventArgs e)
+        {
+            frmDetainLicenseApplication frm = new frmDetainLicenseApplication();
+            frm.ShowDialog();
+        }
     }
 }
