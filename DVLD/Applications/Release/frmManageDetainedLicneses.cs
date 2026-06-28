@@ -1,4 +1,5 @@
-﻿using DVLD.Licenses.LocalLicenses;
+﻿using DVLD.Licenses;
+using DVLD.Licenses.LocalLicenses;
 using DVLD_BUSINESS;
 using System;
 using System.Collections.Generic;
@@ -196,11 +197,27 @@ namespace DVLD.Applications.Release
         {
             this.Close();
         }
-
         private void showLicenseDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmShowLicenseInfo frm
                 = new frmShowLicenseInfo((int)dgvDetainedLicense.CurrentRow.Cells[1].Value);
+            frm.ShowDialog();
+        }
+        private void showPersonInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LicenseID = (int)dgvDetainedLicense.CurrentRow.Cells[1].Value;
+            int PersonID = clsLicense.Find(LicenseID).DriversInfo.PersonID;
+
+            ShowPersonDetails frm =
+                new ShowPersonDetails(PersonID) ;
+            frm.ShowDialog();
+        }
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LicenseID = (int)dgvDetainedLicense.CurrentRow.Cells[1].Value;
+            int PersonID = clsLicense.Find(LicenseID).DriversInfo.PersonID;
+
+            frmShowPersonLicenseHistory frm = new frmShowPersonLicenseHistory(PersonID) ;
             frm.ShowDialog();
         }
     }

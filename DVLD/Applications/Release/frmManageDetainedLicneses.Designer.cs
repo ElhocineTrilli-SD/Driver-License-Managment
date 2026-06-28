@@ -174,6 +174,7 @@
             this.showPersonInfoToolStripMenuItem.Name = "showPersonInfoToolStripMenuItem";
             this.showPersonInfoToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.showPersonInfoToolStripMenuItem.Text = "Show Person Info";
+            this.showPersonInfoToolStripMenuItem.Click += new System.EventHandler(this.showPersonInfoToolStripMenuItem_Click);
             // 
             // showLicenseDetailsToolStripMenuItem
             // 
@@ -187,6 +188,7 @@
             this.showPersonLicenseHistoryToolStripMenuItem.Name = "showPersonLicenseHistoryToolStripMenuItem";
             this.showPersonLicenseHistoryToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
             this.showPersonLicenseHistoryToolStripMenuItem.Text = "Show Person License History";
+            this.showPersonLicenseHistoryToolStripMenuItem.Click += new System.EventHandler(this.showPersonLicenseHistoryToolStripMenuItem_Click);
             // 
             // releasedDetainedLicenseToolStripMenuItem
             // 
