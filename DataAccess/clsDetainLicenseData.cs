@@ -10,17 +10,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess
 {
-    //DetainDate]
-    //FineFees]
-    //CreatedByUserID]
-    //IsReleased]
-    //ReleaseDate]
-    //ReleasedByUserID]
-    //ReleaseApplicationID]
-    //DVLD].[dbo].[DetainedLicenses]
-
-
-    public class clsDetainLicenseData
+   
+    public static class clsDetainLicenseData
     {
         public static bool GetDetainlicenseInfoByID(int DetainID,ref int LicenseID,
             ref DateTime DetainDate,ref float FineFees,ref int CreatedByUserID,
