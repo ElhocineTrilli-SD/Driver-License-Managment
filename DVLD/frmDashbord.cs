@@ -1,5 +1,6 @@
 ﻿using DVLD.Application.ApplicationType;
 using DVLD.Applications.Local_Driving_License;
+using DVLD.Applications.Release;
 using DVLD.Applications.Renew_License_Info;
 using DVLD.Applications.ReplaceLostOrDamagedLicense;
 using DVLD.Dricers;
@@ -127,7 +128,6 @@ namespace DVLD
 
         private void retakeTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             frmListlocalDrivingLicenseApplication frm = new frmListlocalDrivingLicenseApplication();
             frm.DataBack += Frm_DataBack;
             frm.ShowDialog();
@@ -136,7 +136,6 @@ namespace DVLD
 
         private void localDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             frmListlocalDrivingLicenseApplication frm = new frmListlocalDrivingLicenseApplication();
             frm.DataBack += Frm_DataBack;
             frm.ShowDialog();
@@ -155,8 +154,9 @@ namespace DVLD
 
         private void manageDetainedLicensesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+            frmManageDetainedLicneses frm = 
+                new frmManageDetainedLicneses();
+            frm.ShowDialog();
         }
 
         private void detainLicenseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -168,7 +168,6 @@ namespace DVLD
 
         private void releaseDetainedLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             frmReleaseDetainedlicense frm
                 = new frmReleaseDetainedlicense();
             frm.ShowDialog();
@@ -176,7 +175,6 @@ namespace DVLD
 
         private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //  MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             int UserID = GlobalClass.CurrentUser.UserID;
             frmUserInfo frm = new frmUserInfo(UserID);
             frm.ShowDialog();
@@ -186,8 +184,6 @@ namespace DVLD
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready",
-            //MessageBoxButtons.OK, MessageBoxIcon.Warning);
             int UserID = GlobalClass.CurrentUser.UserID;
             frmChangePassword frm = new frmChangePassword(UserID);
             frm.ShowDialog();
@@ -233,17 +229,13 @@ namespace DVLD
 
         private void RenewLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          //
-          //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-          //renew
+         
           frmRenewLicenseApplication frm = new frmRenewLicenseApplication();
             frm.ShowDialog();
         }
 
         private void replacmentToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            // replacement
             frmReplecmentLicense frm = new frmReplecmentLicense();
             frm.ShowDialog();
         }

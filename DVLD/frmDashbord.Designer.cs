@@ -181,7 +181,7 @@
             this.sighToolStripMenuItem,
             this.signOutToolStripMenuItem});
             this.AccountMenu.Name = "AccountMenu";
-            this.AccountMenu.Size = new System.Drawing.Size(245, 140);
+            this.AccountMenu.Size = new System.Drawing.Size(245, 118);
             // 
             // currentUserInfoToolStripMenuItem
             // 
@@ -194,7 +194,7 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(226, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(241, 6);
             // 
             // changePasswordToolStripMenuItem
             // 
@@ -207,7 +207,7 @@
             // sighToolStripMenuItem
             // 
             this.sighToolStripMenuItem.Name = "sighToolStripMenuItem";
-            this.sighToolStripMenuItem.Size = new System.Drawing.Size(226, 6);
+            this.sighToolStripMenuItem.Size = new System.Drawing.Size(241, 6);
             // 
             // signOutToolStripMenuItem
             // 
@@ -326,7 +326,7 @@
             this.manageApplicationTypesToolStripMenuItem,
             this.manageTestTypesToolStripMenuItem});
             this.ApplicationMenueStripe.Name = "ApplicationMenueStripe";
-            this.ApplicationMenueStripe.Size = new System.Drawing.Size(326, 174);
+            this.ApplicationMenueStripe.Size = new System.Drawing.Size(326, 196);
             // 
             // drivingLicenseServicesToolStripMenuItem
             // 
@@ -426,7 +426,7 @@
             this.manageDetainedLicensesToolStripMenuItem,
             this.detainLicenseToolStripMenuItem,
             this.releaseDetainedLicenseToolStripMenuItem});
-            this.detainLicensesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.detainLicensesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
             this.detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
             this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(325, 34);
             this.detainLicensesToolStripMenuItem.Text = "Detain Licenses";
@@ -434,21 +434,21 @@
             // manageDetainedLicensesToolStripMenuItem
             // 
             this.manageDetainedLicensesToolStripMenuItem.Name = "manageDetainedLicensesToolStripMenuItem";
-            this.manageDetainedLicensesToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
+            this.manageDetainedLicensesToolStripMenuItem.Size = new System.Drawing.Size(335, 34);
             this.manageDetainedLicensesToolStripMenuItem.Text = "Manage Detained Licenses";
             this.manageDetainedLicensesToolStripMenuItem.Click += new System.EventHandler(this.manageDetainedLicensesToolStripMenuItem_Click);
             // 
             // detainLicenseToolStripMenuItem
             // 
             this.detainLicenseToolStripMenuItem.Name = "detainLicenseToolStripMenuItem";
-            this.detainLicenseToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
+            this.detainLicenseToolStripMenuItem.Size = new System.Drawing.Size(335, 34);
             this.detainLicenseToolStripMenuItem.Text = "Detain License";
             this.detainLicenseToolStripMenuItem.Click += new System.EventHandler(this.detainLicenseToolStripMenuItem_Click);
             // 
             // releaseDetainedLicenseToolStripMenuItem
             // 
             this.releaseDetainedLicenseToolStripMenuItem.Name = "releaseDetainedLicenseToolStripMenuItem";
-            this.releaseDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(309, 30);
+            this.releaseDetainedLicenseToolStripMenuItem.Size = new System.Drawing.Size(335, 34);
             this.releaseDetainedLicenseToolStripMenuItem.Text = "Release Detained License";
             this.releaseDetainedLicenseToolStripMenuItem.Click += new System.EventHandler(this.releaseDetainedLicenseToolStripMenuItem_Click);
             // 
