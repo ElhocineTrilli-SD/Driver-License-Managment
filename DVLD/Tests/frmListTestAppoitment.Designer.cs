@@ -52,7 +52,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Red;
-            this.lblTitle.Location = new System.Drawing.Point(262, 86);
+            this.lblTitle.Location = new System.Drawing.Point(234, 12);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(203, 36);
             this.lblTitle.TabIndex = 75;
@@ -62,7 +62,7 @@
             // 
             this.picture.Image = global::DVLD.Properties.Resources.examination;
             this.picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture.InitialImage")));
-            this.picture.Location = new System.Drawing.Point(314, 12);
+            this.picture.Location = new System.Drawing.Point(32, 12);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(151, 71);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -75,7 +75,7 @@
             this.dgvLicenseTestAppointments.AllowUserToDeleteRows = false;
             this.dgvLicenseTestAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLicenseTestAppointments.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvLicenseTestAppointments.Location = new System.Drawing.Point(12, 545);
+            this.dgvLicenseTestAppointments.Location = new System.Drawing.Point(12, 524);
             this.dgvLicenseTestAppointments.Name = "dgvLicenseTestAppointments";
             this.dgvLicenseTestAppointments.ReadOnly = true;
             this.dgvLicenseTestAppointments.Size = new System.Drawing.Size(735, 116);
@@ -87,13 +87,13 @@
             this.editToolStripMenuItem,
             this.takeTestToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 86);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(157, 64);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
@@ -101,7 +101,7 @@
             // 
             this.takeTestToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
-            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(156, 30);
             this.takeTestToolStripMenuItem.Text = "Take test";
             this.takeTestToolStripMenuItem.Click += new System.EventHandler(this.takeTestToolStripMenuItem_Click);
             // 
@@ -109,7 +109,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 509);
+            this.label2.Location = new System.Drawing.Point(8, 488);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 22);
             this.label2.TabIndex = 79;
@@ -120,7 +120,7 @@
             this.btnAddAppoitment.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAddAppoitment.BackgroundImage = global::DVLD.Properties.Resources.addpeople;
             this.btnAddAppoitment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddAppoitment.Location = new System.Drawing.Point(694, 501);
+            this.btnAddAppoitment.Location = new System.Drawing.Point(694, 480);
             this.btnAddAppoitment.Name = "btnAddAppoitment";
             this.btnAddAppoitment.Size = new System.Drawing.Size(53, 38);
             this.btnAddAppoitment.TabIndex = 76;
@@ -136,7 +136,7 @@
             this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnclose.Location = new System.Drawing.Point(592, 667);
+            this.btnclose.Location = new System.Drawing.Point(596, 645);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(155, 53);
             this.btnclose.TabIndex = 83;
@@ -147,7 +147,7 @@
             // 
             this.lblRecordsCountAppoitment.AutoSize = true;
             this.lblRecordsCountAppoitment.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsCountAppoitment.Location = new System.Drawing.Point(100, 666);
+            this.lblRecordsCountAppoitment.Location = new System.Drawing.Point(100, 645);
             this.lblRecordsCountAppoitment.Name = "lblRecordsCountAppoitment";
             this.lblRecordsCountAppoitment.Size = new System.Drawing.Size(17, 19);
             this.lblRecordsCountAppoitment.TabIndex = 82;
@@ -157,7 +157,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 666);
+            this.label1.Location = new System.Drawing.Point(12, 645);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 19);
             this.label1.TabIndex = 81;
@@ -165,9 +165,9 @@
             // 
             // ctrlDrivingLicenseApplication1
             // 
-            this.ctrlDrivingLicenseApplication1.Location = new System.Drawing.Point(12, 125);
+            this.ctrlDrivingLicenseApplication1.Location = new System.Drawing.Point(12, 89);
             this.ctrlDrivingLicenseApplication1.Name = "ctrlDrivingLicenseApplication1";
-            this.ctrlDrivingLicenseApplication1.Size = new System.Drawing.Size(735, 381);
+            this.ctrlDrivingLicenseApplication1.Size = new System.Drawing.Size(735, 385);
             this.ctrlDrivingLicenseApplication1.TabIndex = 0;
             // 
             // frmListTestAppoitment
@@ -175,7 +175,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(763, 732);
+            this.ClientSize = new System.Drawing.Size(763, 702);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.lblRecordsCountAppoitment);
             this.Controls.Add(this.label1);
@@ -186,6 +186,7 @@
             this.Controls.Add(this.picture);
             this.Controls.Add(this.ctrlDrivingLicenseApplication1);
             this.Name = "frmListTestAppoitment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "List Test Appoitment";
             this.Load += new System.EventHandler(this.frmListTestAppoitment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();

@@ -63,7 +63,7 @@
             this.lblTrial.AutoSize = true;
             this.lblTrial.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblTrial.ForeColor = System.Drawing.Color.Black;
-            this.lblTrial.Location = new System.Drawing.Point(134, 286);
+            this.lblTrial.Location = new System.Drawing.Point(134, 265);
             this.lblTrial.Name = "lblTrial";
             this.lblTrial.Size = new System.Drawing.Size(23, 19);
             this.lblTrial.TabIndex = 68;
@@ -74,7 +74,7 @@
             this.lblFees.AutoSize = true;
             this.lblFees.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblFees.ForeColor = System.Drawing.Color.Black;
-            this.lblFees.Location = new System.Drawing.Point(131, 356);
+            this.lblFees.Location = new System.Drawing.Point(131, 335);
             this.lblFees.Name = "lblFees";
             this.lblFees.Size = new System.Drawing.Size(23, 19);
             this.lblFees.TabIndex = 67;
@@ -84,7 +84,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(70, 286);
+            this.label7.Location = new System.Drawing.Point(70, 265);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 19);
             this.label7.TabIndex = 65;
@@ -94,7 +94,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(66, 321);
+            this.label6.Location = new System.Drawing.Point(66, 300);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 19);
             this.label6.TabIndex = 64;
@@ -104,7 +104,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(66, 356);
+            this.label1.Location = new System.Drawing.Point(66, 335);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 19);
             this.label1.TabIndex = 71;
@@ -116,7 +116,7 @@
             this.dtpTestDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(212)))));
             this.dtpTestDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpTestDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpTestDate.Location = new System.Drawing.Point(125, 312);
+            this.dtpTestDate.Location = new System.Drawing.Point(125, 291);
             this.dtpTestDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpTestDate.MinDate = new System.DateTime(2026, 6, 16, 0, 0, 0, 0);
             this.dtpTestDate.Name = "dtpTestDate";
@@ -132,7 +132,7 @@
             this.gbRetakeTestInfo.Controls.Add(this.label9);
             this.gbRetakeTestInfo.Controls.Add(this.label8);
             this.gbRetakeTestInfo.Controls.Add(this.label2);
-            this.gbRetakeTestInfo.Location = new System.Drawing.Point(3, 405);
+            this.gbRetakeTestInfo.Location = new System.Drawing.Point(3, 376);
             this.gbRetakeTestInfo.Name = "gbRetakeTestInfo";
             this.gbRetakeTestInfo.Size = new System.Drawing.Size(456, 112);
             this.gbRetakeTestInfo.TabIndex = 76;
@@ -211,7 +211,7 @@
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(295, 523);
+            this.btnSave.Location = new System.Drawing.Point(296, 494);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(163, 39);
             this.btnSave.TabIndex = 77;
@@ -222,7 +222,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(26, 186);
+            this.label3.Location = new System.Drawing.Point(26, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 19);
             this.label3.TabIndex = 61;
@@ -232,7 +232,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(56, 256);
+            this.label4.Location = new System.Drawing.Point(56, 235);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 19);
             this.label4.TabIndex = 62;
@@ -242,7 +242,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(45, 221);
+            this.label5.Location = new System.Drawing.Point(45, 200);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 19);
             this.label5.TabIndex = 63;
@@ -253,7 +253,7 @@
             this.lblLocalDrivingLicenseAppID.AutoSize = true;
             this.lblLocalDrivingLicenseAppID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblLocalDrivingLicenseAppID.ForeColor = System.Drawing.Color.Black;
-            this.lblLocalDrivingLicenseAppID.Location = new System.Drawing.Point(134, 186);
+            this.lblLocalDrivingLicenseAppID.Location = new System.Drawing.Point(134, 165);
             this.lblLocalDrivingLicenseAppID.Name = "lblLocalDrivingLicenseAppID";
             this.lblLocalDrivingLicenseAppID.Size = new System.Drawing.Size(23, 19);
             this.lblLocalDrivingLicenseAppID.TabIndex = 66;
@@ -264,7 +264,7 @@
             this.lblFullName.AutoSize = true;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblFullName.ForeColor = System.Drawing.Color.Black;
-            this.lblFullName.Location = new System.Drawing.Point(134, 256);
+            this.lblFullName.Location = new System.Drawing.Point(134, 235);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(23, 19);
             this.lblFullName.TabIndex = 69;
@@ -275,7 +275,7 @@
             this.lblDrivingClass.AutoSize = true;
             this.lblDrivingClass.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblDrivingClass.ForeColor = System.Drawing.Color.Black;
-            this.lblDrivingClass.Location = new System.Drawing.Point(134, 221);
+            this.lblDrivingClass.Location = new System.Drawing.Point(134, 200);
             this.lblDrivingClass.Name = "lblDrivingClass";
             this.lblDrivingClass.Size = new System.Drawing.Size(23, 19);
             this.lblDrivingClass.TabIndex = 70;
@@ -286,7 +286,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Red;
-            this.lblTitle.Location = new System.Drawing.Point(119, 106);
+            this.lblTitle.Location = new System.Drawing.Point(208, 51);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(203, 36);
             this.lblTitle.TabIndex = 73;
@@ -297,11 +297,10 @@
             this.lblUserMessage.AutoSize = true;
             this.lblUserMessage.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserMessage.ForeColor = System.Drawing.Color.Red;
-            this.lblUserMessage.Location = new System.Drawing.Point(134, 152);
+            this.lblUserMessage.Location = new System.Drawing.Point(134, 131);
             this.lblUserMessage.Name = "lblUserMessage";
-            this.lblUserMessage.Size = new System.Drawing.Size(111, 20);
+            this.lblUserMessage.Size = new System.Drawing.Size(0, 20);
             this.lblUserMessage.TabIndex = 75;
-            this.lblUserMessage.Text = "Sechduel Test";
             this.lblUserMessage.Visible = false;
             // 
             // grTestType
@@ -323,7 +322,7 @@
             this.grTestType.Controls.Add(this.label3);
             this.grTestType.Location = new System.Drawing.Point(3, 3);
             this.grTestType.Name = "grTestType";
-            this.grTestType.Size = new System.Drawing.Size(456, 396);
+            this.grTestType.Size = new System.Drawing.Size(456, 367);
             this.grTestType.TabIndex = 78;
             this.grTestType.TabStop = false;
             this.grTestType.Text = "TestType";
@@ -332,7 +331,7 @@
             // 
             this.picture.Image = global::DVLD.Properties.Resources.examination;
             this.picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture.InitialImage")));
-            this.picture.Location = new System.Drawing.Point(135, 1);
+            this.picture.Location = new System.Drawing.Point(16, 19);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(186, 102);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -347,7 +346,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.gbRetakeTestInfo);
             this.Name = "ctrlSechduelTest";
-            this.Size = new System.Drawing.Size(468, 576);
+            this.Size = new System.Drawing.Size(468, 538);
             this.Load += new System.EventHandler(this.ctrlSechduelTest_Load);
             this.gbRetakeTestInfo.ResumeLayout(false);
             this.gbRetakeTestInfo.PerformLayout();

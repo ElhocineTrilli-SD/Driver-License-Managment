@@ -70,7 +70,7 @@
             this.grTestType.Controls.Add(this.label3);
             this.grTestType.Location = new System.Drawing.Point(3, 3);
             this.grTestType.Name = "grTestType";
-            this.grTestType.Size = new System.Drawing.Size(456, 431);
+            this.grTestType.Size = new System.Drawing.Size(456, 375);
             this.grTestType.TabIndex = 79;
             this.grTestType.TabStop = false;
             this.grTestType.Text = "TestType";
@@ -81,7 +81,7 @@
             this.lblTestID.AutoSize = true;
             this.lblTestID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblTestID.ForeColor = System.Drawing.Color.Black;
-            this.lblTestID.Location = new System.Drawing.Point(131, 393);
+            this.lblTestID.Location = new System.Drawing.Point(124, 342);
             this.lblTestID.Name = "lblTestID";
             this.lblTestID.Size = new System.Drawing.Size(23, 19);
             this.lblTestID.TabIndex = 78;
@@ -91,7 +91,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(51, 393);
+            this.label2.Location = new System.Drawing.Point(44, 342);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 19);
             this.label2.TabIndex = 77;
@@ -102,7 +102,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblDate.ForeColor = System.Drawing.Color.Black;
-            this.lblDate.Location = new System.Drawing.Point(134, 321);
+            this.lblDate.Location = new System.Drawing.Point(127, 270);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(23, 19);
             this.lblDate.TabIndex = 76;
@@ -113,7 +113,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.Red;
-            this.lblTitle.Location = new System.Drawing.Point(119, 106);
+            this.lblTitle.Location = new System.Drawing.Point(198, 50);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(203, 36);
             this.lblTitle.TabIndex = 73;
@@ -123,7 +123,7 @@
             // 
             this.picture.Image = global::DVLD.Properties.Resources.examination;
             this.picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("picture.InitialImage")));
-            this.picture.Location = new System.Drawing.Point(135, 1);
+            this.picture.Location = new System.Drawing.Point(6, 19);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(186, 102);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,7 +135,7 @@
             this.lblDrivingClass.AutoSize = true;
             this.lblDrivingClass.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblDrivingClass.ForeColor = System.Drawing.Color.Black;
-            this.lblDrivingClass.Location = new System.Drawing.Point(134, 221);
+            this.lblDrivingClass.Location = new System.Drawing.Point(127, 170);
             this.lblDrivingClass.Name = "lblDrivingClass";
             this.lblDrivingClass.Size = new System.Drawing.Size(23, 19);
             this.lblDrivingClass.TabIndex = 70;
@@ -145,7 +145,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(66, 356);
+            this.label1.Location = new System.Drawing.Point(59, 305);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 19);
             this.label1.TabIndex = 71;
@@ -156,7 +156,7 @@
             this.lblFullName.AutoSize = true;
             this.lblFullName.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblFullName.ForeColor = System.Drawing.Color.Black;
-            this.lblFullName.Location = new System.Drawing.Point(134, 256);
+            this.lblFullName.Location = new System.Drawing.Point(127, 205);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(23, 19);
             this.lblFullName.TabIndex = 69;
@@ -167,7 +167,7 @@
             this.lblTrial.AutoSize = true;
             this.lblTrial.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblTrial.ForeColor = System.Drawing.Color.Black;
-            this.lblTrial.Location = new System.Drawing.Point(134, 286);
+            this.lblTrial.Location = new System.Drawing.Point(127, 235);
             this.lblTrial.Name = "lblTrial";
             this.lblTrial.Size = new System.Drawing.Size(23, 19);
             this.lblTrial.TabIndex = 68;
@@ -178,7 +178,7 @@
             this.lblLocalDrivingLicenseAppID.AutoSize = true;
             this.lblLocalDrivingLicenseAppID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblLocalDrivingLicenseAppID.ForeColor = System.Drawing.Color.Black;
-            this.lblLocalDrivingLicenseAppID.Location = new System.Drawing.Point(134, 186);
+            this.lblLocalDrivingLicenseAppID.Location = new System.Drawing.Point(127, 135);
             this.lblLocalDrivingLicenseAppID.Name = "lblLocalDrivingLicenseAppID";
             this.lblLocalDrivingLicenseAppID.Size = new System.Drawing.Size(23, 19);
             this.lblLocalDrivingLicenseAppID.TabIndex = 66;
@@ -189,7 +189,7 @@
             this.lblFees.AutoSize = true;
             this.lblFees.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
             this.lblFees.ForeColor = System.Drawing.Color.Black;
-            this.lblFees.Location = new System.Drawing.Point(131, 356);
+            this.lblFees.Location = new System.Drawing.Point(124, 305);
             this.lblFees.Name = "lblFees";
             this.lblFees.Size = new System.Drawing.Size(23, 19);
             this.lblFees.TabIndex = 67;
@@ -199,7 +199,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(45, 221);
+            this.label5.Location = new System.Drawing.Point(38, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 19);
             this.label5.TabIndex = 63;
@@ -209,7 +209,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(70, 286);
+            this.label7.Location = new System.Drawing.Point(63, 235);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 19);
             this.label7.TabIndex = 65;
@@ -219,7 +219,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(56, 256);
+            this.label4.Location = new System.Drawing.Point(49, 205);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 19);
             this.label4.TabIndex = 62;
@@ -229,7 +229,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(66, 321);
+            this.label6.Location = new System.Drawing.Point(59, 270);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 19);
             this.label6.TabIndex = 64;
@@ -239,7 +239,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(26, 186);
+            this.label3.Location = new System.Drawing.Point(19, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 19);
             this.label3.TabIndex = 61;
@@ -251,7 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.grTestType);
             this.Name = "ctrlsechdueldTest";
-            this.Size = new System.Drawing.Size(465, 443);
+            this.Size = new System.Drawing.Size(465, 382);
             this.grTestType.ResumeLayout(false);
             this.grTestType.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
