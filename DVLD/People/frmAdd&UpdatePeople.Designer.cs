@@ -98,7 +98,7 @@
             this.groupBox1.Controls.Add(this.txtThirdname);
             this.groupBox1.Controls.Add(this.txtFirstname);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(21, 104);
+            this.groupBox1.Location = new System.Drawing.Point(12, 83);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(694, 302);
             this.groupBox1.TabIndex = 0;
@@ -116,7 +116,6 @@
             this.PBFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBFoto.TabIndex = 31;
             this.PBFoto.TabStop = false;
-         //   this.PBFoto.Click += new System.EventHandler(this.PBFoto_Click);
             // 
             // lblRemove
             // 
@@ -367,7 +366,7 @@
             this.lbltitel.AutoSize = true;
             this.lbltitel.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitel.ForeColor = System.Drawing.Color.Crimson;
-            this.lbltitel.Location = new System.Drawing.Point(216, 24);
+            this.lbltitel.Location = new System.Drawing.Point(12, 9);
             this.lbltitel.Name = "lbltitel";
             this.lbltitel.Size = new System.Drawing.Size(243, 36);
             this.lbltitel.TabIndex = 1;
@@ -376,20 +375,20 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(18, 73);
+            this.label14.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(14, 61);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 17);
+            this.label14.Size = new System.Drawing.Size(73, 19);
             this.label14.TabIndex = 27;
             this.label14.Text = "PersonID:";
             // 
             // txtPersonID
             // 
             this.txtPersonID.AutoSize = true;
-            this.txtPersonID.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPersonID.Location = new System.Drawing.Point(98, 73);
+            this.txtPersonID.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPersonID.Location = new System.Drawing.Point(94, 61);
             this.txtPersonID.Name = "txtPersonID";
-            this.txtPersonID.Size = new System.Drawing.Size(20, 17);
+            this.txtPersonID.Size = new System.Drawing.Size(21, 19);
             this.txtPersonID.TabIndex = 28;
             this.txtPersonID.Text = "??";
             // 
@@ -402,7 +401,7 @@
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(533, 412);
+            this.btnSave.Location = new System.Drawing.Point(536, 391);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(144, 43);
             this.btnSave.TabIndex = 32;
@@ -418,7 +417,7 @@
             this.btnClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(372, 412);
+            this.btnClose.Location = new System.Drawing.Point(375, 391);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(144, 43);
             this.btnClose.TabIndex = 33;
@@ -439,7 +438,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(722, 457);
+            this.ClientSize = new System.Drawing.Size(722, 441);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtPersonID);

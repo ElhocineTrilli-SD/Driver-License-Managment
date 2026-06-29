@@ -38,7 +38,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(255, 20);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 36);
             this.label1.TabIndex = 1;
@@ -53,9 +53,9 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(487, 449);
+            this.guna2Button1.Location = new System.Drawing.Point(530, 365);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(148, 34);
+            this.guna2Button1.Size = new System.Drawing.Size(154, 40);
             this.guna2Button1.TabIndex = 2;
             this.guna2Button1.Text = "Close";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -63,10 +63,10 @@
             // personInfoWithFilter11
             // 
             this.personInfoWithFilter11.FilterEnabled = true;
-            this.personInfoWithFilter11.Location = new System.Drawing.Point(25, 66);
+            this.personInfoWithFilter11.Location = new System.Drawing.Point(12, 66);
             this.personInfoWithFilter11.Name = "personInfoWithFilter11";
             this.personInfoWithFilter11.ShowAddPerson = true;
-            this.personInfoWithFilter11.Size = new System.Drawing.Size(637, 377);
+            this.personInfoWithFilter11.Size = new System.Drawing.Size(672, 293);
             this.personInfoWithFilter11.TabIndex = 3;
             // 
             // frmFindPerson
@@ -74,13 +74,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(696, 505);
+            this.ClientSize = new System.Drawing.Size(696, 415);
             this.Controls.Add(this.personInfoWithFilter11);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label1);
             this.Name = "frmFindPerson";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmFindPerson";
+            this.Text = "Find Person";
             this.ResumeLayout(false);
             this.PerformLayout();
 

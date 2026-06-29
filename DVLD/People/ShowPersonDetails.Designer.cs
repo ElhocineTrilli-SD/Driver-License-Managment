@@ -38,7 +38,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(239, 18);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(210, 36);
             this.label1.TabIndex = 0;
@@ -52,19 +52,19 @@
             this.btnclose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnclose.ForeColor = System.Drawing.Color.White;
-            this.btnclose.Location = new System.Drawing.Point(473, 370);
+            this.btnclose.ForeColor = System.Drawing.Color.Black;
+            this.btnclose.Location = new System.Drawing.Point(537, 280);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(140, 37);
             this.btnclose.TabIndex = 2;
             this.btnclose.Text = "Close";
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
-            // personInfoCard11
+            // PersonInfoCard1
             // 
-            this.PersonInfoCard1.Location = new System.Drawing.Point(30, 74);
-            this.PersonInfoCard1.Name = "personInfoCard11";
-            this.PersonInfoCard1.Size = new System.Drawing.Size(629, 290);
+            this.PersonInfoCard1.Location = new System.Drawing.Point(12, 66);
+            this.PersonInfoCard1.Name = "PersonInfoCard1";
+            this.PersonInfoCard1.Size = new System.Drawing.Size(678, 208);
             this.PersonInfoCard1.TabIndex = 3;
             // 
             // ShowPersonDetails
@@ -72,7 +72,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(702, 419);
+            this.ClientSize = new System.Drawing.Size(702, 329);
             this.Controls.Add(this.PersonInfoCard1);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.label1);

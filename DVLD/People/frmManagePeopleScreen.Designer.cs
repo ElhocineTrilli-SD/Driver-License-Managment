@@ -58,10 +58,10 @@
             this.dgvPeople.AllowUserToDeleteRows = false;
             this.dgvPeople.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeople.ContextMenuStrip = this.contextMenuStrip2;
-            this.dgvPeople.Location = new System.Drawing.Point(50, 191);
+            this.dgvPeople.Location = new System.Drawing.Point(4, 159);
             this.dgvPeople.Name = "dgvPeople";
             this.dgvPeople.ReadOnly = true;
-            this.dgvPeople.Size = new System.Drawing.Size(685, 291);
+            this.dgvPeople.Size = new System.Drawing.Size(749, 291);
             this.dgvPeople.TabIndex = 0;
             // 
             // contextMenuStrip2
@@ -75,7 +75,7 @@
             this.sendEmailToolStripMenuItem,
             this.phoneCallToolStripMenuItem});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(235, 236);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(235, 214);
             // 
             // showDetailsToolStripMenuItem1
             // 
@@ -89,7 +89,7 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(231, 6);
             // 
             // editToolStripMenuItem1
             // 
@@ -136,7 +136,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 500);
+            this.label1.Location = new System.Drawing.Point(9, 453);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 19);
             this.label1.TabIndex = 2;
@@ -146,7 +146,7 @@
             // 
             this.lblRecordsCount.AutoSize = true;
             this.lblRecordsCount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsCount.Location = new System.Drawing.Point(110, 500);
+            this.lblRecordsCount.Location = new System.Drawing.Point(97, 453);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(17, 19);
             this.lblRecordsCount.TabIndex = 3;
@@ -156,7 +156,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 166);
+            this.label2.Location = new System.Drawing.Point(22, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 22);
             this.label2.TabIndex = 4;
@@ -165,7 +165,7 @@
             // cbfiltering
             // 
             this.cbfiltering.FormattingEnabled = true;
-            this.cbfiltering.Location = new System.Drawing.Point(120, 165);
+            this.cbfiltering.Location = new System.Drawing.Point(120, 133);
             this.cbfiltering.Name = "cbfiltering";
             this.cbfiltering.Size = new System.Drawing.Size(161, 21);
             this.cbfiltering.TabIndex = 1;
@@ -173,7 +173,7 @@
             // 
             // txtFilterValue
             // 
-            this.txtFilterValue.Location = new System.Drawing.Point(287, 166);
+            this.txtFilterValue.Location = new System.Drawing.Point(287, 134);
             this.txtFilterValue.Name = "txtFilterValue";
             this.txtFilterValue.Size = new System.Drawing.Size(137, 20);
             this.txtFilterValue.TabIndex = 2;
@@ -190,7 +190,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2Button1.Location = new System.Drawing.Point(580, 488);
+            this.guna2Button1.Location = new System.Drawing.Point(580, 456);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(155, 53);
             this.guna2Button1.TabIndex = 9;
@@ -202,7 +202,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(281, 117);
+            this.label3.Location = new System.Drawing.Point(202, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(229, 36);
             this.label3.TabIndex = 10;
@@ -212,7 +212,7 @@
             // 
             this.guna2CirclePictureBox1.Image = global::DVLD.Properties.Resources.Manage_People;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(304, 1);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 12);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(184, 113);
@@ -225,7 +225,7 @@
             this.btnAddPeople.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAddPeople.BackgroundImage = global::DVLD.Properties.Resources.addpeople;
             this.btnAddPeople.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddPeople.Location = new System.Drawing.Point(658, 107);
+            this.btnAddPeople.Location = new System.Drawing.Point(676, 88);
             this.btnAddPeople.Name = "btnAddPeople";
             this.btnAddPeople.Size = new System.Drawing.Size(77, 68);
             this.btnAddPeople.TabIndex = 3;
@@ -237,7 +237,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(765, 547);
+            this.ClientSize = new System.Drawing.Size(765, 517);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2CirclePictureBox1);

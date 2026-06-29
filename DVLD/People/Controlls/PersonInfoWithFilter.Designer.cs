@@ -36,7 +36,7 @@
             this.txtFilterValue = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.PersonInfoCard01 = new DVLD.PersonInfoCard1();
+            this.PersonInfoCard1 = new DVLD.PersonInfoCard1();
             this.gbPersonFilter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +51,7 @@
             this.gbPersonFilter.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.gbPersonFilter.Location = new System.Drawing.Point(3, 6);
             this.gbPersonFilter.Name = "gbPersonFilter";
-            this.gbPersonFilter.Size = new System.Drawing.Size(623, 87);
+            this.gbPersonFilter.Size = new System.Drawing.Size(623, 71);
             this.gbPersonFilter.TabIndex = 1;
             this.gbPersonFilter.TabStop = false;
             this.gbPersonFilter.Text = "Person Filter";
@@ -77,7 +77,6 @@
             this.btnAddNewPerson.FillColor = System.Drawing.Color.White;
             this.btnAddNewPerson.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddNewPerson.ForeColor = System.Drawing.Color.White;
-            this.btnAddNewPerson.Image = global::DVLD.Properties.Resources.add_user;
             this.btnAddNewPerson.ImageSize = new System.Drawing.Size(28, 28);
             this.btnAddNewPerson.Location = new System.Drawing.Point(499, 24);
             this.btnAddNewPerson.Name = "btnAddNewPerson";
@@ -95,7 +94,6 @@
             this.btnSearch.FillColor = System.Drawing.Color.White;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::DVLD.Properties.Resources.magnifying_glass1;
             this.btnSearch.ImageOffset = new System.Drawing.Point(1, 0);
             this.btnSearch.ImageSize = new System.Drawing.Size(28, 28);
             this.btnSearch.Location = new System.Drawing.Point(458, 23);
@@ -137,21 +135,21 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // PersonInfoCard01
+            // PersonInfoCard1
             // 
-            this.PersonInfoCard01.Location = new System.Drawing.Point(3, 99);
-            this.PersonInfoCard01.Name = "PersonInfoCard01";
-            this.PersonInfoCard01.Size = new System.Drawing.Size(623, 275);
-            this.PersonInfoCard01.TabIndex = 2;
+            this.PersonInfoCard1.Location = new System.Drawing.Point(3, 83);
+            this.PersonInfoCard1.Name = "PersonInfoCard1";
+            this.PersonInfoCard1.Size = new System.Drawing.Size(623, 204);
+            this.PersonInfoCard1.TabIndex = 2;
             // 
             // PersonInfoWithFilter1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.PersonInfoCard01);
+            this.Controls.Add(this.PersonInfoCard1);
             this.Controls.Add(this.gbPersonFilter);
             this.Name = "PersonInfoWithFilter1";
-            this.Size = new System.Drawing.Size(637, 377);
+            this.Size = new System.Drawing.Size(637, 290);
             this.Load += new System.EventHandler(this.PersonInfoWithFilter_Load);
             this.gbPersonFilter.ResumeLayout(false);
             this.gbPersonFilter.PerformLayout();
