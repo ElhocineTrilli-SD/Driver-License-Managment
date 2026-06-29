@@ -41,9 +41,9 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(480, 419);
+            this.guna2Button1.Location = new System.Drawing.Point(485, 292);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(148, 34);
+            this.guna2Button1.Size = new System.Drawing.Size(157, 40);
             this.guna2Button1.TabIndex = 3;
             this.guna2Button1.Text = "Close";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -52,7 +52,7 @@
             // 
             this.ctrlUserCard1.Location = new System.Drawing.Point(8, 12);
             this.ctrlUserCard1.Name = "ctrlUserCard1";
-            this.ctrlUserCard1.Size = new System.Drawing.Size(660, 396);
+            this.ctrlUserCard1.Size = new System.Drawing.Size(660, 274);
             this.ctrlUserCard1.TabIndex = 0;
             // 
             // frmUserInfo
@@ -61,7 +61,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(680, 465);
+            this.ClientSize = new System.Drawing.Size(668, 344);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.ctrlUserCard1);
             this.Name = "frmUserInfo";

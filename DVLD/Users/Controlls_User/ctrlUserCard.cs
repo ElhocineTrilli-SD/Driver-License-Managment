@@ -30,7 +30,7 @@ namespace DVLD.Users.Controlls_User
 
             if(_User == null )
             {
-                _ResetPersonInfo();
+              //  _ResetPersonInfo();
                 MessageBox.Show("No User With this ID " + UserID, "User Not Found",
                   MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -41,25 +41,27 @@ namespace DVLD.Users.Controlls_User
 
         private void _FillUserInfo()
         {
-            personInfoCard11.LoadPersonInfo(_User.PersonID);
-            txtUserID.Text = _User.UserID.ToString();
-            txtUserName.Text = _User.UserName.ToString();
+            personInfoCard12.LoadPersonInfo(_User.PersonID);
+            lblUser_ID.Text = _User.UserID.ToString();
+            lblUName.Text = _User.UserName.ToString();
 
             if(_User.IsActive == true )
             {
-                txtIsActive.Text = "Yse";
+                lblIsActive.Text = "Yes";
             }
-            else { txtIsActive.Text = "No"; }
+            else {lblIsActive.Text = "No"; }
         }
 
-        private void _ResetPersonInfo()
-        {
-            
-        }
+      
 
         public ctrlUserCard()
         {
             InitializeComponent();
+        }
+
+        private void ctrlUserCard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

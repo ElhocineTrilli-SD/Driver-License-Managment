@@ -216,21 +216,21 @@
             // txtUserID
             // 
             this.txtUserID.AutoSize = true;
-            this.txtUserID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
+            this.txtUserID.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserID.ForeColor = System.Drawing.Color.Red;
-            this.txtUserID.Location = new System.Drawing.Point(188, 87);
+            this.txtUserID.Location = new System.Drawing.Point(179, 68);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(23, 19);
+            this.txtUserID.Size = new System.Drawing.Size(30, 26);
             this.txtUserID.TabIndex = 50;
             this.txtUserID.Text = "??";
             // 
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
-            this.lblUserID.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblUserID.Location = new System.Drawing.Point(108, 87);
+            this.lblUserID.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID.Location = new System.Drawing.Point(80, 68);
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(72, 19);
+            this.lblUserID.Size = new System.Drawing.Size(93, 26);
             this.lblUserID.TabIndex = 47;
             this.lblUserID.Text = "User ID :";
             // 

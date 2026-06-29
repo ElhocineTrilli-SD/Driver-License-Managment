@@ -51,7 +51,7 @@
             this.btnsave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnsave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsave.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnsave.Location = new System.Drawing.Point(539, 490);
+            this.btnsave.Location = new System.Drawing.Point(539, 351);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(155, 53);
             this.btnsave.TabIndex = 23;
@@ -67,7 +67,7 @@
             this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnclose.Location = new System.Drawing.Point(368, 490);
+            this.btnclose.Location = new System.Drawing.Point(368, 351);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(155, 53);
             this.btnclose.TabIndex = 22;
@@ -85,7 +85,7 @@
             this.txtConfirm_Password.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtConfirm_Password.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtConfirm_Password.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirm_Password.Location = new System.Drawing.Point(172, 481);
+            this.txtConfirm_Password.Location = new System.Drawing.Point(172, 342);
             this.txtConfirm_Password.Name = "txtConfirm_Password";
             this.txtConfirm_Password.PlaceholderText = "";
             this.txtConfirm_Password.SelectedText = "";
@@ -104,7 +104,7 @@
             this.txtNewPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNewPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPassword.Location = new System.Drawing.Point(172, 449);
+            this.txtNewPassword.Location = new System.Drawing.Point(172, 310);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PlaceholderText = "";
             this.txtNewPassword.SelectedText = "";
@@ -124,7 +124,7 @@
             this.txtCurrentPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCurrentPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCurrentPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCurrentPass.Location = new System.Drawing.Point(172, 414);
+            this.txtCurrentPass.Location = new System.Drawing.Point(172, 275);
             this.txtCurrentPass.Name = "txtCurrentPass";
             this.txtCurrentPass.PlaceholderText = "";
             this.txtCurrentPass.SelectedText = "";
@@ -136,7 +136,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(8, 490);
+            this.label9.Location = new System.Drawing.Point(8, 351);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(158, 19);
             this.label9.TabIndex = 57;
@@ -146,7 +146,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(79, 456);
+            this.label7.Location = new System.Drawing.Point(79, 317);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 19);
             this.label7.TabIndex = 56;
@@ -156,7 +156,7 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft YaHei UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblUsername.Location = new System.Drawing.Point(18, 423);
+            this.lblUsername.Location = new System.Drawing.Point(18, 284);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(150, 19);
             this.lblUsername.TabIndex = 55;
@@ -170,7 +170,7 @@
             // 
             this.ctrlUserCard1.Location = new System.Drawing.Point(12, 12);
             this.ctrlUserCard1.Name = "ctrlUserCard1";
-            this.ctrlUserCard1.Size = new System.Drawing.Size(686, 396);
+            this.ctrlUserCard1.Size = new System.Drawing.Size(686, 273);
             this.ctrlUserCard1.TabIndex = 0;
             // 
             // frmChangePassword
@@ -178,7 +178,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(706, 555);
+            this.ClientSize = new System.Drawing.Size(706, 412);
             this.Controls.Add(this.txtConfirm_Password);
             this.Controls.Add(this.txtNewPassword);
             this.Controls.Add(this.txtCurrentPass);
