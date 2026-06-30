@@ -37,7 +37,7 @@
             // 
             // ctrlDriverLicenses1
             // 
-            this.ctrlDriverLicenses1.Location = new System.Drawing.Point(18, 380);
+            this.ctrlDriverLicenses1.Location = new System.Drawing.Point(28, 380);
             this.ctrlDriverLicenses1.Name = "ctrlDriverLicenses1";
             this.ctrlDriverLicenses1.Size = new System.Drawing.Size(766, 261);
             this.ctrlDriverLicenses1.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(666, 662);
+            this.guna2Button1.Location = new System.Drawing.Point(646, 647);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(148, 34);
             this.guna2Button1.TabIndex = 9;
@@ -83,7 +83,7 @@
             // personInfoWithFilter11
             // 
             this.personInfoWithFilter11.FilterEnabled = true;
-            this.personInfoWithFilter11.Location = new System.Drawing.Point(213, 12);
+            this.personInfoWithFilter11.Location = new System.Drawing.Point(147, 12);
             this.personInfoWithFilter11.Name = "personInfoWithFilter11";
             this.personInfoWithFilter11.ShowAddPerson = true;
             this.personInfoWithFilter11.Size = new System.Drawing.Size(637, 362);
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 703);
+            this.ClientSize = new System.Drawing.Size(862, 693);
             this.Controls.Add(this.personInfoWithFilter11);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.label2);

@@ -58,9 +58,9 @@
             // 
             this.grReplacement.Controls.Add(this.rbDamagedL);
             this.grReplacement.Controls.Add(this.rbLostL);
-            this.grReplacement.Location = new System.Drawing.Point(474, 56);
+            this.grReplacement.Location = new System.Drawing.Point(426, 56);
             this.grReplacement.Name = "grReplacement";
-            this.grReplacement.Size = new System.Drawing.Size(238, 93);
+            this.grReplacement.Size = new System.Drawing.Size(238, 75);
             this.grReplacement.TabIndex = 98;
             this.grReplacement.TabStop = false;
             this.grReplacement.Text = "Replacement for :";
@@ -112,7 +112,7 @@
             this.btnIssueReplacement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnIssueReplacement.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIssueReplacement.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnIssueReplacement.Location = new System.Drawing.Point(635, 623);
+            this.btnIssueReplacement.Location = new System.Drawing.Point(570, 527);
             this.btnIssueReplacement.Name = "btnIssueReplacement";
             this.btnIssueReplacement.Size = new System.Drawing.Size(155, 34);
             this.btnIssueReplacement.TabIndex = 97;
@@ -128,7 +128,7 @@
             this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnclose.Location = new System.Drawing.Point(474, 623);
+            this.btnclose.Location = new System.Drawing.Point(409, 527);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(155, 34);
             this.btnclose.TabIndex = 96;
@@ -139,9 +139,10 @@
             // 
             this.llblShowHistory.AutoSize = true;
             this.llblShowHistory.Enabled = false;
-            this.llblShowHistory.Location = new System.Drawing.Point(38, 619);
+            this.llblShowHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblShowHistory.Location = new System.Drawing.Point(25, 515);
             this.llblShowHistory.Name = "llblShowHistory";
-            this.llblShowHistory.Size = new System.Drawing.Size(109, 13);
+            this.llblShowHistory.Size = new System.Drawing.Size(135, 16);
             this.llblShowHistory.TabIndex = 95;
             this.llblShowHistory.TabStop = true;
             this.llblShowHistory.Text = "Show License History";
@@ -151,9 +152,10 @@
             // 
             this.llblShowNewLicenseInfo.AutoSize = true;
             this.llblShowNewLicenseInfo.Enabled = false;
-            this.llblShowNewLicenseInfo.Location = new System.Drawing.Point(160, 619);
+            this.llblShowNewLicenseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblShowNewLicenseInfo.Location = new System.Drawing.Point(166, 515);
             this.llblShowNewLicenseInfo.Name = "llblShowNewLicenseInfo";
-            this.llblShowNewLicenseInfo.Size = new System.Drawing.Size(120, 13);
+            this.llblShowNewLicenseInfo.Size = new System.Drawing.Size(144, 16);
             this.llblShowNewLicenseInfo.TabIndex = 94;
             this.llblShowNewLicenseInfo.TabStop = true;
             this.llblShowNewLicenseInfo.Text = "Show New License Info";
@@ -173,9 +175,9 @@
             this.groupBox1.Controls.Add(this.lblRLAppID);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(26, 500);
+            this.groupBox1.Location = new System.Drawing.Point(26, 395);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(560, 117);
+            this.groupBox1.Size = new System.Drawing.Size(686, 117);
             this.groupBox1.TabIndex = 92;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Application Info for License Replacement";
@@ -183,7 +185,7 @@
             // lblAppDate
             // 
             this.lblAppDate.AutoSize = true;
-            this.lblAppDate.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppDate.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAppDate.ForeColor = System.Drawing.Color.Black;
             this.lblAppDate.Location = new System.Drawing.Point(133, 61);
             this.lblAppDate.Name = "lblAppDate";
@@ -194,17 +196,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(9, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 19);
+            this.label4.Size = new System.Drawing.Size(129, 19);
             this.label4.TabIndex = 81;
             this.label4.Text = "Application Date :";
             // 
             // lblCreatedBy
             // 
             this.lblCreatedBy.AutoSize = true;
-            this.lblCreatedBy.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreatedBy.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCreatedBy.ForeColor = System.Drawing.Color.Black;
             this.lblCreatedBy.Location = new System.Drawing.Point(345, 89);
             this.lblCreatedBy.Name = "lblCreatedBy";
@@ -215,17 +217,17 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(256, 89);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(83, 19);
+            this.label15.Size = new System.Drawing.Size(90, 19);
             this.label15.TabIndex = 79;
             this.label15.Text = "Created By :";
             // 
             // lblOldLicenseID
             // 
             this.lblOldLicenseID.AutoSize = true;
-            this.lblOldLicenseID.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOldLicenseID.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOldLicenseID.ForeColor = System.Drawing.Color.Black;
             this.lblOldLicenseID.Location = new System.Drawing.Point(363, 61);
             this.lblOldLicenseID.Name = "lblOldLicenseID";
@@ -236,17 +238,17 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(256, 61);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(101, 19);
+            this.label13.Size = new System.Drawing.Size(107, 19);
             this.label13.TabIndex = 77;
             this.label13.Text = "Old LicenseID :";
             // 
             // lblReplacedLicenseID
             // 
             this.lblReplacedLicenseID.AutoSize = true;
-            this.lblReplacedLicenseID.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReplacedLicenseID.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblReplacedLicenseID.ForeColor = System.Drawing.Color.Black;
             this.lblReplacedLicenseID.Location = new System.Drawing.Point(396, 31);
             this.lblReplacedLicenseID.Name = "lblReplacedLicenseID";
@@ -257,17 +259,17 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(256, 31);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(134, 19);
+            this.label11.Size = new System.Drawing.Size(145, 19);
             this.label11.TabIndex = 73;
             this.label11.Text = "Replaced LicenseID :";
             // 
             // lblAppFees
             // 
             this.lblAppFees.AutoSize = true;
-            this.lblAppFees.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppFees.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAppFees.ForeColor = System.Drawing.Color.Black;
             this.lblAppFees.Location = new System.Drawing.Point(131, 89);
             this.lblAppFees.Name = "lblAppFees";
@@ -278,7 +280,7 @@
             // lblRLAppID
             // 
             this.lblRLAppID.AutoSize = true;
-            this.lblRLAppID.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRLAppID.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRLAppID.ForeColor = System.Drawing.Color.Black;
             this.lblRLAppID.Location = new System.Drawing.Point(131, 31);
             this.lblRLAppID.Name = "lblRLAppID";
@@ -289,20 +291,20 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(5, 89);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(116, 19);
+            this.label7.Size = new System.Drawing.Size(127, 19);
             this.label7.TabIndex = 65;
             this.label7.Text = "Application Fees :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(5, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 19);
+            this.label1.Size = new System.Drawing.Size(132, 19);
             this.label1.TabIndex = 61;
             this.label1.Text = "R.L.ApplicationID :";
             // 
@@ -311,7 +313,7 @@
             this.lblTitel.AutoSize = true;
             this.lblTitel.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblTitel.ForeColor = System.Drawing.Color.Red;
-            this.lblTitel.Location = new System.Drawing.Point(206, 9);
+            this.lblTitel.Location = new System.Drawing.Point(12, 9);
             this.lblTitel.Name = "lblTitel";
             this.lblTitel.Size = new System.Drawing.Size(302, 36);
             this.lblTitel.TabIndex = 99;
@@ -322,7 +324,7 @@
             this.ctrlLicenseInfoWithFilter2.FilterEnabled = true;
             this.ctrlLicenseInfoWithFilter2.Location = new System.Drawing.Point(26, 56);
             this.ctrlLicenseInfoWithFilter2.Name = "ctrlLicenseInfoWithFilter2";
-            this.ctrlLicenseInfoWithFilter2.Size = new System.Drawing.Size(699, 438);
+            this.ctrlLicenseInfoWithFilter2.Size = new System.Drawing.Size(699, 333);
             this.ctrlLicenseInfoWithFilter2.TabIndex = 93;
             this.ctrlLicenseInfoWithFilter2.OnLicenseSelected += new System.Action<int>(this.ctrlLicenseInfoWithFilter2_OnLicenseSelected);
             this.ctrlLicenseInfoWithFilter2.Load += new System.EventHandler(this.ctrlLicenseInfoWithFilter2_Load);
@@ -331,7 +333,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 666);
+            this.ClientSize = new System.Drawing.Size(749, 577);
             this.Controls.Add(this.lblTitel);
             this.Controls.Add(this.grReplacement);
             this.Controls.Add(this.btnIssueReplacement);

@@ -104,10 +104,10 @@
             this.dgvLD.AllowUserToDeleteRows = false;
             this.dgvLD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLD.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvLD.Location = new System.Drawing.Point(23, 200);
+            this.dgvLD.Location = new System.Drawing.Point(3, 200);
             this.dgvLD.Name = "dgvLD";
             this.dgvLD.ReadOnly = true;
-            this.dgvLD.Size = new System.Drawing.Size(761, 291);
+            this.dgvLD.Size = new System.Drawing.Size(781, 291);
             this.dgvLD.TabIndex = 27;
             // 
             // contextMenuStrip1
@@ -128,7 +128,7 @@
             this.toolStripMenuItem6,
             this.showLisensePersonalToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(394, 334);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(394, 312);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showApplicationDetailsToolStripMenuItem

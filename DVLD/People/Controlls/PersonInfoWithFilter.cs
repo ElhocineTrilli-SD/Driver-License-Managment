@@ -68,13 +68,13 @@ namespace DVLD.People.Controlls
 
         public int PersonID
         {
-            get { return PersonInfoCard01.PersonID; }
+            get { return PersonInfoCard1.PersonID; }
             
         }
 
         public clsPerson SelectedPersonInfo
         {
-            get { return PersonInfoCard01.SelectedPersonInfo; }
+            get { return PersonInfoCard1.SelectedPersonInfo; }
         }
 
         public void LoadPersonInfo(int PersonID)
@@ -89,13 +89,13 @@ namespace DVLD.People.Controlls
            switch(cbFilterBy.Text)
             {
                 case "PersonID":
-                    PersonInfoCard01.LoadPersonInfo(int.Parse(txtFilterValue.Text));
-
+                    PersonInfoCard1.LoadPersonInfo(int.Parse(txtFilterValue.Text));
+                    
                     break;
 
                 case "NationalNo":
                 
-                    PersonInfoCard01.LoadPersonInfo(txtFilterValue.Text.Trim());
+                    PersonInfoCard1.LoadPersonInfo(txtFilterValue.Text.Trim());
 
                     break;
 
@@ -109,7 +109,7 @@ namespace DVLD.People.Controlls
 
             if (OnPersonSelected != null && FilterEnabled)
               //  if (PersonInfoCard1 != null)
-                    OnPersonSelected(PersonInfoCard01.PersonID);
+                    OnPersonSelected(PersonInfoCard1.PersonID);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -159,7 +159,7 @@ namespace DVLD.People.Controlls
         {
             cbFilterBy.SelectedIndex = 1;
             txtFilterValue.Text = PersonID.ToString();
-           PersonInfoCard01.LoadPersonInfo(PersonID);
+           PersonInfoCard1.LoadPersonInfo(PersonID);
         }
 
         public void FilterFocus()

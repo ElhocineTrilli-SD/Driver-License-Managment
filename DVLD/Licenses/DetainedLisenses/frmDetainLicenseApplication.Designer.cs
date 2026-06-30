@@ -56,7 +56,7 @@
             this.ctrlLicenseInfoWithFilter1.FilterEnabled = true;
             this.ctrlLicenseInfoWithFilter1.Location = new System.Drawing.Point(20, 0);
             this.ctrlLicenseInfoWithFilter1.Name = "ctrlLicenseInfoWithFilter1";
-            this.ctrlLicenseInfoWithFilter1.Size = new System.Drawing.Size(699, 438);
+            this.ctrlLicenseInfoWithFilter1.Size = new System.Drawing.Size(699, 311);
             this.ctrlLicenseInfoWithFilter1.TabIndex = 0;
             this.ctrlLicenseInfoWithFilter1.OnLicenseSelected += new System.Action<int>(this.SelectedLicenseID);
             // 
@@ -72,7 +72,7 @@
             this.gbDetainInfo.Controls.Add(this.lblDetainID);
             this.gbDetainInfo.Controls.Add(this.label18);
             this.gbDetainInfo.Controls.Add(this.label19);
-            this.gbDetainInfo.Location = new System.Drawing.Point(20, 444);
+            this.gbDetainInfo.Location = new System.Drawing.Point(20, 307);
             this.gbDetainInfo.Name = "gbDetainInfo";
             this.gbDetainInfo.Size = new System.Drawing.Size(690, 137);
             this.gbDetainInfo.TabIndex = 1;
@@ -202,7 +202,7 @@
             this.btnDetain.Enabled = false;
             this.btnDetain.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetain.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDetain.Location = new System.Drawing.Point(618, 587);
+            this.btnDetain.Location = new System.Drawing.Point(564, 450);
             this.btnDetain.Name = "btnDetain";
             this.btnDetain.Size = new System.Drawing.Size(155, 34);
             this.btnDetain.TabIndex = 101;
@@ -218,7 +218,7 @@
             this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnclose.Location = new System.Drawing.Point(457, 587);
+            this.btnclose.Location = new System.Drawing.Point(403, 450);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(155, 34);
             this.btnclose.TabIndex = 100;
@@ -229,9 +229,10 @@
             // 
             this.llblShowHistory.AutoSize = true;
             this.llblShowHistory.Enabled = false;
-            this.llblShowHistory.Location = new System.Drawing.Point(21, 583);
+            this.llblShowHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblShowHistory.Location = new System.Drawing.Point(32, 447);
             this.llblShowHistory.Name = "llblShowHistory";
-            this.llblShowHistory.Size = new System.Drawing.Size(109, 13);
+            this.llblShowHistory.Size = new System.Drawing.Size(135, 16);
             this.llblShowHistory.TabIndex = 99;
             this.llblShowHistory.TabStop = true;
             this.llblShowHistory.Text = "Show License History";
@@ -241,9 +242,10 @@
             // 
             this.llblShowLicenseInfo.AutoSize = true;
             this.llblShowLicenseInfo.Enabled = false;
-            this.llblShowLicenseInfo.Location = new System.Drawing.Point(143, 583);
+            this.llblShowLicenseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblShowLicenseInfo.Location = new System.Drawing.Point(173, 447);
             this.llblShowLicenseInfo.Name = "llblShowLicenseInfo";
-            this.llblShowLicenseInfo.Size = new System.Drawing.Size(95, 13);
+            this.llblShowLicenseInfo.Size = new System.Drawing.Size(114, 16);
             this.llblShowLicenseInfo.TabIndex = 98;
             this.llblShowLicenseInfo.TabStop = true;
             this.llblShowLicenseInfo.Text = "Show License Info";
@@ -268,7 +270,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 638);
+            this.ClientSize = new System.Drawing.Size(739, 497);
             this.Controls.Add(this.lblTitel);
             this.Controls.Add(this.btnDetain);
             this.Controls.Add(this.btnclose);

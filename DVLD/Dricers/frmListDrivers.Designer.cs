@@ -53,7 +53,7 @@
             this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnclose.Location = new System.Drawing.Point(653, 462);
+            this.btnclose.Location = new System.Drawing.Point(635, 425);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(155, 53);
             this.btnclose.TabIndex = 13;
@@ -64,7 +64,7 @@
             // 
             this.lblRecordsCount.AutoSize = true;
             this.lblRecordsCount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsCount.Location = new System.Drawing.Point(115, 459);
+            this.lblRecordsCount.Location = new System.Drawing.Point(96, 425);
             this.lblRecordsCount.Name = "lblRecordsCount";
             this.lblRecordsCount.Size = new System.Drawing.Size(17, 19);
             this.lblRecordsCount.TabIndex = 12;
@@ -74,7 +74,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 459);
+            this.label1.Location = new System.Drawing.Point(8, 425);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 19);
             this.label1.TabIndex = 11;
@@ -86,10 +86,10 @@
             this.dgvDrivers.AllowUserToDeleteRows = false;
             this.dgvDrivers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDrivers.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvDrivers.Location = new System.Drawing.Point(31, 165);
+            this.dgvDrivers.Location = new System.Drawing.Point(3, 117);
             this.dgvDrivers.Name = "dgvDrivers";
             this.dgvDrivers.ReadOnly = true;
-            this.dgvDrivers.Size = new System.Drawing.Size(759, 291);
+            this.dgvDrivers.Size = new System.Drawing.Size(787, 291);
             this.dgvDrivers.TabIndex = 10;
             // 
             // contextMenuStrip1
@@ -98,7 +98,7 @@
             this.showDriverInfoToolStripMenuItem,
             this.showPersonLicenseHistoryToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(341, 94);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(341, 72);
             // 
             // showDriverInfoToolStripMenuItem
             // 
@@ -122,7 +122,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(290, 28);
+            this.label3.Location = new System.Drawing.Point(12, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(231, 36);
             this.label3.TabIndex = 14;
@@ -131,7 +131,7 @@
             // cbfilter
             // 
             this.cbfilter.FormattingEnabled = true;
-            this.cbfilter.Location = new System.Drawing.Point(119, 127);
+            this.cbfilter.Location = new System.Drawing.Point(110, 91);
             this.cbfilter.Name = "cbfilter";
             this.cbfilter.Size = new System.Drawing.Size(161, 21);
             this.cbfilter.TabIndex = 16;
@@ -141,7 +141,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(21, 127);
+            this.label2.Location = new System.Drawing.Point(12, 91);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 22);
             this.label2.TabIndex = 17;
@@ -149,7 +149,7 @@
             // 
             // txtFilterValue
             // 
-            this.txtFilterValue.Location = new System.Drawing.Point(296, 127);
+            this.txtFilterValue.Location = new System.Drawing.Point(287, 91);
             this.txtFilterValue.Name = "txtFilterValue";
             this.txtFilterValue.Size = new System.Drawing.Size(137, 20);
             this.txtFilterValue.TabIndex = 18;
@@ -163,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(820, 527);
+            this.ClientSize = new System.Drawing.Size(802, 492);
             this.Controls.Add(this.txtFilterValue);
             this.Controls.Add(this.cbfilter);
             this.Controls.Add(this.label2);

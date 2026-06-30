@@ -47,7 +47,7 @@
             this.lblTitel.AutoSize = true;
             this.lblTitel.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.lblTitel.ForeColor = System.Drawing.Color.Red;
-            this.lblTitel.Location = new System.Drawing.Point(219, 146);
+            this.lblTitel.Location = new System.Drawing.Point(189, 146);
             this.lblTitel.Name = "lblTitel";
             this.lblTitel.Size = new System.Drawing.Size(380, 36);
             this.lblTitel.TabIndex = 12;
@@ -59,10 +59,10 @@
             this.dgvApplicationtypes.AllowUserToDeleteRows = false;
             this.dgvApplicationtypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvApplicationtypes.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvApplicationtypes.Location = new System.Drawing.Point(73, 185);
+            this.dgvApplicationtypes.Location = new System.Drawing.Point(12, 185);
             this.dgvApplicationtypes.Name = "dgvApplicationtypes";
             this.dgvApplicationtypes.ReadOnly = true;
-            this.dgvApplicationtypes.Size = new System.Drawing.Size(661, 300);
+            this.dgvApplicationtypes.Size = new System.Drawing.Size(722, 300);
             this.dgvApplicationtypes.TabIndex = 17;
             // 
             // contextMenuStrip1
@@ -70,7 +70,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.editApplicationTypeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(257, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(257, 34);
             // 
             // editApplicationTypeToolStripMenuItem
             // 
@@ -89,7 +89,7 @@
             this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnclose.Location = new System.Drawing.Point(649, 512);
+            this.btnclose.Location = new System.Drawing.Point(579, 501);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(155, 53);
             this.btnclose.TabIndex = 22;
@@ -100,7 +100,7 @@
             // 
             this.lblRecordsCountapptypes.AutoSize = true;
             this.lblRecordsCountapptypes.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordsCountapptypes.Location = new System.Drawing.Point(127, 512);
+            this.lblRecordsCountapptypes.Location = new System.Drawing.Point(96, 501);
             this.lblRecordsCountapptypes.Name = "lblRecordsCountapptypes";
             this.lblRecordsCountapptypes.Size = new System.Drawing.Size(17, 19);
             this.lblRecordsCountapptypes.TabIndex = 21;
@@ -110,7 +110,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 512);
+            this.label1.Location = new System.Drawing.Point(8, 501);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 19);
             this.label1.TabIndex = 20;
@@ -120,7 +120,7 @@
             // 
             this.guna2CirclePictureBox1.Image = global::DVLD.Properties.Resources.apptypes_removebg_preview;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(310, 12);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(265, 12);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(222, 131);
@@ -133,7 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(833, 566);
+            this.ClientSize = new System.Drawing.Size(761, 566);
             this.Controls.Add(this.guna2CirclePictureBox1);
             this.Controls.Add(this.btnclose);
             this.Controls.Add(this.lblRecordsCountapptypes);
@@ -142,7 +142,7 @@
             this.Controls.Add(this.lblTitel);
             this.Name = "frmManageApplicationType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmApplicationType";
+            this.Text = "Application Type";
             this.Load += new System.EventHandler(this.frmManageApplicationType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvApplicationtypes)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

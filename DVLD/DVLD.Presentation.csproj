@@ -74,6 +74,18 @@
     <Compile Include="Applications\controlls\UserControl_ApplicationBasic.Designer.cs">
       <DependentUpon>UserControl_ApplicationBasic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\International Driving License\frmListInternationalLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\International Driving License\frmListInternationalLicense.Designer.cs">
+      <DependentUpon>frmListInternationalLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\International Driving License\frmNewInternationalLicenseApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\International Driving License\frmNewInternationalLicenseApplication.Designer.cs">
+      <DependentUpon>frmNewInternationalLicenseApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\Local Driving License\ctrlDrivingLicenseApplication.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -128,6 +140,12 @@
     <Compile Include="Licenses\Control\ctrlDriverLicenses.Designer.cs">
       <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
     </Compile>
+    <Compile Include="Licenses\Control\ctrlInternationalLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Licenses\Control\ctrlInternationalLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Licenses\Control\ctrlLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -157,6 +175,12 @@
     </Compile>
     <Compile Include="Licenses\frmShowPersonLicenseHistory.Designer.cs">
       <DependentUpon>frmShowPersonLicenseHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Licenses\International License\frmInternationalLicenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Licenses\International License\frmInternationalLicenseInfo.Designer.cs">
+      <DependentUpon>frmInternationalLicenseInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Licenses\LocalLicenses\frmIssueLicenseForthefirsttime.cs">
       <SubType>Form</SubType>
@@ -304,6 +328,12 @@
     <EmbeddedResource Include="Applications\controlls\UserControl_ApplicationBasic.resx">
       <DependentUpon>UserControl_ApplicationBasic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Applications\International Driving License\frmListInternationalLicense.resx">
+      <DependentUpon>frmListInternationalLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\International Driving License\frmNewInternationalLicenseApplication.resx">
+      <DependentUpon>frmNewInternationalLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\ctrlDrivingLicenseApplication.resx">
       <DependentUpon>ctrlDrivingLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +361,9 @@
     <EmbeddedResource Include="Licenses\Control\ctrlDriverLicenses.resx">
       <DependentUpon>ctrlDriverLicenses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\Control\ctrlInternationalLicenseInfo.resx">
+      <DependentUpon>ctrlInternationalLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Licenses\Control\ctrlLicenseInfo.resx">
       <DependentUpon>ctrlLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\frmShowPersonLicenseHistory.resx">
       <DependentUpon>frmShowPersonLicenseHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Licenses\International License\frmInternationalLicenseInfo.resx">
+      <DependentUpon>frmInternationalLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Licenses\LocalLicenses\frmIssueLicenseForthefirsttime.resx">
       <DependentUpon>frmIssueLicenseForthefirsttime.cs</DependentUpon>
@@ -669,6 +705,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\personinfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\earth1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,25 +31,25 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabLocal = new System.Windows.Forms.TabPage();
-            this.tabInternational = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvLocal = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dgvLocal = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showLicenseInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabInternational = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.lblRecordsInter = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvInternational = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showLicenseInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabLocal.SuspendLayout();
-            this.tabInternational.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInternational)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.tabInternational.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInternational)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -76,40 +76,15 @@
             this.tabLocal.Text = "Local";
             this.tabLocal.UseVisualStyleBackColor = true;
             // 
-            // tabInternational
+            // label2
             // 
-            this.tabInternational.Controls.Add(this.label3);
-            this.tabInternational.Controls.Add(this.lblRecordsInter);
-            this.tabInternational.Controls.Add(this.label5);
-            this.tabInternational.Controls.Add(this.dgvInternational);
-            this.tabInternational.Location = new System.Drawing.Point(4, 22);
-            this.tabInternational.Name = "tabInternational";
-            this.tabInternational.Padding = new System.Windows.Forms.Padding(3);
-            this.tabInternational.Size = new System.Drawing.Size(740, 204);
-            this.tabInternational.TabIndex = 1;
-            this.tabInternational.Text = "International";
-            this.tabInternational.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.tabControl1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(760, 255);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Driver Licenses";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // dgvLocal
-            // 
-            this.dgvLocal.AllowUserToAddRows = false;
-            this.dgvLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLocal.ContextMenuStrip = this.contextMenuStrip1;
-            this.dgvLocal.Location = new System.Drawing.Point(23, 33);
-            this.dgvLocal.Name = "dgvLocal";
-            this.dgvLocal.Size = new System.Drawing.Size(689, 145);
-            this.dgvLocal.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Local Licenses History :";
             // 
             // lblRecordsCount
             // 
@@ -131,15 +106,44 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "#Records: ";
             // 
-            // label2
+            // dgvLocal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Local Licenses History :";
+            this.dgvLocal.AllowUserToAddRows = false;
+            this.dgvLocal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocal.ContextMenuStrip = this.contextMenuStrip1;
+            this.dgvLocal.Location = new System.Drawing.Point(6, 33);
+            this.dgvLocal.Name = "dgvLocal";
+            this.dgvLocal.Size = new System.Drawing.Size(706, 145);
+            this.dgvLocal.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showLicenseInfoToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(260, 38);
+            // 
+            // showLicenseInfoToolStripMenuItem
+            // 
+            this.showLicenseInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showLicenseInfoToolStripMenuItem.Name = "showLicenseInfoToolStripMenuItem";
+            this.showLicenseInfoToolStripMenuItem.Size = new System.Drawing.Size(259, 34);
+            this.showLicenseInfoToolStripMenuItem.Text = "Show License Info";
+            this.showLicenseInfoToolStripMenuItem.Click += new System.EventHandler(this.showLicenseInfoToolStripMenuItem_Click);
+            // 
+            // tabInternational
+            // 
+            this.tabInternational.Controls.Add(this.label3);
+            this.tabInternational.Controls.Add(this.lblRecordsInter);
+            this.tabInternational.Controls.Add(this.label5);
+            this.tabInternational.Controls.Add(this.dgvInternational);
+            this.tabInternational.Location = new System.Drawing.Point(4, 22);
+            this.tabInternational.Name = "tabInternational";
+            this.tabInternational.Padding = new System.Windows.Forms.Padding(3);
+            this.tabInternational.Size = new System.Drawing.Size(740, 204);
+            this.tabInternational.TabIndex = 1;
+            this.tabInternational.Text = "International";
+            this.tabInternational.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -175,25 +179,21 @@
             // 
             this.dgvInternational.AllowUserToAddRows = false;
             this.dgvInternational.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInternational.Location = new System.Drawing.Point(28, 27);
+            this.dgvInternational.Location = new System.Drawing.Point(6, 27);
             this.dgvInternational.Name = "dgvInternational";
-            this.dgvInternational.Size = new System.Drawing.Size(689, 145);
+            this.dgvInternational.Size = new System.Drawing.Size(711, 145);
             this.dgvInternational.TabIndex = 16;
             // 
-            // contextMenuStrip1
+            // groupBox1
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showLicenseInfoToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(260, 60);
-            // 
-            // showLicenseInfoToolStripMenuItem
-            // 
-            this.showLicenseInfoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showLicenseInfoToolStripMenuItem.Name = "showLicenseInfoToolStripMenuItem";
-            this.showLicenseInfoToolStripMenuItem.Size = new System.Drawing.Size(259, 34);
-            this.showLicenseInfoToolStripMenuItem.Text = "Show License Info";
-            this.showLicenseInfoToolStripMenuItem.Click += new System.EventHandler(this.showLicenseInfoToolStripMenuItem_Click);
+            this.groupBox1.Controls.Add(this.tabControl1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(760, 255);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Driver Licenses";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // ctrlDriverLicenses
             // 
@@ -205,12 +205,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabLocal.ResumeLayout(false);
             this.tabLocal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLocal)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tabInternational.ResumeLayout(false);
             this.tabInternational.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLocal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInternational)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

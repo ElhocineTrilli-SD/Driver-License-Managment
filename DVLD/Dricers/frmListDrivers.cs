@@ -56,10 +56,10 @@ namespace DVLD.Dricers
                 dgvDrivers.Columns[3].Width = 250;
 
                 dgvDrivers.Columns[4].HeaderText = "Date";
-                dgvDrivers.Columns[4].Width = 100;
+                dgvDrivers.Columns[4].Width = 110;
 
                 dgvDrivers.Columns[5].HeaderText = "Is Active";
-                dgvDrivers.Columns[5].Width = 90;
+                dgvDrivers.Columns[5].Width = 120;
 
             }
         }

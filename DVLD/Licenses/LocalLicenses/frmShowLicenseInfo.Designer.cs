@@ -42,7 +42,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.Location = new System.Drawing.Point(556, 429);
+            this.guna2Button1.Location = new System.Drawing.Point(556, 362);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(148, 34);
             this.guna2Button1.TabIndex = 4;
@@ -54,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(256, 28);
+            this.label1.Location = new System.Drawing.Point(32, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(179, 36);
             this.label1.TabIndex = 6;
@@ -62,16 +62,16 @@
             // 
             // ctrlLicenseInfo1
             // 
-            this.ctrlLicenseInfo1.Location = new System.Drawing.Point(10, 80);
+            this.ctrlLicenseInfo1.Location = new System.Drawing.Point(10, 118);
             this.ctrlLicenseInfo1.Name = "ctrlLicenseInfo1";
-            this.ctrlLicenseInfo1.Size = new System.Drawing.Size(694, 343);
+            this.ctrlLicenseInfo1.Size = new System.Drawing.Size(694, 238);
             this.ctrlLicenseInfo1.TabIndex = 5;
             // 
             // frmShowLicenseInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 472);
+            this.ClientSize = new System.Drawing.Size(716, 412);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrlLicenseInfo1);
             this.Controls.Add(this.guna2Button1);
