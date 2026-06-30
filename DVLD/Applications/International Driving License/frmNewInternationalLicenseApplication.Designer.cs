@@ -66,7 +66,7 @@ namespace DVLD.Applications.International_Driving_License
             this.btnclose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnclose.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnclose.Location = new System.Drawing.Point(450, 633);
+            this.btnclose.Location = new System.Drawing.Point(447, 496);
             this.btnclose.Name = "btnclose";
             this.btnclose.Size = new System.Drawing.Size(155, 42);
             this.btnclose.TabIndex = 112;
@@ -78,7 +78,7 @@ namespace DVLD.Applications.International_Driving_License
             this.llblShowHistory.AutoSize = true;
             this.llblShowHistory.Enabled = false;
             this.llblShowHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblShowHistory.Location = new System.Drawing.Point(22, 630);
+            this.llblShowHistory.Location = new System.Drawing.Point(19, 493);
             this.llblShowHistory.Name = "llblShowHistory";
             this.llblShowHistory.Size = new System.Drawing.Size(135, 16);
             this.llblShowHistory.TabIndex = 111;
@@ -91,7 +91,7 @@ namespace DVLD.Applications.International_Driving_License
             this.llblShowLicenseInfo.AutoSize = true;
             this.llblShowLicenseInfo.Enabled = false;
             this.llblShowLicenseInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblShowLicenseInfo.Location = new System.Drawing.Point(169, 630);
+            this.llblShowLicenseInfo.Location = new System.Drawing.Point(166, 493);
             this.llblShowLicenseInfo.Name = "llblShowLicenseInfo";
             this.llblShowLicenseInfo.Size = new System.Drawing.Size(114, 16);
             this.llblShowLicenseInfo.TabIndex = 110;
@@ -117,7 +117,7 @@ namespace DVLD.Applications.International_Driving_License
             this.gbDetainInfo.Controls.Add(this.lblIAppID);
             this.gbDetainInfo.Controls.Add(this.label18);
             this.gbDetainInfo.Controls.Add(this.label19);
-            this.gbDetainInfo.Location = new System.Drawing.Point(24, 456);
+            this.gbDetainInfo.Location = new System.Drawing.Point(12, 319);
             this.gbDetainInfo.Name = "gbDetainInfo";
             this.gbDetainInfo.Size = new System.Drawing.Size(690, 171);
             this.gbDetainInfo.TabIndex = 109;
@@ -324,9 +324,8 @@ namespace DVLD.Applications.International_Driving_License
             this.btnIssue.Enabled = false;
             this.btnIssue.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIssue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnIssue.Image = global::DVLD.Properties.Resources.earth;
             this.btnIssue.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnIssue.Location = new System.Drawing.Point(628, 633);
+            this.btnIssue.Location = new System.Drawing.Point(625, 496);
             this.btnIssue.Name = "btnIssue";
             this.btnIssue.Size = new System.Drawing.Size(155, 42);
             this.btnIssue.TabIndex = 113;
@@ -336,9 +335,9 @@ namespace DVLD.Applications.International_Driving_License
             // ctrlLicenseInfoWithFilter1
             // 
             this.ctrlLicenseInfoWithFilter1.FilterEnabled = true;
-            this.ctrlLicenseInfoWithFilter1.Location = new System.Drawing.Point(24, 12);
+            this.ctrlLicenseInfoWithFilter1.Location = new System.Drawing.Point(12, 12);
             this.ctrlLicenseInfoWithFilter1.Name = "ctrlLicenseInfoWithFilter1";
-            this.ctrlLicenseInfoWithFilter1.Size = new System.Drawing.Size(699, 438);
+            this.ctrlLicenseInfoWithFilter1.Size = new System.Drawing.Size(699, 311);
             this.ctrlLicenseInfoWithFilter1.TabIndex = 108;
             this.ctrlLicenseInfoWithFilter1.OnLicenseSelected += new System.Action<int>(this.ctrlLicenseInfoWithFilter1_OnLicenseSelected);
             // 
@@ -346,7 +345,7 @@ namespace DVLD.Applications.International_Driving_License
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(815, 694);
+            this.ClientSize = new System.Drawing.Size(815, 548);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTitel);
             this.Controls.Add(this.btnIssue);
