@@ -19,6 +19,4 @@ Driving & Vehicle License Department System built using Three Layer Architecture
 - License Services
 - Local & International Licenses
 
-## Dashboard
 
-![Dashboard](Screenshots/Screenshots/Dashbord.png)
