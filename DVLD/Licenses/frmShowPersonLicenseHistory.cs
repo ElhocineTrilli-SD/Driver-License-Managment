@@ -45,10 +45,9 @@ namespace DVLD.Licenses
 
         }
 
-   
-        private void personInfoWithFilter11_OnPersonSelected(int obj)
+        private void personInfoWithFilter11_PersonSelected(object sender, People.Controlls.PersonInfoWithFilter1.PersonInfoEventArgs e)
         {
-            _PersonID = obj;
+            _PersonID = e.PersonID;
             if (_PersonID == -1)
             {
                 ctrlDriverLicenses1.Clear();
@@ -59,5 +58,19 @@ namespace DVLD.Licenses
                 ctrlDriverLicenses1.LoadInfoByPersonId(_PersonID);
             }
         }
+
+        //private void personInfoWithFilter11_OnPersonSelected(int obj)
+        //{
+        //    _PersonID = obj;
+        //    if (_PersonID == -1)
+        //    {
+        //        ctrlDriverLicenses1.Clear();
+
+        //    }
+        //    else
+        //    {
+        //        ctrlDriverLicenses1.LoadInfoByPersonId(_PersonID);
+        //    }
+        //}
     }
 }

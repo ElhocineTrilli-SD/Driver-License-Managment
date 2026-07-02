@@ -14,26 +14,50 @@ namespace DVLD.People.Controlls
     public partial class PersonInfoWithFilter1 : UserControl
     {
 
-        // Define a custom event handler delegate with parameters
-        public event Action<int> OnPersonSelected;
-        // Create a protected method to raise the event with a parameter
-        protected virtual void PersonSelected(int PersonID)
-        {
-            Action<int> handler = OnPersonSelected;
-            if (handler != null)
-            {
-                handler(PersonID); // Raise the event with the parameter
-            }
-        }
+        //// Define a custom event handler delegate with parameters
+        //public event Action<int> OnPersonSelected;
+        //// Create a protected method to raise the event with a parameter
+        //protected virtual void PersonSelected(int PersonID)
+        //{
+        //    Action<int> handler = OnPersonSelected;
+        //    if (handler != null)
+        //    {
+        //        handler(PersonID); // Raise the event with the parameter
+        //    }
+        //}
 
         public PersonInfoWithFilter1()
         {
             InitializeComponent();
         }
 
-       
+        /// <summary>
+        /// ///////////////////////////////////////////////
+        /// </summary>
+       public class PersonInfoEventArgs : EventArgs
+        {
+            public int PersonID { get; }
 
+            public PersonInfoEventArgs(int personID)
+            {
+                PersonID = personID;
+            }
+        }
 
+        public event EventHandler<PersonInfoEventArgs> PersonSelected;
+
+        protected virtual void RaiseOnPersonSelected(PersonInfoEventArgs e )
+        {
+            PersonSelected?.Invoke( this, e );
+        }
+        public void RaiseOnPersonSelected(int PersonID)
+        {
+            RaiseOnPersonSelected(new PersonInfoEventArgs(PersonID));
+        }
+        /// <summary>
+        /// //////////////////////////////////////////////////////
+        /// </summary>
+        /// 
 
         private bool _ShowAddPerson = true;
 
@@ -107,9 +131,9 @@ namespace DVLD.People.Controlls
                    
             }
 
-            if (OnPersonSelected != null && FilterEnabled)
+            if (PersonSelected != null && FilterEnabled)
               //  if (PersonInfoCard1 != null)
-                    OnPersonSelected(PersonInfoCard1.PersonID);
+                    RaiseOnPersonSelected(PersonInfoCard1.PersonID);
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
