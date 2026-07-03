@@ -30,9 +30,26 @@ namespace DVLD
         public frmDashbord(frmLogIn frm)
         {
             InitializeComponent();
+            ApplyBorderRadiusToPanels();
             _frmLogin = frm;
         }
+        private void ApplyBorderRadiusToPanels()
+        {
+            Guna.UI2.WinForms.Guna2Panel[] panels =
+            {
+        guna2Panel2,
+        guna2Panel3,
+        guna2Panel5
+     
+            };
 
+            foreach (var panel in panels)
+            {
+                Guna.UI2.WinForms.Guna2Elipse elipse = new Guna.UI2.WinForms.Guna2Elipse();
+                elipse.BorderRadius = 15;
+                elipse.TargetControl = panel;
+            }
+        }
         //private void ActiveButton(Guna2Button btn)
         //{
         //    btn.ForeColor = Color.DarkOrange;
