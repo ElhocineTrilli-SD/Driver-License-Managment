@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageUsers));
             this.label3 = new System.Windows.Forms.Label();
             this.txtFilterValueUser = new System.Windows.Forms.TextBox();
             this.cbfilterUsers = new System.Windows.Forms.ComboBox();
@@ -120,11 +121,12 @@
             this.sendEmailToolStripMenuItem,
             this.phoneCallToolStripMenuItem1});
             this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(244, 254);
+            this.contextMenuStrip2.Size = new System.Drawing.Size(244, 276);
             // 
             // showDetailsToolStripMenuItem1
             // 
             this.showDetailsToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.showDetailsToolStripMenuItem1.Image = global::DVLD.Properties.Resources.personinfo;
             this.showDetailsToolStripMenuItem1.Name = "showDetailsToolStripMenuItem1";
             this.showDetailsToolStripMenuItem1.Size = new System.Drawing.Size(243, 34);
             this.showDetailsToolStripMenuItem1.Text = "Show Details";
@@ -138,6 +140,7 @@
             // editToolStripMenuItem1
             // 
             this.editToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.editToolStripMenuItem1.Image = global::DVLD.Properties.Resources.addpeople;
             this.editToolStripMenuItem1.Name = "editToolStripMenuItem1";
             this.editToolStripMenuItem1.Size = new System.Drawing.Size(243, 34);
             this.editToolStripMenuItem1.Text = "Add New User";
@@ -154,6 +157,7 @@
             // deleteToolStripMenuItem2
             // 
             this.deleteToolStripMenuItem2.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.deleteToolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem2.Image")));
             this.deleteToolStripMenuItem2.Name = "deleteToolStripMenuItem2";
             this.deleteToolStripMenuItem2.Size = new System.Drawing.Size(243, 34);
             this.deleteToolStripMenuItem2.Text = "Delete";
@@ -162,6 +166,7 @@
             // phoneCallToolStripMenuItem
             // 
             this.phoneCallToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 15.75F);
+            this.phoneCallToolStripMenuItem.Image = global::DVLD.Properties.Resources.reset_password;
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
             this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
             this.phoneCallToolStripMenuItem.Text = "Change Password";
@@ -240,7 +245,8 @@
             // btnAddUser
             // 
             this.btnAddUser.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddUser.BackgroundImage = global::DVLD.Properties.Resources.addpeople;
+            this.btnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnAddUser.Location = new System.Drawing.Point(677, 91);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(71, 66);
@@ -250,6 +256,7 @@
             // 
             // pbUsers
             // 
+            this.pbUsers.Image = global::DVLD.Properties.Resources.Manage_People;
             this.pbUsers.ImageRotate = 0F;
             this.pbUsers.Location = new System.Drawing.Point(12, 12);
             this.pbUsers.Name = "pbUsers";

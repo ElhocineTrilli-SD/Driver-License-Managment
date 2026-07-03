@@ -144,8 +144,23 @@ namespace DVLD.Users
 
         private void deleteToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is Not Implemented Yet! ", "Not Ready", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //delete : 
+            if (MessageBox.Show("are you sure do you want to delete User " +
+          "[" + dgvUser.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                int UserID = (int)dgvUser.CurrentRow.Cells[0].Value;
+                if (clsUser.DeleteUser(UserID))
+                {
+                    MessageBox.Show("User Deleted Successfully.");
+                }
+                else
+                    MessageBox.Show("User is not Deleted.");
 
+                frmManageUsers_Load(null, null);
+
+
+
+            }
         }
 
         private void deleteToolStripMenuItem1_Click(object sender, EventArgs e)
