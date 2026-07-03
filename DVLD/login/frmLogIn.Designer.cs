@@ -30,6 +30,7 @@ namespace DVLD
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.PanelLeft = new Guna.UI2.WinForms.Guna2Panel();
             this.lblTitel = new System.Windows.Forms.Label();
             this.picLogo = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -43,6 +44,7 @@ namespace DVLD
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.exit = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.PanelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
@@ -228,6 +230,11 @@ namespace DVLD
             this.exit.Text = "X";
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 15;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,5 +280,6 @@ namespace DVLD
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2Button btnLogIn;
         private System.Windows.Forms.Label exit;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
