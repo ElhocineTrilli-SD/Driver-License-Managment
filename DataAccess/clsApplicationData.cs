@@ -12,26 +12,24 @@ namespace DataAccess
     {
         public static int GetApplicationCount()
         {
-            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
+                try
+                {
+                using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
+                {
+                    connection.Open();
+                    string query = "SELECT COUNT(*) FROM Applications";
 
-            string query = "SELECT COUNT(*) FROM Applications";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            try
-            {
-                connection.Open();
-
-                return (int)command.ExecuteScalar();
-            }
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        return (int)command.ExecuteScalar();
+                    }
+                }
+                }
             catch
             {
                 return 0;
             }
-            finally
-            {
-                connection.Close();
-            }
+            
         }
         public static bool GetApplicationByID
             (int ApplicationID,ref int ApplicantPersonID,
@@ -40,55 +38,51 @@ namespace DataAccess
             ref float PaidFees,ref int CreatedByUserID)
         {
             bool IsFound=false;
-
-            SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
-
-            string query = "SELECT * FROM Applications WHERE ApplicationID = @ApplicationID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            command.Parameters.AddWithValue("@ApplicationID",ApplicationID);
-
             try
             {
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-
-                if (reader.Read())
+                using (SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString))
                 {
-                    // The record was found
-                    IsFound = true;
-                    ApplicantPersonID = (int)reader["ApplicantPersonID"];
-                    ApplicationDate = (DateTime)reader["ApplicationDate"];
-                    ApplicationTypeID = (int)reader["ApplicationTypeID"];
-                    ApplicationStatus = (Byte)reader["ApplicationStatus"];
-                    LastStatusDate = (DateTime)reader["LastStatusDate"];
-                    PaidFees =Convert.ToSingle(reader["PaidFees"]);
-                    CreatedByUserID = (int)reader["CreatedByUserID"];
+                    connection.Open();
+                     
+                    string query = "SELECT * FROM Applications WHERE ApplicationID = @ApplicationID";
 
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                // The record was found
+                                IsFound = true;
+                                ApplicantPersonID = (int)reader["ApplicantPersonID"];
+                                ApplicationDate = (DateTime)reader["ApplicationDate"];
+                                ApplicationTypeID = (int)reader["ApplicationTypeID"];
+                                ApplicationStatus = (Byte)reader["ApplicationStatus"];
+                                LastStatusDate = (DateTime)reader["LastStatusDate"];
+                                PaidFees = Convert.ToSingle(reader["PaidFees"]);
+                                CreatedByUserID = (int)reader["CreatedByUserID"];
+
+                            }
+                            else
+                            {
+                                // The record was not found
+                                IsFound = false;
+                            }
+                        }
+                        //reader.Close();
+                    }
                 }
-                else
-                {
-                    // The record was not found
-                    IsFound = false;
-                }
-
-                reader.Close();
-
-
             }
-            catch (Exception ex)
+            catch (Exception k)
             {
                 //Console.WriteLine("Error: " + ex.Message);
 
                 IsFound = false;
             }
-            finally
-            {
-                connection.Close();
-            }
-
-
+           
             return IsFound;
         }
 
