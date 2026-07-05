@@ -38,43 +38,17 @@ namespace DataAccess
                     Firstname = (string)reader["Firstname"];
                     secondname = (string)reader["Secondname"];
                     lastname = (string)reader["Lastname"];
-
-
                     //Thirdname: allows null in database so we should handle null
-                    if ( reader["Thirdname"] != DBNull.Value)
-                    {
-                        thirdname = (string)reader["Thirdname"];
-                    }
-                    else
-                    {
-                        thirdname = "";
-                    }
-
+                    thirdname = reader["Thirdname"] as string ?? "";
                     //Email: allows null in database so we should handle null
-                    if (reader["Email"]!=DBNull.Value)
-                    {
-                        Email = (string)reader["Email"];
-                    }
-                    else
-                    {
-                        Email = "";
-                    }
-
+                    Email = reader["Email"] as string ?? "";
                     Phone = (string)reader["Phone"];
                     Address = (string)reader["Address"];
                     CountryID = (int)reader["NationalityCountryID"];
                     Gender = (byte)(reader["Gendor"]);
                     dateOfbirth = (DateTime)reader["DateOfBirth"];
-
                     //ImagePath: allows null in database so we should handle null
-                    if (reader["ImagePath"] != DBNull.Value)
-                    {
-                        imagepath = (string)reader["ImagePath"];
-                    }
-                    else
-                    {
-                        imagepath = "";
-                    }
+                    imagepath = reader["ImagePath"] as string ?? "";
                 }
                 else
                 {
@@ -84,7 +58,6 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-               // Console.WriteLine(ex.Message);
                IsFound=false;
             }
             finally
@@ -118,43 +91,18 @@ namespace DataAccess
                     Firstname = (string)reader["Firstname"];
                     secondname = (string)reader["Secondname"];
                     lastname = (string)reader["Lastname"];
-
-
                     //Thirdname: allows null in database so we should handle null
-                    if (reader["Thirdname"] != DBNull.Value)
-                    {
-                        thirdname = (string)reader["Thirdname"];
-                    }
-                    else
-                    {
-                        thirdname = "";
-                    }
-
+                    thirdname = reader["Thirdname"] as string ?? "";
                     //Email: allows null in database so we should handle null
-                    if (reader["Email"] != DBNull.Value)
-                    {
-                        Email = (string)reader["Email"];
-                    }
-                    else
-                    {
-                        Email = "";
-                    }
-
+                    Email = reader["Email"] as string ?? "";
                     Phone = (string)reader["Phone"];
                     Address = (string)reader["Address"];
                     CountryID = (int)reader["NationalityCountryID"];
                     Gender = (byte)(reader["Gendor"]);
                     dateOfbirth = (DateTime)reader["DateOfBirth"];
-
                     //ImagePath: allows null in database so we should handle null
-                    if (reader["ImagePath"] != DBNull.Value)
-                    {
-                        imagepath = (string)reader["ImagePath"];
-                    }
-                    else
-                    {
-                        imagepath = "";
-                    }
+                    imagepath = reader["ImagePath"] as string ?? "";
+                   
                 }
                 else
                 {
