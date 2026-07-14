@@ -1,4 +1,5 @@
 ﻿using DVLD_BUSINESS;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Win32;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace DVLD.Globle_Classes
 {
     internal class GlobalClass
@@ -35,6 +36,51 @@ namespace DVLD.Globle_Classes
                 MessageBox.Show($"An error occurred: {ex.Message}");
                 return false;
             }
+
+        }
+
+
+        public static bool DeleteRememberedCredentials(string Username, string Password)
+        {
+            string KeyPath = @"Software\DVLD";
+
+            try
+            {
+                // Open the registry key in read/write mode with explicit registry view
+                using (RegistryKey baseKey = RegistryKey.OpenBaseKey(RegistryHive.CurrentUser, RegistryView.Default))
+                {
+
+                    using (RegistryKey key = baseKey.OpenSubKey(KeyPath, true))
+                    {
+                        if (key != null)
+                        {
+                            // Delete the specified value
+                            key.DeleteValue("UserName");
+                            key.DeleteValue("Password");
+                            return true;
+
+                            Console.WriteLine($"Successfully deleted value  from registry key '{KeyPath}'");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Registry key '{KeyPath}' not found");
+                            return false;
+                        }
+                    }
+                }
+            }
+            catch (UnauthorizedAccessException)
+            {
+                Console.WriteLine("UnauthorizedAccessException: Run the program with administrative privileges.");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return false;
+            }
+
+        
 
         }
 
