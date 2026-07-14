@@ -55,7 +55,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                
+                clsEventLog.LogException("GetLicenseClassInfoByID", ex);
                 isFound = false;
             }
             finally
@@ -108,7 +109,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetLicenseClassInfoByClassName", ex);
                 isFound = false;
             }
             finally
@@ -161,7 +162,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("AddNewLicenseClass", ex);
 
             }
 
@@ -209,7 +210,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("UpdateLicenseClass", ex);
                 return false;
             }
 
@@ -250,7 +251,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetAllLicenseClasses", ex);
             }
             finally
             {

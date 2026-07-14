@@ -58,6 +58,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("GetPersonInfoByPersonID", ex);
                IsFound=false;
             }
             finally
@@ -112,7 +113,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                // Console.WriteLine(ex.Message);
+                clsEventLog.LogException("GetPersonInfoByNationalN", ex);
                 IsFound = false;
             }
             finally
@@ -198,7 +199,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                clsEventLog.LogException("AddNewPerson", ex);
+                
             }
             finally
             {
@@ -284,7 +286,10 @@ namespace DataAccess
                 connection.Open();
                 RowsAffected = command.ExecuteNonQuery();
             }
-            catch (Exception ex) { Console.WriteLine("error: " + ex.Message); }
+            catch (Exception ex) {
+
+                clsEventLog.LogException("UpdateContact", ex);
+            }
             finally
             {
                 connection.Close();
@@ -317,7 +322,9 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+
+                clsEventLog.LogException("GetallPeople", ex);
+               
             }
             finally
             {
@@ -342,8 +349,9 @@ namespace DataAccess
 
                 return (int)command.ExecuteScalar();
             }
-            catch
+            catch (Exception ex)
             {
+                clsEventLog.LogException("GetPeopleCount", ex);
                 return 0;
             }
             finally
@@ -371,7 +379,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                clsEventLog.LogException("DeletePerson", ex);
             }
             finally
             {
@@ -403,6 +411,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("IsPersonExist", ex);
                IsFound = false;
             }
             finally
@@ -434,7 +443,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-               // Console.WriteLine(ex.Message);
+                clsEventLog.LogException("IsPersonExist", ex);
                Isfound = false;
             }
             finally

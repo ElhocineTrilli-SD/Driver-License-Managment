@@ -54,7 +54,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetLocalDrivingLicenseApplicationInfoByID", ex);
                 isFound = false;
             }
             finally
@@ -105,7 +105,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetLocalDrivingLicenseApplicationInfoByApplicationID", ex);
                 isFound = false;
             }
             finally
@@ -149,7 +149,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetAllLocalDrivingLicenseApplications", ex);
             }
             finally
             {
@@ -192,8 +192,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("AddNewLocalDrivingLicenseApplication", ex);
             }
 
             finally
@@ -231,7 +230,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("UpdateLocalDrivingLicenseApplication", ex);
                 return false;
             }
 
@@ -265,7 +264,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("DeleteLocalDrivingLicenseApplication", ex);
             }
             finally
             {
@@ -314,8 +313,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("DoesPassTestType", ex);
             }
 
             finally
@@ -363,8 +361,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("DoesAttendTestType", ex);
             }
 
             finally
@@ -412,8 +409,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("TotalTrialsPerTest", ex);
             }
 
             finally
@@ -461,8 +457,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("IsThereAnActiveScheduledTest", ex);
             }
 
             finally

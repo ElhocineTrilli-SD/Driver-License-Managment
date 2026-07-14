@@ -64,7 +64,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetLicenseInfoByID", ex);
                 isFound = false;
             }
             finally
@@ -104,7 +104,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetAllLicenses", ex);
             }
             finally
             {
@@ -153,7 +153,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetDriverLicenses", ex);
             }
             finally
             {
@@ -231,8 +231,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("AddNewLicense", ex);
             }
 
             finally
@@ -291,7 +290,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("UpdateLicense", ex);
                 return false;
             }
 
@@ -336,8 +335,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("GetActiveLicenseIDByPersonID", ex);
             }
 
             finally
@@ -373,7 +371,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("DeactivateLicense", ex);
                 return false;
             }
 

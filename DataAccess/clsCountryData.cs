@@ -32,7 +32,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                clsEventLog.LogException("GetAllCountries", ex);
             }
             finally
             {
@@ -77,8 +77,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("GetCountryInfoByName", ex);
 
-                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -122,8 +122,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("GetCountryInfoByID", ex);
 
-                Console.WriteLine(ex.Message);
             }
             finally
             {

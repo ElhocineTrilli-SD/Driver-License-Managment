@@ -25,8 +25,9 @@ namespace DataAccess
                     }
                 }
                 }
-            catch
+            catch (Exception ex) 
             {
+                clsEventLog.LogException("GetApplicationCount", ex);
                 return 0;
             }
             
@@ -68,6 +69,8 @@ namespace DataAccess
                             }
                             else
                             {
+                                
+
                                 // The record was not found
                                 IsFound = false;
                             }
@@ -78,8 +81,7 @@ namespace DataAccess
             }
             catch (Exception k)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("GetApplicationByID", k);
                 IsFound = false;
             }
            
@@ -110,6 +112,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("GetAllApplication", ex);
+
                 //Console.WriteLine(ex.Message);
             }
             finally
@@ -157,7 +161,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //  Console.WriteLine(ex.Message);
+                clsEventLog.LogException("AddNewApplication", ex);
             }
             finally
             {
@@ -210,7 +214,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //  Console.WriteLine(ex.Message);
+                clsEventLog.LogException("UpdateApplication", ex);
+                return false;
             }
             finally
             {
@@ -245,6 +250,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("UpdateApplication", ex);
+              
                 Console.WriteLine(ex.Message);
             }
             finally
@@ -279,6 +286,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("IsApplicationExist", ex);
+                
                 IsFound = false;
             }
             finally
@@ -322,7 +331,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetActiveApplicationID",ex);
+             
                 return ActiveApplicationID;
             }
             finally
@@ -366,7 +376,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetActiveApplicationIDForLicenseClass", ex);
+                
                 return ActiveApplicationID;
             }
             finally
@@ -404,7 +415,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("UpdateStatus", ex);
                 return false;
             }
 

@@ -53,8 +53,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("GetUserInfoByUserID", ex);
                 isFound = false;
             }
             finally
@@ -106,8 +105,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("GetUserInfoByPersonID", ex);
                 isFound = false;
             }
             finally
@@ -162,8 +160,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("GetUserInfoByUsernameAndPassword", ex);
                 isFound = false;
             }
             finally
@@ -203,7 +200,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-              //  Console.WriteLine(ex.Message);
+                clsEventLog.LogException("AddNewUser", ex);
             }
             finally
             {
@@ -244,19 +241,13 @@ namespace DataAccess
             }
             catch (Exception ex) 
             {
-                //Console.WriteLine("error: " + ex.Message);
+                clsEventLog.LogException("UpdateUser", ex);
             }
             finally
             {
                 connection.Close();
             }
-
             return RowsAffected > 0;
-
-
-
-
-
         }
 
         public static DataTable GetAllUser()
@@ -283,7 +274,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine(ex.Message);
+                clsEventLog.LogException("GetAllUser", ex);
             }
             finally
             {
@@ -308,8 +299,9 @@ namespace DataAccess
 
                 return (int)command.ExecuteScalar();
             }
-            catch
+            catch (Exception ex)
             {
+                clsEventLog.LogException("GetUsersCount", ex);
                 return 0;
             }
             finally
@@ -337,7 +329,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                clsEventLog.LogException("DeleteUser", ex);
             }
             finally
             {
@@ -369,6 +361,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("IsUserExist", ex);
                 IsFound = false;
             }
             finally
@@ -401,6 +394,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("IsUserExist", ex);
                 IsFound = false;
             }
             finally
@@ -434,7 +428,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("IsUserExistForPersonID", ex);
                 isFound = false;
             }
             finally
@@ -470,7 +464,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("ChangePassword", ex);
                 return false;
             }
 

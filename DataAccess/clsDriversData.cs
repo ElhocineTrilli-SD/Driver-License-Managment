@@ -52,7 +52,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetDriverInfoByDriverID", ex);
                 isFound = false;
             }
             finally
@@ -104,7 +104,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                
+                clsEventLog.LogException("GetDriverInfoByPersonID", ex);
                 isFound = false;
             }
             finally
@@ -144,7 +145,8 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+               
+                clsEventLog.LogException("GetAllDrivers", ex);
             }
             finally
             {
@@ -187,8 +189,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("AddNewDriver", ex);
             }
 
             finally
@@ -226,7 +227,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                
+                clsEventLog.LogException("UpdateDriver", ex);
                 return false;
             }
 

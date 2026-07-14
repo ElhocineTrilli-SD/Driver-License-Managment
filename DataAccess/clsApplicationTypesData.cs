@@ -38,6 +38,7 @@ namespace DataAccess
                 }
                 else
                 {
+
                     // The record was not found
                     IsFound = false;
                 }
@@ -48,7 +49,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetApplicationTypeByID", ex);
 
                 IsFound = false;
             }
@@ -85,7 +86,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine(ex.Message);
+                //  GetAllApplicationTypes
+                clsEventLog.LogException("GetAllApplicationTypes", ex);    
             }
             finally
             {
@@ -121,7 +123,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //  Console.WriteLine(ex.Message);
+                clsEventLog.LogException("AddNewApplicationTypes", ex);
             }
             finally
             {
@@ -160,7 +162,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //  Console.WriteLine(ex.Message);
+                clsEventLog.LogException("UpdateApplicationTypes", ex);
+             
             }
             finally
             {

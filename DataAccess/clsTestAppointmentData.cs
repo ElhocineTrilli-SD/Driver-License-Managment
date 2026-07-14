@@ -59,6 +59,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("GetTestAppoitmentByID", ex);
                 IsFound = false;
             }
             finally
@@ -120,6 +121,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("GetLastTestAppoitment", ex);
                 IsFound = false;
             }
             finally
@@ -169,7 +171,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetApplicationTestAppointmentsPerTestType", ex);
             }
             finally
             {
@@ -204,7 +206,10 @@ namespace DataAccess
                 }
                 reader.Close();
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                clsEventLog.LogException("GetAllTestAppoitment", ex);
+            }
             finally{connection.Close();}
             return dt;
         }
@@ -251,21 +256,13 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("AddNewTestApoitment", ex);
             }
 
             finally
             {
                 connection.Close();
             }
-
-
-
-
-
-
-
             return TestAppoitmentID;
         }
 
@@ -314,8 +311,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("UpdateTestApoitment", ex);
             }
 
             finally
@@ -353,8 +349,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("GetTestID", ex);
             }
 
             finally

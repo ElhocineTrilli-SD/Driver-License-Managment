@@ -59,7 +59,8 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                
+                clsEventLog.LogException("GetInternationalLicenseInfoByID", ex);
                 isFound = false;
             }
             finally
@@ -104,7 +105,8 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                
+                clsEventLog.LogException("GetAllInternationalLicenses", ex);
             }
             finally
             {
@@ -150,7 +152,8 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                
+                clsEventLog.LogException("GetDriverInternationalLicenses", ex);
             }
             finally
             {
@@ -219,7 +222,8 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                
+                clsEventLog.LogException("AddNewInternationalLicense", ex);
 
             }
 
@@ -273,7 +277,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("UpdateInternationalLicense", ex);
                 return false;
             }
 
@@ -315,7 +319,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetActiveInternationalLicenseIDByDriverID", ex);
 
             }
 

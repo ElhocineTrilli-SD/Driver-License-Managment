@@ -44,6 +44,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
+                clsEventLog.LogException("GetTestInfoByID", ex);
                 IsFound = false;
             }
             finally { connection.Close(); }
@@ -111,7 +112,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetLastTestByPersonAndTestTypeAndLicenseClass", ex);
                 isFound = false;
             }
             finally
@@ -167,7 +168,7 @@ namespace DataAccess
             }
             catch(Exception ex) 
             {
-
+                clsEventLog.LogException("_AddNewTest", ex);
             }
             finally { connection.Close(); }
 
@@ -212,7 +213,9 @@ namespace DataAccess
                 connection.Open();
                 RowsAffcted = command.ExecuteNonQuery();
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+                clsEventLog.LogException("_UpdateTest", ex);
+            }
             finally { connection.Close(); }
 
             return (RowsAffcted > 1);
@@ -241,7 +244,10 @@ namespace DataAccess
                 }
                 reader.Close();
             }
-            catch (Exception ex) { }
+            catch (Exception ex)
+            {
+                clsEventLog.LogException("GetAllTests", ex);
+            }
             finally { connection.Close(); }
             return dt;
         }
@@ -277,8 +283,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("GetPassedTestCount", ex);
             }
 
             finally

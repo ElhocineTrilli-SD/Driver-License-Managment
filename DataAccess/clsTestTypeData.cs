@@ -47,7 +47,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("GetTestTypeByID", ex);
 
                 IsFound = false;
             }
@@ -84,7 +84,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine(ex.Message);
+                clsEventLog.LogException("GetAllTestTypes", ex);
             }
             finally
             {
@@ -123,7 +123,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //  Console.WriteLine(ex.Message);
+                clsEventLog.LogException("AddNewTestTypes", ex);
             }
             finally
             {
@@ -164,7 +164,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //  Console.WriteLine(ex.Message);
+                clsEventLog.LogException("UpdateTestTypes", ex);
             }
             finally
             {

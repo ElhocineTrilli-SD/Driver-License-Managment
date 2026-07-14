@@ -42,7 +42,11 @@ namespace DataAccess
 
                 reader.Close();
             }
-            catch (Exception ex) { Isfound = false; }
+            catch (Exception ex) {
+                clsEventLog.LogException("GetDetainlicenseInfoByID", ex);
+
+                Isfound = false; 
+            }
             finally { connection.Close(); }
             return Isfound;
         }
@@ -94,7 +98,10 @@ namespace DataAccess
 
                 reader.Close();
             }
-            catch (Exception ex) { Isfound = false; }
+            catch (Exception ex) {
+                clsEventLog.LogException("GetDetainlicenseInfoByLicenseID", ex);
+
+                Isfound = false; }
             finally { connection.Close(); }
             return Isfound;
         }
@@ -127,7 +134,8 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                // Console.WriteLine("Error: " + ex.Message);
+                // GetAllDetainLicenses
+                clsEventLog.LogException("GetAllDetainLicenses", ex);
             }
             finally
             {
@@ -183,7 +191,8 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("AddNewDetainedLicense", ex);
+
 
             }
 
@@ -229,7 +238,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("UpdateDetainedLicense", ex);
                 return false;
             }
 
@@ -270,7 +279,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                clsEventLog.LogException("ReleaseDetainedLicense", ex);
                 return false;
             }
 
@@ -312,8 +321,7 @@ namespace DataAccess
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
-
+                clsEventLog.LogException("IsLicenseDetained", ex);
             }
 
             finally
