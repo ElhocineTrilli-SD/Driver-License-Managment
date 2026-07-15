@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+ 
 
 namespace DVLD
 {
@@ -27,7 +28,8 @@ namespace DVLD
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-          clsUser user = clsUser.FindByUserNameAndPassword(txtUsername.Text.Trim(), txtPassword.Text.Trim());  
+          string HashedPassword = clsUtil.ComputeHash(txtPassword.Text.Trim());
+          clsUser user = clsUser.FindByUserNameAndPassword(txtUsername.Text.Trim(), HashedPassword );  
 
             if(user != null )
             {
@@ -36,11 +38,12 @@ namespace DVLD
                 {
                     //store username and password
                     GlobalClass.RememberUsernameAndPassword(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+
                 }
                 else
                 {
-                    //store empty username and password
-                    GlobalClass.RememberUsernameAndPassword("", "");
+                 //   GlobalClass.RememberUsernameAndPassword("","");
+                 GlobalClass.DeleteRememberedCredentials(txtUsername.Text.Trim(),txtPassword.Text.Trim());
                 }
 
                 //incase the user is not active

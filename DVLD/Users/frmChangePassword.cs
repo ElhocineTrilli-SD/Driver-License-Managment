@@ -1,4 +1,5 @@
-﻿using DVLD_BUSINESS;
+﻿using DVLD.Globle_Classes;
+using DVLD_BUSINESS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -60,8 +61,8 @@ namespace DVLD.Users
             {
                 errorProvider1.SetError(txtCurrentPass, null );
             }
-
-            if(_User.Password  != txtCurrentPass.Text)
+            string HashedPass = clsUtil.ComputeHash(txtCurrentPass.Text.Trim());
+            if(_User.Password  != HashedPass)
             {
                 e.Cancel = true;
                 errorProvider1.SetError(txtCurrentPass, "Current Password wrong.");
@@ -90,16 +91,16 @@ namespace DVLD.Users
             {
                 errorProvider1.SetError(txtNewPassword, null);
             }
-            if (txtNewPassword.Text == txtConfirm_Password.Text)
-            {
-                e.Cancel = true;
-                errorProvider1.SetError(txtNewPassword, "It is match the Current Password Try another Password!");
-            }
-            else
-            {
-                errorProvider1.SetError(txtNewPassword, "");
+            //if (txtNewPassword.Text == txtConfirm_Password.Text)
+            //{
+            //    e.Cancel = true;
+            //    errorProvider1.SetError(txtNewPassword, "It is match the Current Password Try another Password!");
+            //}
+            //else
+            //{
+            //    errorProvider1.SetError(txtNewPassword, "");
 
-            }
+            //}
         }
 
         private void txtConfirm_Password_Validating(object sender, CancelEventArgs e)
@@ -108,7 +109,7 @@ namespace DVLD.Users
             if(txtNewPassword.Text.Trim() != txtConfirm_Password.Text.Trim())
             {
                 e.Cancel = true;
-                errorProvider1.SetError(txtConfirm_Password, "Password Confirmayion does not match the new password!");
+                errorProvider1.SetError(txtConfirm_Password, "Password Confirmation does not match the new password!");
 
             }
             else
@@ -129,7 +130,9 @@ namespace DVLD.Users
 
             }
 
-            _User.Password = txtNewPassword.Text;
+            string HashedPassword = clsUtil.ComputeHash(txtNewPassword.Text.Trim());
+
+            _User.Password = txtNewPassword.Text.Trim();
 
             if(_User.Save())
             {

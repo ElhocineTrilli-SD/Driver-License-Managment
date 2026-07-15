@@ -152,11 +152,13 @@ namespace DVLD.Users
                 if (clsUser.DeleteUser(UserID))
                 {
                     MessageBox.Show("User Deleted Successfully.");
+                    frmManageUsers_Load(null, null);
+
                 }
                 else
                     MessageBox.Show("User is not Deleted.");
 
-                frmManageUsers_Load(null, null);
+             
 
 
 
