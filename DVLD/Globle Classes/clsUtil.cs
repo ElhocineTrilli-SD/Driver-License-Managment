@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.ComponentModel;
 
 namespace DVLD.Globle_Classes
 {
@@ -20,6 +22,16 @@ namespace DVLD.Globle_Classes
             // convert the GUID to a string
             return newGuid.ToString();
 
+        }
+
+        public static string ComputeHash(string Input)
+        {
+            using (SHA256 sha256 = SHA256.Create() )
+            {
+                byte[] HashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(Input));
+                
+                return BitConverter.ToString(HashBytes).Replace("-","").ToLower();
+            }
         }
 
         public static bool CreateFolderIfDoesNotExist(string FolderPath)
