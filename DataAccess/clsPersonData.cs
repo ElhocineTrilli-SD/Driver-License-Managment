@@ -192,67 +192,34 @@ namespace DataAccess
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
 
-            string query = @"UPDATE People
-                             SET FirstName   = @FirstName  ,
-                               NationalNo    = @NationalNo   ,
-                               SecondName    = @SecondName   ,
-                               ThirdName    = @ThirdName   ,
-                               LastName    = @LastName   ,
-                               Email       = @Email      ,
-                               Phone       = @Phone      ,
-                               Address     = @Address    ,
-                               DateOfBirth = @DateOfBirth,
-                               Gendor      = @Gendor,
-                               NationalityCountryID   = @NationalityCountryID  ,
-                               ImagePath   = @ImagePath  
-                                 WHERE PersonID = @PersonID";
-
-            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@NationalNo", NationalN);
-            command.Parameters.AddWithValue("@FirstName", FirstName);
-            command.Parameters.AddWithValue("@SecondName", SecondName);
+            SqlCommand command = new SqlCommand("SP_UpdatePerson", connection);
+            command.CommandType = CommandType.StoredProcedure;  
+            command.Parameters.Add("@NationalNo", SqlDbType.NVarChar, 20).Value = NationalN;
+            command.Parameters.Add("@FirstName", SqlDbType.NVarChar, 20).Value = FirstName;
+            command.Parameters.Add("@SecondName", SqlDbType.NVarChar, 20).Value = SecondName;
 
             //Thirdname: allows null in database so we should handle null
-            if (ThirdName != "" && ThirdName != null)
-            {
-                command.Parameters.AddWithValue("@ThirdName", ThirdName);
-            }
-            else
-            {
-                command.Parameters.AddWithValue("@ThirdName", System.DBNull.Value);
-            }
+             command.Parameters.Add("@ThirdName", SqlDbType.NVarChar, 20).Value =
+               string.IsNullOrEmpty( ThirdName) ? (object)DBNull.Value : ThirdName;
 
-            command.Parameters.AddWithValue("@LastName", LastName);
-            command.Parameters.AddWithValue("@DateOfBirth", DateOfBirth);
-            command.Parameters.AddWithValue("@Gendor", Gender);
-            command.Parameters.AddWithValue("@Address", Address);
-            command.Parameters.AddWithValue("@Phone", Phone);
+
+            command.Parameters.Add("@LastName", SqlDbType.NVarChar, 20).Value = LastName;
+            command.Parameters.Add("@DateOfBirth", SqlDbType.DateTime2).Value = DateOfBirth;
+            command.Parameters.Add("@Gendor", SqlDbType.TinyInt).Value = Gender;
+            command.Parameters.Add("@Address", SqlDbType.NVarChar, 500).Value = Address;
+            command.Parameters.Add("@Phone", SqlDbType.NVarChar, 20).Value = Phone;
 
             //Email: allows null in database so we should handle null
-            if (Email != "" && Email != null)
-            {
-                command.Parameters.AddWithValue("@Email", Email);
-            }
-            else
-            {
-                command.Parameters.AddWithValue("@Email", System.DBNull.Value);
-            }
+            command.Parameters.Add("@Email", SqlDbType.NVarChar, 250).Value =
+                string.IsNullOrEmpty(Email) ? (object)DBNull.Value : Email ;
+
 
             //ImagePath: allows null in database so we should handle null
-            if (ImagePath != "" && ImagePath != null)
-            {
-                command.Parameters.AddWithValue("@ImagePath", ImagePath);
-            }
-            else
-            {
-                command.Parameters.AddWithValue("@ImagePath", System.DBNull.Value);
-            }
+            command.Parameters.Add("@ImagePath", SqlDbType.NVarChar, 250).Value =
+            string.IsNullOrEmpty(ImagePath) ? (object)DBNull.Value : ImagePath;
 
-            command.Parameters.AddWithValue("@NationalityCountryID", CountryID);
-
-            command.Parameters.AddWithValue("@PersonID", ID);
-
-
+            command.Parameters.Add("@NationalityCountryID", SqlDbType.Int).Value = CountryID;
+            command.Parameters.Add("@PersonID", SqlDbType.Int).Value = ID;
 
             try
             {
