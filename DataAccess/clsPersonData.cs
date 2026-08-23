@@ -140,15 +140,6 @@ namespace DataAccess
             command.Parameters.Add("@ThirdName", SqlDbType.NVarChar, 20).Value =
                 string.IsNullOrEmpty(thirdname) ? (object)DBNull.Value : thirdname;
 
-            //if (thirdname != "" && thirdname != null )
-            //{
-            //    command.Parameters.Add("@ThirdName", SqlDbType.NVarChar, 20).Value = thirdname;
-            //}
-            //else
-            //{
-            //    command.Parameters.Add("@ThirdName", SqlDbType.NVarChar, 20).Value = System.DBNull.Value;
-            //}
-
             command.Parameters.Add("@LastName", SqlDbType.NVarChar, 20).Value = lastname;
             command.Parameters.Add("@DateOfBirth", SqlDbType.DateTime2).Value = dateOfbirth;
             command.Parameters.Add("@Gendor", SqlDbType.TinyInt).Value = Gender;
@@ -159,28 +150,11 @@ namespace DataAccess
             command.Parameters.Add("@Email", SqlDbType.NVarChar, 100).Value =
             string.IsNullOrEmpty(Email) ? (object)DBNull.Value : Email;
 
-            //if (Email != "" && Email != null)
-            //{
-            //    command.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = Email;
-            //}
-            //else
-            //{
-            //    command.Parameters.Add("@Email", SqlDbType.NVarChar, 50).Value = System.DBNull.Value;
-            //}
-
             //ImagePath: allows null in database so we should handle null
             command.Parameters.Add("@ImagePath", SqlDbType.NVarChar, 250).Value =
                 string.IsNullOrEmpty(imagepath) ? (object)DBNull.Value : imagepath;
 
-            //if (imagepath != "")
-            //{
-            //   command.Parameters.Add("@ImagePath", SqlDbType.NVarChar, 250).Value = imagepath;
-            //}
-            //else
-            //{
-            //    command.Parameters.Add("@ImagePath", SqlDbType.NVarChar, 250).Value = System.DBNull.Value;
-            //}
-
+        
             
             command.Parameters.Add("@NationalityCountryID", SqlDbType.Int).Value = CountryID ;
 
@@ -302,10 +276,9 @@ namespace DataAccess
             DataTable dt = new DataTable();
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
 
-            string Query = "Select * from PeopleList";
 
-            SqlCommand command = new SqlCommand(Query, connection);
-
+            SqlCommand command = new SqlCommand("SP_GetAllPeople", connection);
+            command.CommandType = CommandType.StoredProcedure;
             try
             {
                 connection.Open();
