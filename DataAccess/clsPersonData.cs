@@ -305,9 +305,9 @@ namespace DataAccess
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
 
-            string Query = "Delete People where PersonID = @PersonID ";
 
-            SqlCommand command = new SqlCommand(Query, connection);
+            SqlCommand command = new SqlCommand("SP_DeletePerson", connection);
+            command.CommandType = CommandType.StoredProcedure;
             command.Parameters.AddWithValue("@PersonID", ID);
 
             try
