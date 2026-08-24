@@ -334,10 +334,10 @@ namespace DataAccess
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
 
-            string Query = "select Found = 1  from People where PersonID = @PersonID ";
-
-            SqlCommand command = new SqlCommand(Query, connection);
-            command.Parameters.AddWithValue("@PersonID", ID);
+          
+            SqlCommand command = new SqlCommand("SP_CheckPersonExsit", connection);
+            command.CommandType = CommandType.StoredProcedure;  
+            command.Parameters.Add("@PersonID", SqlDbType.Int).Value = ID;
 
             try
             {
@@ -367,10 +367,10 @@ namespace DataAccess
 
             SqlConnection connection = new SqlConnection(DataAccessSettings.ConnectionString);
 
-            string Query = "select Found = 1 from People where NationalNo = @NationalNo ";
 
-            SqlCommand command = new SqlCommand(Query, connection);
-            command.Parameters.AddWithValue("NationalNo", NationalNo);
+            SqlCommand command = new SqlCommand("SP_CheckPersonExsitByNatinalNo", connection);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.Add("@NationalNo", SqlDbType.NVarChar, 20).Value = NationalNo;
 
             try
             {
